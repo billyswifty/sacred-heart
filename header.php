@@ -62,7 +62,7 @@
 							<div class="content">
 								<div class="top">
 									<span class="callout">Make a Difference. Support Sacred Heart.</span>
-									<a href="#" class="give-now">Give Now &#10095;</a>
+									<a href="#" class="give-now btn">Give Now</a>
 								</div>
 								<div class="bottom">
 									<div class="social">

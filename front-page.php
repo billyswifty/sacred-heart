@@ -23,8 +23,8 @@
 				<div class="table">
 					<div class="table-cell">
 						<h3 class="section-title">Why We Give</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis vero sequi repellat magnam possimus hic maxime nesciunt. Et quia delectus porro corporis laudantium, qui, iste nesciunt ullam quis assumenda eaque.</p>
-						<a href="#" class="give-now">Give Now &#10095;</a>
+						<p>Sacred Heart Foundation donors, staff, and volunteers make the difference every day, for every life touched by Sacred Heart Health.</p>
+						<a href="#" class="give-now btn">Give Now</a>
 					</div>
 				</div>
 			</div>
@@ -35,7 +35,7 @@
 				<div class="table">
 					<div class="table-cell">
 						<h3 class="section-title">Upcoming Events</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero ratione eos sed minus quasi tenetur excepturi, omnis. Numquam dolorem voluptates commodi ipsa fuga necessitatibus quod cum, facilis, fugiat nulla? Voluptate.</p>
+						<p>Upcoming Events description Sacred Heart Foundation donors, staff, and volunteers make the difference every day, for every life touched by Sacred Heart Health.</p>
 					</div>
 				</div>
 			</div>
@@ -82,7 +82,7 @@
 				<div class="table">
 					<div class="table-cell">
 						<h3 class="section-title">Patient Stories</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla repellendus numquam sapiente, eius tenetur, enim commodi perferendis.</p>
+						<p>Sacred Heart Foundation donors, staff, and volunteers make the difference every day, for every Sacred Heart. Health.</p>
 					</div>
 				</div>
 			</div>

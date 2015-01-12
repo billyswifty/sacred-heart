@@ -2,7 +2,7 @@
 			<footer class="main clearfix">
 				<div class="constrain">
 					<div class="links">
-						<a href="#" class="give-now">Give Now &#10095;</a>
+						<a href="#" class="give-now btn">Give Now</a>
 						<div class="contact">
 							<a href="#" class="contact-icon"><img src="<?php echo get_template_directory_uri(); ?>/img/phone.png" alt="Phone"></a>
 							<a href="#" class="contact-icon"><img src="<?php echo get_template_directory_uri(); ?>/img/map.png" alt="Map"></a>

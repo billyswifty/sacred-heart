@@ -1,7 +1,7 @@
 footer.main {
   height: $footer-height;
   background: $footer-bg-color; 
-  font: $font-alt;
+  font: $font-main;
   font-size: 14px;
   color: $footer-font-color;
   padding: 30px 0; 
@@ -13,8 +13,9 @@ footer.main {
       color: #fff;
       text-transform: uppercase;
       display: inline-block;
+      font: $font-alt;
       font-size: 30px;
-      padding: 2px 5px 1px 5px;
+      padding: 5px 5px 1px 5px;
       text-decoration: none;
       &:hover {
         background: $color-main;

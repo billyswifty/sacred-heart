@@ -72,6 +72,21 @@
       background: #fff;
     }
   }
+  &.give-now {
+    text-transform: uppercase;
+    background: $color-alt;
+    color: #fff;
+    padding: 4px 8px 2px 8px;
+    font: $font-alt;
+    font-size: 18px;
+    &:after {
+      content:'\276F';
+      padding-left: 10px;
+    }
+    &:hover {
+      background: $color-main;
+    }
+  }
 }
 
 [class^="icon-"] {
