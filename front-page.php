@@ -3,7 +3,7 @@
 	<div class="home-wrapper constrain">
 
 		<div class="home-slider-wrapper">
-			
+			<?php layerslider(1) ?>
 		</div>
 
 		<div class="about">
