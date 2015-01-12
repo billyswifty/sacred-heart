@@ -1,0 +1,60 @@
+footer.main {
+  height: $footer-height;
+  background: $footer-bg-color; 
+  font: $font-alt;
+  font-size: 14px;
+  color: $footer-font-color;
+  padding: 30px 0; 
+  .links {
+    width: 40%;
+    float: left;
+    .give-now {
+      background: $color-alt;
+      color: #fff;
+      text-transform: uppercase;
+      display: inline-block;
+      font-size: 30px;
+      padding: 2px 5px 1px 5px;
+      text-decoration: none;
+      &:hover {
+        background: $color-main;
+      }
+    }
+    .contact {
+      margin-top: 30px;
+      .contact-icon {
+        display: inline-block;
+        width: 50px;
+      }
+    }
+    @include small {
+      width: 100%;
+      float: none;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+  }
+  .navigation {
+    width: 40%;
+    float: right;
+    ul {
+      list-style-type: none;
+      li {
+        display: block;
+        padding-bottom: 4px;
+        a {
+          color: #646464;
+          text-decoration: none;
+          font-size: 15px;
+          &:hover {
+            color: $color-main;
+          }
+        }
+      }
+    }
+    @include small {
+      width: 100%;
+      float: none;
+    }
+  }
+}

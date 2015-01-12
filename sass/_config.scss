@@ -1,0 +1,72 @@
+// Size
+$max-width:           1000px;
+$body-bg-color:       #fff;
+
+$break-small:         550px;
+$break-medium:        800px;
+$break-large:         1100px;
+
+
+// Color
+$color-main:          #472e93;
+$color-alt:           #876fcf;
+
+$color-highlight:  		#d1c4e2;
+$color-menu: 				  #5a2b91;
+
+$color-light:         #e5e5e5;
+$color-dark:          #1f1f1f;
+
+// Typography
+$font-size:           16px;
+
+$font-main:          	normal $font-size "Arial", sans-serif;
+$font-alt:           	normal $font-size "Arial", sans-serif;
+
+
+// Headings
+$heading-font:        $font-main;
+$heading-weight:      normal; // bold || normal || 300
+
+
+// Header
+$header-height:       auto;
+$header-bg-color:     transparent;
+$header-font-color:   $color-main;
+
+// Sidebar 
+$sidebar-bg-color:    $color-alt;
+$sidebar-font-color:  #fff;
+$sidebar-icon-color:  $color-menu; 
+
+// Footer
+$footer-height:       auto;
+$footer-bg-color:     #fff;
+$footer-nav-lined:    "false"; // "true" || "false"
+$footer-font-color:   #6c6c6c;
+
+
+// Buttons
+$btn-border-radius:   0;
+$btn-border-width:    0;    // 0 for no border
+$btn-border-color:    shade($color-main, 10%);
+$btn-bg-color:        $color-main;
+$btn-font-color:      #fff;
+$btn-font:            $font-main;
+$btn-font-size:       18px;
+$btn-font-weight:     normal; // bold || normal
+$btn-font-case:       uppercase;   // none || uppercase || lowercase || capitalize
+$btn-border-side:     "none"; // "all" || "bottom" || "horizontal" || "vertical" || "left" || "right" || "top" || "none"
+
+
+// Inputs
+$input-border-radius:   0;
+$input-bg-color:        #fff;
+$input-border-color:    $color-light;
+$input-border-width:    0; // 0 for no border
+$input-font:            $font-main;
+$input-font-color:      $color-dark;
+$input-font-size:       1em;
+
+
+

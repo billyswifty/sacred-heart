@@ -1,0 +1,16 @@
+#sidr {
+  text-align: left; 
+  font: $font-main;
+  color: $sidebar-font-color; 
+  background: $sidebar-bg-color;
+  ul {
+    margin-top: 10px;
+    li {
+      padding: 8px 0;
+      a {
+        font: $font-main; 
+        font-size: 16px;
+      }
+    }
+  }
+}

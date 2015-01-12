@@ -1,0 +1,66 @@
+input[type=email],
+input[type=text],
+input[type=password],
+textarea {
+  background: $input-bg-color; 
+  -webkit-border-radius: $input-border-radius; 
+  -moz-border-radius: $input-border-radius; 
+  -ms-border-radius: $input-border-radius; 
+  -o-border-radius: $input-border-radius; 
+  border-radius: $input-border-radius; 
+  border-style: solid;
+  color: $input-font-color;
+  font: $input-font; 
+  border-width: $input-border-width;
+  border-color: $input-border-color;
+  -webkit-appearance: none; 
+  font-size: $input-font-size; 
+  padding: 8px 6px 6px 6px;
+  &:focus {
+    outline-width: 3px;
+    outline-offset: -2px;
+    outline-color: $color-main;
+  }
+}
+
+form.search {
+  position: relative;
+  input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+    background: $color-alt !important;
+  }
+  .search-input {
+    background: $color-alt;
+    font-size: 13px;
+    color: #fff;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    border-radius: 12px;
+    -webkit-appearance: none;
+    border: 0;
+    font-style: italic;
+    padding: 5px 8px 7px 8px;
+    &:focus {
+      outline-width: 0;
+    }
+  }
+  .search-submit {
+    background: none;
+    border: 0;
+    color: #fff;
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    font-size: 23px;
+    padding: 0;
+    -webkit-appearance: none;
+    cursor: pointer;
+    &:hover {
+      color: $color-main;
+    }
+    &:focus {
+      outline-width: 0;
+    }
+  }
+}
