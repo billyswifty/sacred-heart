@@ -79,7 +79,7 @@
     padding: 4px 8px 2px 8px;
     font: $font-alt;
     font-size: 18px;
-    &:after {
+    &::after {
       content:'\276F';
       padding-left: 10px;
     }

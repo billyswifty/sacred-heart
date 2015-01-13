@@ -62,12 +62,12 @@
 							<div class="content">
 								<div class="top">
 									<span class="callout">Make a Difference. Support Sacred Heart.</span>
-									<a href="#" class="give-now btn">Give Now</a>
+									<a href="<?php echo do_shortcode('[contentblock id=give_now_url]') ?>" target="_blank" class="give-now btn">Give Now</a>
 								</div>
 								<div class="bottom">
 									<div class="social">
-										<a href="" class="icon-circle-facebook" target="_blank"></a>
-										<a href="" class="icon-circle-twitter" target="_blank"></a>
+										<a href="<?php echo do_shortcode('[contentblock id=facebook_url]') ?>" class="icon-circle-facebook" target="_blank"></a>
+										<a href="<?php echo do_shortcode('[contentblock id=twitter_url]') ?>" class="icon-circle-twitter" target="_blank"></a>
 									</div>
 									<div class="search">
 										<?php get_template_part('searchform'); ?>
@@ -79,15 +79,8 @@
 
 					<nav class="main constrain">
 						<div class="menu">
-							<ul>
-								<li><a href="#">Home</a></li>
-								<li><a href="#">Your Impact</a></li>
-								<li><a href="#">Our Vision</a></li>
-								<li><a href="#">Make a Gift</a></li>
-								<li><a href="#">Contact Us</a></li>
-							</ul>
+							<? html5blank_nav(); ?>
 						</div>
-<!-- 						<?php html5blank_nav(); ?> -->
 					</nav>
 
 

@@ -6,7 +6,7 @@
 	.about {
 		background: $color-main;
 		color: #fff;
-		padding: 3%;
+		padding: 30px 20px;
 		.title {
 			font-size: 24px;
 		}
@@ -17,7 +17,7 @@
 	.why-we-give, .upcoming-events {
 		background: $color-alt;
 		color: #fff;
-		padding: 2%;
+		padding: 20px;
 		height: 225px;
 		.give-now {
       color: #fff;
@@ -115,7 +115,7 @@
 			position: relative;
 			height: 225px;
 			.table-cell {
-				padding: 8%;
+				padding: 20px;
 				background: $color-main;
 				color: #fff;
 			}
@@ -176,7 +176,7 @@
 	.did-you-know-slider-wrapper {
 		background: $color-alt;
 		color: #fff;
-		padding: 2%;
+		padding: 20px;
 		position: relative;
 		.arrows {
 			position: absolute;

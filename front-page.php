@@ -8,23 +8,21 @@
 
 		<div class="about">
 			<h1 class="title">Sacred Heart Foundation</h1>
-			<p>Sacred Heart Foundation donors, staff, and volunteers make the difference every day, for every life touched by Sacred Heart Health System. Together, we support this vital ministry and continue a legacy of charity that is impacting thousands of lives across the Gulf Coast — turning no one in need away.</p>
+			<?php echo do_shortcode('[contentblock id=homepage_about_text]') ?>
 		</div>
 
 		<div class="grid-row">
 			<div class="unit1of2 video">
 				<div class="table">
 					<div class="table-cell">
-						<a class="youtube" href="https://www.youtube.com/watch?v=pOnnmCzBFnE">&#10148;</a>
+						<a class="youtube" href="<?php echo do_shortcode('[contentblock id=homepage_video_url]') ?>">&#10148;</a>
 					</div>
 				</div>
 			</div>
 			<div class="unit1of2 why-we-give">
 				<div class="table">
 					<div class="table-cell">
-						<h3 class="section-title">Why We Give</h3>
-						<p>Sacred Heart Foundation donors, staff, and volunteers make the difference every day, for every life touched by Sacred Heart Health.</p>
-						<a href="#" class="give-now btn">Give Now</a>
+						<?php echo do_shortcode('[contentblock id=homepage_box_1_text]') ?>
 					</div>
 				</div>
 			</div>
@@ -34,8 +32,7 @@
 			<div class="unit1of2 upcoming-events">
 				<div class="table">
 					<div class="table-cell">
-						<h3 class="section-title">Upcoming Events</h3>
-						<p>Upcoming Events description Sacred Heart Foundation donors, staff, and volunteers make the difference every day, for every life touched by Sacred Heart Health.</p>
+						<?php echo do_shortcode('[contentblock id=homepage_box_2_text]') ?>
 					</div>
 				</div>
 			</div>
@@ -81,8 +78,7 @@
 			<div class="unit1of4 patient-stories">
 				<div class="table">
 					<div class="table-cell">
-						<h3 class="section-title">Patient Stories</h3>
-						<p>Sacred Heart Foundation donors, staff, and volunteers make the difference every day, for every Sacred Heart. Health.</p>
+						<?php echo do_shortcode('[contentblock id=homepage_box_3_text]') ?>
 					</div>
 				</div>
 			</div>
