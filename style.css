@@ -2,7 +2,7 @@
 	Theme Name: Sacred Heart
 	Theme URI: http://www.nine.is
 	Description: Custom Theme for Sacred Heart
-	Version: 1.5
+	Version: 1.6
 	Author: The Nine
 	Author URI: http://www.nine.is
 	Tags: Graphics, text, images, custom
@@ -12,6 +12,7 @@
 	License URI: http://opensource.org/licenses/mit-license.php
 */
 @import "https://fontastic.s3.amazonaws.com/pyUQdwwUpRETXmnff6V2FR/icons.css";
+@import "http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,700,300";
 /* line 5, ../../../../../.rvm/gems/ruby-2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -155,18 +156,48 @@ html.lt-ie9 .grid-row .unit4of5 {
     display: none !important; } }
 
 /* line 1, sass/modules/_body.scss */
-body {
-  font: normal 16px "Arial", sans-serif;
-  background-image: url("img/bg.png");
-  color: #1f1f1f; }
+html {
+  min-height: 100%;
+  height: 100%; }
 
-/* line 7, sass/modules/_body.scss */
+/* line 6, sass/modules/_body.scss */
+body {
+  font: 300 16px "Open Sans", sans-serif;
+  background-image: url("img/bg.png");
+  color: #1f1f1f;
+  position: relative;
+  min-height: 100%; }
+
+/* line 14, sass/modules/_body.scss */
 body * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-/* line 13, sass/modules/_body.scss */
+/* line 20, sass/modules/_body.scss */
+.body-overlay {
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 50%, white 60%, white 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(50%, rgba(255, 255, 255, 0.8)), color-stop(60%, white), color-stop(100%, white));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 50%, white 60%, white 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 50%, white 60%, white 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 50%, white 60%, white 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 50%, #ffffff 60%, #ffffff 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
+  /* IE6-9 */ }
+
+/* line 37, sass/modules/_body.scss */
 .constrain {
   max-width: 1000px;
   width: 100%;
@@ -174,7 +205,7 @@ body * {
   margin: 0 auto !important;
   padding: 0 2%;
   height: 100%; }
-  /* line 20, sass/modules/_body.scss */
+  /* line 44, sass/modules/_body.scss */
   .constrain::after {
     content: ".";
     visibility: hidden;
@@ -182,13 +213,17 @@ body * {
     height: 0;
     clear: both; }
 
-/* line 29, sass/modules/_body.scss */
+/* line 53, sass/modules/_body.scss */
 .hidden {
   display: none !important;
   visibility: none !important;
   opacity: 0 !important; }
 
-/* line 35, sass/modules/_body.scss */
+/* line 60, sass/modules/_body.scss */
+.page-wrapper .page-body {
+  padding: 20px 2% 40px 2%; }
+
+/* line 66, sass/modules/_body.scss */
 .clearfix::after {
   content: ".";
   visibility: hidden;
@@ -196,56 +231,56 @@ body * {
   height: 0;
   clear: both; }
 
-/* line 44, sass/modules/_body.scss */
+/* line 75, sass/modules/_body.scss */
 .richtext p, .richtext ol, .richtext ul {
   margin-bottom: 20px;
-  font: normal 16px "Arial", sans-serif;
+  font: 300 16px "Open Sans", sans-serif;
   line-height: 1.2em; }
-  /* line 48, sass/modules/_body.scss */
+  /* line 79, sass/modules/_body.scss */
   .richtext p strong, .richtext p b, .richtext ol strong, .richtext ol b, .richtext ul strong, .richtext ul b {
     font-weight: bold; }
-  /* line 51, sass/modules/_body.scss */
+  /* line 82, sass/modules/_body.scss */
   .richtext p em, .richtext p i, .richtext ol em, .richtext ol i, .richtext ul em, .richtext ul i {
     font-style: italic; }
-  /* line 54, sass/modules/_body.scss */
+  /* line 85, sass/modules/_body.scss */
   .richtext p a, .richtext ol a, .richtext ul a {
     text-decoration: none;
     color: #472e93; }
-    /* line 57, sass/modules/_body.scss */
+    /* line 88, sass/modules/_body.scss */
     .richtext p a:hover, .richtext ol a:hover, .richtext ul a:hover {
       color: #876fcf; }
-  /* line 61, sass/modules/_body.scss */
+  /* line 92, sass/modules/_body.scss */
   .richtext p:last-of-type, .richtext ol:last-of-type, .richtext ul:last-of-type {
     margin-bottom: 0; }
-/* line 65, sass/modules/_body.scss */
+/* line 96, sass/modules/_body.scss */
 .richtext ul {
   list-style-type: disc;
   padding-left: 10px; }
 
-/* line 71, sass/modules/_body.scss */
+/* line 102, sass/modules/_body.scss */
 .table {
   display: table;
   table-layout: fixed;
   width: 100%;
   height: 100%; }
 
-/* line 78, sass/modules/_body.scss */
+/* line 109, sass/modules/_body.scss */
 .table-cell {
   display: table-cell;
   vertical-align: middle;
   width: 100%;
   height: 100%; }
 
-/* line 85, sass/modules/_body.scss */
+/* line 116, sass/modules/_body.scss */
 ::selection {
   color: #fff;
   background: #472e93; }
 
-/* line 90, sass/modules/_body.scss */
+/* line 121, sass/modules/_body.scss */
 img {
   max-width: 100%; }
 
-/* line 92, sass/modules/_body.scss */
+/* line 123, sass/modules/_body.scss */
 .map img {
   max-width: none !important; }
 
@@ -258,7 +293,7 @@ img {
   border-radius: 0;
   background: #472e93;
   color: #fff;
-  font: normal 16px "Arial", sans-serif;
+  font: 300 16px "Open Sans", sans-serif;
   display: inline-block;
   font-weight: normal;
   padding: 10px 15px 8px 15px;
@@ -302,7 +337,7 @@ img {
   /* line 75, sass/modules/_buttons.scss */
   .btn.give-now {
     text-transform: uppercase;
-    background: #876fcf;
+    background: #fdd223;
     color: #fff;
     padding: 4px 8px 2px 8px;
     font: normal 16px "Nexa", sans-serif;
@@ -313,7 +348,7 @@ img {
       padding-left: 10px; }
     /* line 86, sass/modules/_buttons.scss */
     .btn.give-now:hover {
-      background: #472e93; }
+      background: #e3bd1f; }
 
 /* line 92, sass/modules/_buttons.scss */
 [class^="icon-"] {
@@ -360,7 +395,7 @@ ul.social-links {
 footer.main {
   height: auto;
   background: #fff;
-  font: normal 16px "Arial", sans-serif;
+  font: 300 16px "Open Sans", sans-serif;
   font-size: 14px;
   color: #6c6c6c;
   padding: 30px 0 95px 0; }
@@ -370,25 +405,15 @@ footer.main {
     float: left; }
     /* line 11, sass/modules/_footer.scss */
     footer.main .links .give-now {
-      background: #876fcf;
-      color: #fff;
-      text-transform: uppercase;
-      display: inline-block;
-      font: normal 16px "Nexa", sans-serif;
       font-size: 35px;
-      padding: 5px 10px 1px 10px;
-      text-decoration: none;
-      font-weight: normal; }
-      /* line 21, sass/modules/_footer.scss */
-      footer.main .links .give-now:hover {
-        background: #472e93; }
-      /* line 24, sass/modules/_footer.scss */
+      padding: 5px 10px 1px 10px; }
+      /* line 14, sass/modules/_footer.scss */
       footer.main .links .give-now::after {
         padding-left: 43px; }
-    /* line 28, sass/modules/_footer.scss */
+    /* line 18, sass/modules/_footer.scss */
     footer.main .links .contact {
       margin-top: 26px; }
-      /* line 30, sass/modules/_footer.scss */
+      /* line 20, sass/modules/_footer.scss */
       footer.main .links .contact .contact-icon {
         display: inline-block;
         width: 80px;
@@ -396,22 +421,22 @@ footer.main {
         background-image: url("img/icons/contact_sprite.png");
         background-size: 160px;
         margin-right: 8px; }
-        /* line 37, sass/modules/_footer.scss */
+        /* line 27, sass/modules/_footer.scss */
         footer.main .links .contact .contact-icon.phone {
           background-position: 0 0; }
-          /* line 39, sass/modules/_footer.scss */
+          /* line 29, sass/modules/_footer.scss */
           footer.main .links .contact .contact-icon.phone:hover {
             background-position: 80px 0; }
-        /* line 43, sass/modules/_footer.scss */
+        /* line 33, sass/modules/_footer.scss */
         footer.main .links .contact .contact-icon.map {
           background-position: 0 160px; }
-          /* line 45, sass/modules/_footer.scss */
+          /* line 35, sass/modules/_footer.scss */
           footer.main .links .contact .contact-icon.map:hover {
             background-position: 80px 160px; }
-        /* line 49, sass/modules/_footer.scss */
+        /* line 39, sass/modules/_footer.scss */
         footer.main .links .contact .contact-icon.mail {
           background-position: 0 80px; }
-          /* line 51, sass/modules/_footer.scss */
+          /* line 41, sass/modules/_footer.scss */
           footer.main .links .contact .contact-icon.mail:hover {
             background-position: 80px 80px; }
     @media all and (max-width: 800px) {
@@ -421,27 +446,27 @@ footer.main {
         float: none;
         text-align: center;
         margin-bottom: 30px; } }
-  /* line 64, sass/modules/_footer.scss */
+  /* line 54, sass/modules/_footer.scss */
   footer.main .navigation {
     width: 40%;
     float: right; }
-    /* line 67, sass/modules/_footer.scss */
+    /* line 57, sass/modules/_footer.scss */
     footer.main .navigation ul {
       list-style-type: none; }
-      /* line 69, sass/modules/_footer.scss */
+      /* line 59, sass/modules/_footer.scss */
       footer.main .navigation ul li {
         display: block;
         padding-bottom: 4px; }
-        /* line 72, sass/modules/_footer.scss */
+        /* line 62, sass/modules/_footer.scss */
         footer.main .navigation ul li a {
           color: #6a6a6a;
           text-decoration: none;
           font-size: 17px; }
-          /* line 76, sass/modules/_footer.scss */
+          /* line 66, sass/modules/_footer.scss */
           footer.main .navigation ul li a:hover {
             color: #472e93; }
     @media all and (max-width: 800px) {
-      /* line 64, sass/modules/_footer.scss */
+      /* line 54, sass/modules/_footer.scss */
       footer.main .navigation {
         width: 100%;
         float: none; } }
@@ -459,7 +484,7 @@ textarea {
   border-radius: 0;
   border-style: solid;
   color: #1f1f1f;
-  font: normal 16px "Arial", sans-serif;
+  font: 300 16px "Open Sans", sans-serif;
   border-width: 0;
   border-color: #e5e5e5;
   -webkit-appearance: none;
@@ -605,7 +630,7 @@ header.main {
       cursor: pointer;
       font-size: 42px;
       position: relative;
-      top: 7px;
+      top: 2px;
       left: 3px;
       color: #5a2b91; }
     /* line 20, sass/modules/_header.scss */
@@ -614,97 +639,119 @@ header.main {
       padding-bottom: 2px;
       margin-left: 20px;
       position: relative;
-      top: 5px; }
-    /* line 27, sass/modules/_header.scss */
+      top: -2px;
+      display: inline; }
+      @media all and (max-width: 800px) {
+        /* line 20, sass/modules/_header.scss */
+        header.main .title-bar #short-logo {
+          float: right;
+          width: 250px;
+          top: 16px;
+          margin-right: 6px; } }
+    /* line 34, sass/modules/_header.scss */
     header.main .title-bar nav.links {
       float: right;
+      display: block;
       margin-top: 0; }
-      /* line 30, sass/modules/_header.scss */
+      /* line 38, sass/modules/_header.scss */
       header.main .title-bar nav.links ul {
         list-style-type: none; }
-        /* line 32, sass/modules/_header.scss */
+        /* line 40, sass/modules/_header.scss */
         header.main .title-bar nav.links ul li {
           display: inline-block;
           margin-left: 15px;
           padding-left: 15px;
-          padding-top: 15px;
+          padding-top: 13px;
           font-size: 17px;
           height: 50px;
           border-left: 1px solid #fff; }
-          /* line 40, sass/modules/_header.scss */
+          /* line 48, sass/modules/_header.scss */
           header.main .title-bar nav.links ul li:last-of-type {
             padding-right: 15px;
             border-right: 1px solid #fff; }
-          /* line 44, sass/modules/_header.scss */
+          /* line 52, sass/modules/_header.scss */
           header.main .title-bar nav.links ul li a {
             color: #5a2b91;
             text-decoration: none; }
-  /* line 52, sass/modules/_header.scss */
+  /* line 60, sass/modules/_header.scss */
   header.main .main-header {
     background: #fff;
     padding: 23px 0; }
-    /* line 55, sass/modules/_header.scss */
+    /* line 63, sass/modules/_header.scss */
     header.main .main-header .logo-link {
       display: block;
       width: 40%;
       float: left; }
-      /* line 59, sass/modules/_header.scss */
+      /* line 67, sass/modules/_header.scss */
       header.main .main-header .logo-link img {
         width: 340px; }
-    /* line 63, sass/modules/_header.scss */
+      @media all and (max-width: 800px) {
+        /* line 63, sass/modules/_header.scss */
+        header.main .main-header .logo-link {
+          width: 80%;
+          margin: 0 auto;
+          float: none;
+          text-align: center; } }
+    /* line 77, sass/modules/_header.scss */
     header.main .main-header .content {
       width: 60%;
       float: right;
       text-align: right; }
-      /* line 68, sass/modules/_header.scss */
+      /* line 82, sass/modules/_header.scss */
       header.main .main-header .content .top .callout {
         color: #000;
-        margin-right: 8px; }
-      /* line 72, sass/modules/_header.scss */
-      header.main .main-header .content .top .give-now {
-        background: #876fcf;
-        color: #fff;
-        text-transform: uppercase;
-        display: inline-block;
-        font: normal 16px "Nexa", sans-serif;
-        font-size: 18px;
-        padding: 3px 5px 1px 5px;
-        text-decoration: none; }
-        /* line 81, sass/modules/_header.scss */
-        header.main .main-header .content .top .give-now:hover {
-          background: #472e93; }
+        margin-right: 8px;
+        display: inline-block; }
       /* line 87, sass/modules/_header.scss */
+      header.main .main-header .content .top .give-now {
+        font-size: 18px;
+        padding: 3px 5px 1px 5px; }
+        @media all and (max-width: 800px) {
+          /* line 87, sass/modules/_header.scss */
+          header.main .main-header .content .top .give-now {
+            margin-top: 20px; } }
+      /* line 99, sass/modules/_header.scss */
       header.main .main-header .content .bottom .social {
         position: relative;
         top: 15px;
         margin-right: 20px;
         display: inline-block; }
-        /* line 92, sass/modules/_header.scss */
+        /* line 104, sass/modules/_header.scss */
         header.main .main-header .content .bottom .social [class^="icon-"] {
           color: #876fcf;
           width: 32px;
           display: inline-block; }
-          /* line 96, sass/modules/_header.scss */
+          /* line 108, sass/modules/_header.scss */
           header.main .main-header .content .bottom .social [class^="icon-"]:hover {
             color: #472e93; }
-      /* line 101, sass/modules/_header.scss */
+      /* line 113, sass/modules/_header.scss */
       header.main .main-header .content .bottom .search {
         display: inline-block; }
-  /* line 110, sass/modules/_header.scss */
+      @media all and (max-width: 800px) {
+        /* line 77, sass/modules/_header.scss */
+        header.main .main-header .content {
+          width: 100%;
+          float: none;
+          text-align: center; } }
+    @media all and (max-width: 800px) {
+      /* line 60, sass/modules/_header.scss */
+      header.main .main-header {
+        padding: 15px 0; } }
+  /* line 130, sass/modules/_header.scss */
   header.main nav.main {
     text-align: center; }
-    /* line 112, sass/modules/_header.scss */
+    /* line 132, sass/modules/_header.scss */
     header.main nav.main .menu {
       width: 100%;
       height: 45px; }
-      /* line 115, sass/modules/_header.scss */
+      /* line 135, sass/modules/_header.scss */
       header.main nav.main .menu ul {
         padding: 0;
         margin: 0;
         list-style-type: none;
         width: 100%;
         height: 100%; }
-        /* line 121, sass/modules/_header.scss */
+        /* line 141, sass/modules/_header.scss */
         header.main nav.main .menu ul li {
           display: inline-block;
           float: left;
@@ -714,14 +761,14 @@ header.main {
           background: #472e93;
           padding: 0;
           position: relative; }
-          /* line 131, sass/modules/_header.scss */
+          /* line 151, sass/modules/_header.scss */
           header.main nav.main .menu ul li:hover > a {
             border-bottom: 8px solid #876fcf;
             padding: 10px 0 4px 0; }
-          /* line 135, sass/modules/_header.scss */
+          /* line 155, sass/modules/_header.scss */
           header.main nav.main .menu ul li:hover .sub-menu {
             display: block; }
-          /* line 139, sass/modules/_header.scss */
+          /* line 159, sass/modules/_header.scss */
           header.main nav.main .menu ul li a {
             text-decoration: none;
             color: #fff;
@@ -730,7 +777,7 @@ header.main {
             width: 100%;
             height: 100%;
             padding: 10px 0 12px 0; }
-          /* line 148, sass/modules/_header.scss */
+          /* line 168, sass/modules/_header.scss */
           header.main nav.main .menu ul li .sub-menu {
             display: none;
             position: absolute;
@@ -738,20 +785,20 @@ header.main {
             left: 0;
             z-index: 20;
             width: 100%; }
-            /* line 155, sass/modules/_header.scss */
+            /* line 175, sass/modules/_header.scss */
             header.main nav.main .menu ul li .sub-menu li {
               width: 100%;
               background: rgba(239, 239, 239, 0.9);
               text-align: left; }
-              /* line 159, sass/modules/_header.scss */
+              /* line 179, sass/modules/_header.scss */
               header.main nav.main .menu ul li .sub-menu li:nth-of-type(even) {
                 background: rgba(255, 255, 255, 0.9); }
-              /* line 163, sass/modules/_header.scss */
+              /* line 183, sass/modules/_header.scss */
               header.main nav.main .menu ul li .sub-menu li:hover a {
                 border-bottom: 0 !important;
                 padding: 6px 12px !important;
                 color: #472e93; }
-              /* line 169, sass/modules/_header.scss */
+              /* line 189, sass/modules/_header.scss */
               header.main nav.main .menu ul li .sub-menu li a {
                 color: #666666;
                 font-size: 16px;
@@ -759,7 +806,7 @@ header.main {
 
 /* line 1, sass/modules/_headings.scss */
 h1, h2, h3, h4, h5, h6 {
-  font: normal 16px "Arial", sans-serif;
+  font: 300 16px "Open Sans", sans-serif;
   font-weight: normal;
   line-height: 1em; }
   /* line 5, sass/modules/_headings.scss */
@@ -810,7 +857,7 @@ span.bold {
 /* line 1, sass/modules/_navigation.scss */
 #sidr {
   text-align: left;
-  font: normal 16px "Arial", sans-serif;
+  font: 300 16px "Open Sans", sans-serif;
   color: #fff;
   background: #876fcf; }
   /* line 6, sass/modules/_navigation.scss */
@@ -821,7 +868,7 @@ span.bold {
       padding: 8px 0; }
       /* line 10, sass/modules/_navigation.scss */
       #sidr ul li a {
-        font: normal 16px "Arial", sans-serif;
+        font: 300 16px "Open Sans", sans-serif;
         font-size: 16px; }
 
 /* line 3, sass/modules/_slider.scss */
@@ -1024,6 +1071,154 @@ span.bold {
     /* line 189, sass/pages/_home.scss */
     .home-wrapper .did-you-know-slider-wrapper .panel-wrapper {
       padding: 1px !important; }
+
+/* line 1, sass/pages/_our_vision.scss */
+.post-grid-wrapper {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto; }
+  /* line 8, sass/pages/_our_vision.scss */
+  .post-grid-wrapper .grid-sizer, .post-grid-wrapper .post-box {
+    width: 33.3333333%; }
+    @media all and (min-width: 600px) and (max-width: 900px) {
+      /* line 8, sass/pages/_our_vision.scss */
+      .post-grid-wrapper .grid-sizer, .post-grid-wrapper .post-box {
+        width: 50%; } }
+    @media all and (min-width: 0) and (max-width: 600px) {
+      /* line 8, sass/pages/_our_vision.scss */
+      .post-grid-wrapper .grid-sizer, .post-grid-wrapper .post-box {
+        width: 100%; } }
+
+/* line 18, sass/pages/_our_vision.scss */
+.post-box {
+  float: left;
+  border: none;
+  background: transparent;
+  cursor: pointer; }
+  /* line 27, sass/pages/_our_vision.scss */
+  .post-box.big {
+    width: 66.66666666%;
+    z-index: 2; }
+    /* line 30, sass/pages/_our_vision.scss */
+    .post-box.big .container .image-wrapper {
+      background: #472e93;
+      border: 1px solid #b9b9b9; }
+      /* line 33, sass/pages/_our_vision.scss */
+      .post-box.big .container .image-wrapper .post-box-link {
+        width: 50%;
+        float: left; }
+      /* line 37, sass/pages/_our_vision.scss */
+      .post-box.big .container .image-wrapper .blurb {
+        width: 50%;
+        float: right;
+        display: block;
+        padding: 10px;
+        font-size: 15px;
+        color: #fff; }
+    @media all and (min-width: 0) and (max-width: 900px) {
+      /* line 27, sass/pages/_our_vision.scss */
+      .post-box.big {
+        width: 100%; } }
+  /* line 51, sass/pages/_our_vision.scss */
+  .post-box .container {
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    -webkit-transition: width 0.4s, height 0.4s;
+    -moz-transition: width 0.4s, height 0.4s;
+    -o-transition: width 0.4s, height 0.4s;
+    transition: width 0.4s, height 0.4s; }
+    /* line 61, sass/pages/_our_vision.scss */
+    .post-box .container .post-box-link {
+      display: block; }
+    /* line 65, sass/pages/_our_vision.scss */
+    .post-box .container .image-wrapper .blurb {
+      display: none; }
+    /* line 69, sass/pages/_our_vision.scss */
+    .post-box .container .text-wrapper {
+      padding: 10px 15px 15px 15px;
+      border-bottom: 1px solid #b9b9b9;
+      border-left: 1px solid #b9b9b9;
+      border-right: 1px solid #b9b9b9;
+      background: #fff;
+      position: relative;
+      bottom: 5px; }
+    /* line 78, sass/pages/_our_vision.scss */
+    .post-box .container .patient-name {
+      color: #472e93;
+      font-size: 20px;
+      margin-bottom: 8px; }
+    /* line 83, sass/pages/_our_vision.scss */
+    .post-box .container .patient-subtitle {
+      color: #666666;
+      font-size: 14px;
+      margin-bottom: 0; }
+
+/* line 91, sass/pages/_our_vision.scss */
+#fullscreen-overlay {
+  background: rgba(71, 46, 147, 0.8);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 100; }
+  /* line 99, sass/pages/_our_vision.scss */
+  #fullscreen-overlay .modal-wrapper {
+    max-width: 600px;
+    width: 96%;
+    margin: 0 auto;
+    position: relative;
+    bottom: 800px;
+    -webkit-transition: bottom 0.4s ease;
+    -moz-transition: bottom 0.4s ease;
+    -o-transition: bottom 0.4s ease;
+    transition: bottom 0.4s ease; }
+    /* line 109, sass/pages/_our_vision.scss */
+    #fullscreen-overlay .modal-wrapper.shown {
+      bottom: 0; }
+  /* line 113, sass/pages/_our_vision.scss */
+  #fullscreen-overlay .modal {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+    background: #fff;
+    color: #2f2f2f;
+    padding: 40px;
+    position: relative; }
+    /* line 123, sass/pages/_our_vision.scss */
+    #fullscreen-overlay .modal #name {
+      font-size: 24px;
+      margin-bottom: 6px; }
+    /* line 127, sass/pages/_our_vision.scss */
+    #fullscreen-overlay .modal #subtitle {
+      font-size: 18px;
+      margin-bottom: 12px;
+      color: #676767; }
+    /* line 132, sass/pages/_our_vision.scss */
+    #fullscreen-overlay .modal #blurb {
+      font-size: 15px; }
+    /* line 135, sass/pages/_our_vision.scss */
+    #fullscreen-overlay .modal .read-more {
+      margin-top: 15px;
+      padding: 4px 15px 6px 15px;
+      background: #876fcf; }
+      /* line 139, sass/pages/_our_vision.scss */
+      #fullscreen-overlay .modal .read-more:hover {
+        background: #7963ba; }
+    /* line 143, sass/pages/_our_vision.scss */
+    #fullscreen-overlay .modal #close-modal {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      color: #472e93;
+      font-size: 30px; }
+      /* line 149, sass/pages/_our_vision.scss */
+      #fullscreen-overlay .modal #close-modal:hover {
+        color: #876fcf; }
 
 /* line 1, sass/plugins/_animate.scss */
 body {

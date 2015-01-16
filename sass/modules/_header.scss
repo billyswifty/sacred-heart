@@ -13,7 +13,7 @@ header.main {
       cursor: pointer;
       font-size: 42px;
       position: relative;
-      top: 7px;
+      top: 2px;
       left: 3px;
       color: $sidebar-icon-color;
     }
@@ -22,10 +22,18 @@ header.main {
       padding-bottom: 2px;
       margin-left: 20px;
       position: relative;
-      top: 5px;
+      top: -2px;
+      display: inline;
+      @include small {
+        float: right;
+        width: 250px;
+        top: 16px;
+        margin-right: 6px;
+      }
     }
     nav.links {
       float: right;
+      display: block;
       margin-top: 0;
       ul {
         list-style-type: none;
@@ -33,7 +41,7 @@ header.main {
           display: inline-block;
           margin-left: 15px;
           padding-left: 15px;
-          padding-top: 15px;
+          padding-top: 13px;
           font-size: 17px;
           height: 50px;
           border-left: 1px solid #fff;
@@ -59,6 +67,12 @@ header.main {
       img {
         width: 340px;
       }
+      @include small {
+        width: 80%;
+        margin: 0 auto;
+        float: none;
+        text-align: center;
+      }
     }
     .content {
       width: 60%;
@@ -68,18 +82,16 @@ header.main {
         .callout {
           color: #000;
           margin-right: 8px;
+          display: inline-block;
         }
         .give-now {
-          background: $color-alt;
-          color: #fff;
-          text-transform: uppercase;
-          display: inline-block;
-          font: $font-alt;
           font-size: 18px;
           padding: 3px 5px 1px 5px;
-          text-decoration: none;
-          &:hover {
-            background: $color-main;
+          @include small {
+            margin-top: 20px;
+       //     display: block;
+       //     width: 120px;
+       //     margin: 10px auto 0 auto;
           }
         }
       }
@@ -105,6 +117,14 @@ header.main {
           }
         }
       } 
+      @include small {
+        width: 100%;
+        float: none;
+        text-align: center;
+      }
+    }
+    @include small {
+      padding: 15px 0;
     }
   }
   nav.main {

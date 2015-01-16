@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 
-	<main role="main">
+	<div class="page-wrapper constrain">
 	<!-- section -->
-	<section>
+	<section class="page-body">
 
 	<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
@@ -60,8 +60,8 @@
 
 	</section>
 	<!-- /section -->
-	</main>
+	</div>
 
-<?php get_sidebar(); ?>
+<?php // get_sidebar(); ?>
 
 <?php get_footer(); ?>

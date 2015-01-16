@@ -9,18 +9,8 @@ footer.main {
     width: 40%;
     float: left;
     .give-now {
-      background: $color-alt;
-      color: #fff;
-      text-transform: uppercase;
-      display: inline-block;
-      font: $font-alt;
       font-size: 35px;
       padding: 5px 10px 1px 10px;
-      text-decoration: none;
-      font-weight: normal;
-      &:hover {
-        background: $color-main;
-      }
       &::after {
         padding-left: 43px;
       }

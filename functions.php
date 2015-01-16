@@ -87,6 +87,56 @@ function html5blank_nav()
 	);
 }
 
+// HTML5 Blank navigation
+function html5footer_nav()
+{
+    wp_nav_menu(
+    array(
+        'theme_location'  => 'extra-menu',
+        'menu'            => '',
+        'container'       => 'div',
+        'container_class' => 'menu-{menu slug}-container',
+        'container_id'    => '',
+        'menu_class'      => 'menu',
+        'menu_id'         => '',
+        'echo'            => true,
+        'fallback_cb'     => 'wp_page_menu',
+        'before'          => '',
+        'after'           => '',
+        'link_before'     => '',
+        'link_after'      => '',
+        'items_wrap'      => '<ul>%3$s</ul>',
+        'depth'           => 0,
+        'walker'          => ''
+        )
+    );
+}
+
+// HTML5 Blank navigation
+function html5footer2_nav()
+{
+    wp_nav_menu(
+    array(
+        'theme_location'  => 'sidebar-menu',
+        'menu'            => '',
+        'container'       => 'div',
+        'container_class' => 'menu-{menu slug}-container',
+        'container_id'    => '',
+        'menu_class'      => 'menu',
+        'menu_id'         => '',
+        'echo'            => true,
+        'fallback_cb'     => 'wp_page_menu',
+        'before'          => '',
+        'after'           => '',
+        'link_before'     => '',
+        'link_after'      => '',
+        'items_wrap'      => '<ul>%3$s</ul>',
+        'depth'           => 0,
+        'walker'          => ''
+        )
+    );
+}
+
 // Load HTML5 Blank scripts (header.php)
 function html5blank_header_scripts()
 {
@@ -127,10 +177,10 @@ function html5blank_header_scripts()
 // Load HTML5 Blank conditional scripts
 function html5blank_conditional_scripts()
 {
-    if (is_page('pagenamehere')) {
-        wp_register_script('scriptname', get_template_directory_uri() . '/js/scriptname.js', array('jquery'), '1.0.0'); // Conditional script(s)
-        wp_enqueue_script('scriptname'); // Enqueue it!
-    }
+    // if (is_page('our-vision')) {
+    //     wp_register_script('our_vision', get_template_directory_uri() . '/js/our_vision.js', array('jquery'), '1.0.0'); // Conditional script(s)
+    //     wp_enqueue_script('our_vision'); // Enqueue it!
+    // }
 }
 
 // Load HTML5 Blank styles

@@ -10,28 +10,14 @@
 						</div>
 					</div>
 					<div class="navigation">
-						<nav class="grid-row">
+						<div class="grid-row">
 							<div class="unit1of2">
-								<ul>
-									<li><a href="#">Home</a></li>
-									<li><a href="#">Your Impact</a></li>
-									<li><a href="#">Our Vision</a></li>
-									<li><a href="#">Make a Gift</a></li>
-									<li><a href="#">Contact Us</a></li>
-								</ul>
+								<? html5footer_nav(); ?>
 							</div>
 							<div class="unit1of2">
-								<ul>
-									<li><a href="#">Our Services</a></li>
-									<li><a href="#">About Sacred Heart</a></li>
-									<li><a href="#">News &amp; Events</a></li>
-									<br />
-									<li><a href="#">Find a Doctor / Physician</a></li>
-									<li><a href="#">Find a Career / Jobs</a></li>
-									<li><a href="#">Locate a Facility</a></li>
-								</ul>
+								<? html5footer2_nav(); ?>
 							</div>
-						</nav>
+						</div>
 					</div>
 				</div>
 			</footer>

@@ -1,43 +1,295 @@
-<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+<?php // if (have_posts()): while (have_posts()) : the_post(); ?>
 
-	<!-- article -->
-	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<div class="post-grid-wrapper clearfix">
 
+<div class="gutter-sizer"></div>
+<div class="grid-sizer"></div>
+<?
+	global $post;
+	$myposts = get_posts(array(
+	  'numberposts' => 20,
+	  'category_name' => 'Patients'
+	));
+
+	$count = 0; 
+
+	foreach($myposts as $post) :
+		setup_postdata( $post );
+		$post_id = $post->ID;
+		$count = $count + 1
+?>
+
+	<!-- div -->
+	<div id="post-<?php the_ID(); ?>" class="post-box" <?php post_class(); ?>>
+		<div class="container">
 		<!-- post thumbnail -->
-		<?php if ( has_post_thumbnail()) : // Check if thumbnail exists ?>
-			<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-				<?php the_post_thumbnail(array(120,120)); // Declare pixel size you need inside the array ?>
+
+		<div class="image-wrapper clearfix">
+			<?php if ( has_post_thumbnail()) : // Check if thumbnail exists ?>
+			<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="post-box-link">
+				<?php the_post_thumbnail(); // Declare pixel size you need inside the array ?>
 			</a>
+			<p class="blurb"><?= get_post_meta($post_id, 'wpcf-blurb', true); ?></p>
 		<?php endif; ?>
+
+		</div>
+		
 		<!-- /post thumbnail -->
 
 		<!-- post title -->
-		<h2>
-			<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
-		</h2>
+<!-- 		<h2> -->
+		<!-- 	<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a> -->
+<!-- 		</h2> -->
 		<!-- /post title -->
+	<div class="text-wrapper">
+				<h2 class="patient-name"><?= get_post_meta($post_id, 'wpcf-name', true); ?></h2>
+		<h4 class="patient-subtitle"><?= get_post_meta($post_id, 'wpcf-subtitle', true); ?></h4>
+	</div>
 
-		<!-- post details -->
-		<span class="date"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></span>
-		<span class="author"><?php _e( 'Published by', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>
-		<span class="comments"><?php if (comments_open( get_the_ID() ) ) comments_popup_link( __( 'Leave your thoughts', 'html5blank' ), __( '1 Comment', 'html5blank' ), __( '% Comments', 'html5blank' )); ?></span>
-		<!-- /post details -->
+<!-- 		 -->
+	</div>
+	</div>
+	<!-- /div -->
 
-		<?php html5wp_excerpt('html5wp_index'); // Build your custom callback length in functions.php ?>
+<? endforeach; ?>
 
-		<?php edit_post_link(); ?>
+<?
+	global $post;
+	$myposts = get_posts(array(
+	  'numberposts' => 20,
+	  'category_name' => 'Patients'
+	));
 
-	</article>
-	<!-- /article -->
+	$count = 0; 
 
-<?php endwhile; ?>
+	foreach($myposts as $post) :
+		setup_postdata( $post );
+		$post_id = $post->ID;
+		$count = $count + 1
+?>
 
-<?php else: ?>
+	<!-- div -->
+	<div id="post-<?php the_ID(); ?>" class="post-box" <?php post_class(); ?>>
+		<div class="container">
+<div class="image-wrapper clearfix">
+			<?php if ( has_post_thumbnail()) : // Check if thumbnail exists ?>
+			<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="post-box-link">
+				<?php the_post_thumbnail(); // Declare pixel size you need inside the array ?>
+			</a>
+			<p class="blurb"><?= get_post_meta($post_id, 'wpcf-blurb', true); ?></p>
+		<?php endif; ?>
 
-	<!-- article -->
-	<article>
-		<h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
-	</article>
-	<!-- /article -->
+		</div>
 
-<?php endif; ?>
+		<!-- post title -->
+<!-- 		<h2> -->
+		<!-- 	<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a> -->
+<!-- 		</h2> -->
+		<!-- /post title -->
+<div class="text-wrapper">
+			<h2 class="patient-name"><?= get_post_meta($post_id, 'wpcf-name', true); ?></h2>
+		<h4 class="patient-subtitle"><?= get_post_meta($post_id, 'wpcf-subtitle', true); ?></h4>
+</div>
+
+<!-- 		<p class="blurb"><?= get_post_meta($post_id, 'wpcf-blurb', true); ?></p> -->
+	</div>
+	</div>
+	<!-- /div -->
+
+<? endforeach; ?>
+
+<?
+	global $post;
+	$myposts = get_posts(array(
+	  'numberposts' => 20,
+	  'category_name' => 'Patients'
+	));
+
+	$count = 0; 
+
+	foreach($myposts as $post) :
+		setup_postdata( $post );
+		$post_id = $post->ID;
+		$count = $count + 1
+?>
+
+	<!-- div -->
+	<div id="post-<?php the_ID(); ?>" class="post-box" <?php post_class(); ?>>
+		<div class="container">
+<div class="image-wrapper clearfix">
+			<?php if ( has_post_thumbnail()) : // Check if thumbnail exists ?>
+			<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="post-box-link">
+				<?php the_post_thumbnail(); // Declare pixel size you need inside the array ?>
+			</a>
+			<p class="blurb"><?= get_post_meta($post_id, 'wpcf-blurb', true); ?></p>
+		<?php endif; ?>
+
+		</div>
+
+		<!-- post title -->
+<!-- 		<h2> -->
+		<!-- 	<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a> -->
+<!-- 		</h2> -->
+		<!-- /post title -->
+	<div class="text-wrapper">
+				<h2 class="patient-name"><?= get_post_meta($post_id, 'wpcf-name', true); ?></h2>
+		<h4 class="patient-subtitle"><?= get_post_meta($post_id, 'wpcf-subtitle', true); ?></h4>
+	</div>
+
+<!-- 		<p class="blurb"><?= get_post_meta($post_id, 'wpcf-blurb', true); ?></p> -->
+	</div>
+	</div>
+	<!-- /div -->
+
+<? endforeach; ?>
+
+<?
+	global $post;
+	$myposts = get_posts(array(
+	  'numberposts' => 20,
+	  'category_name' => 'Patients'
+	));
+
+	$count = 0; 
+
+	foreach($myposts as $post) :
+		setup_postdata( $post );
+		$post_id = $post->ID;
+		$count = $count + 1
+?>
+
+	<!-- div -->
+	<div id="post-<?php the_ID(); ?>" class="post-box" <?php post_class(); ?>>
+		<div class="container">
+<div class="image-wrapper clearfix">
+			<?php if ( has_post_thumbnail()) : // Check if thumbnail exists ?>
+			<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="post-box-link">
+				<?php the_post_thumbnail(); // Declare pixel size you need inside the array ?>
+			</a>
+			<p class="blurb"><?= get_post_meta($post_id, 'wpcf-blurb', true); ?></p>
+		<?php endif; ?>
+
+		</div>
+
+		<!-- post title -->
+<!-- 		<h2> -->
+		<!-- 	<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a> -->
+<!-- 		</h2> -->
+		<!-- /post title -->
+	<div class="text-wrapper">
+				<h2 class="patient-name"><?= get_post_meta($post_id, 'wpcf-name', true); ?></h2>
+		<h4 class="patient-subtitle"><?= get_post_meta($post_id, 'wpcf-subtitle', true); ?></h4>
+	</div>
+
+<!-- 		<p class="blurb"><?= get_post_meta($post_id, 'wpcf-blurb', true); ?></p> -->
+	</div>
+	</div>
+	<!-- /div -->
+
+<? endforeach; ?>
+
+<?
+	global $post;
+	$myposts = get_posts(array(
+	  'numberposts' => 20,
+	  'category_name' => 'Patients'
+	));
+
+	$count = 0; 
+
+	foreach($myposts as $post) :
+		setup_postdata( $post );
+		$post_id = $post->ID;
+		$count = $count + 1
+?>
+
+	<!-- div -->
+	<div id="post-<?php the_ID(); ?>" class="post-box" <?php post_class(); ?>>
+		<div class="container">
+		<!-- post thumbnail -->
+<div class="image-wrapper clearfix">
+			<?php if ( has_post_thumbnail()) : // Check if thumbnail exists ?>
+			<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="post-box-link">
+				<?php the_post_thumbnail(); // Declare pixel size you need inside the array ?>
+			</a>
+			<p class="blurb"><?= get_post_meta($post_id, 'wpcf-blurb', true); ?></p>
+		<?php endif; ?>
+
+		</div>
+
+		<!-- post title -->
+<!-- 		<h2> -->
+		<!-- 	<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a> -->
+<!-- 		</h2> -->
+		<!-- /post title -->
+	<div class="text-wrapper">
+				<h2 class="patient-name"><?= get_post_meta($post_id, 'wpcf-name', true); ?></h2>
+		<h4 class="patient-subtitle"><?= get_post_meta($post_id, 'wpcf-subtitle', true); ?></h4>
+	</div>
+
+<!-- 		<p class="blurb"><?= get_post_meta($post_id, 'wpcf-blurb', true); ?></p> -->
+	</div>
+	</div>
+	<!-- /div -->
+
+<? endforeach; ?>
+
+<?
+	global $post;
+	$myposts = get_posts(array(
+	  'numberposts' => 20,
+	  'category_name' => 'Patients'
+	));
+
+	$count = 0; 
+
+	foreach($myposts as $post) :
+		setup_postdata( $post );
+		$post_id = $post->ID;
+		$count = $count + 1
+?>
+
+	<!-- div -->
+	<div id="post-<?php the_ID(); ?>" class="post-box" <?php post_class(); ?>>
+		<div class="container">
+		<!-- post thumbnail -->
+<div class="image-wrapper clearfix">
+			<?php if ( has_post_thumbnail()) : // Check if thumbnail exists ?>
+			<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="post-box-link">
+				<?php the_post_thumbnail(); // Declare pixel size you need inside the array ?>
+			</a>
+			<p class="blurb"><?= get_post_meta($post_id, 'wpcf-blurb', true); ?></p>
+		<?php endif; ?>
+
+		</div>
+		<!-- /post thumbnail -->
+
+		<!-- post title -->
+<!-- 		<h2> -->
+		<!-- 	<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a> -->
+<!-- 		</h2> -->
+		<!-- /post title -->
+	<div class="text-wrapper">
+				<h2 class="patient-name"><?= get_post_meta($post_id, 'wpcf-name', true); ?></h2>
+		<h4 class="patient-subtitle"><?= get_post_meta($post_id, 'wpcf-subtitle', true); ?></h4>
+	</div>
+
+<!-- 		<p class="blurb"><?= get_post_meta($post_id, 'wpcf-blurb', true); ?></p> -->
+	</div>
+	</div>
+	<!-- /div -->
+
+<? endforeach; ?>
+
+</div>
+
+<script>
+	// $(document).ready(function() {
+	// 	var container = document.querySelector('.post-grid-wraper');
+	// 	var msnry = new Masonry( container, {
+	// 	  // options
+	// 	  columnWidth: 200,
+	// 	  itemSelector: '.post-box'
+	// 	});
+	// });
+</script>

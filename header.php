@@ -33,8 +33,8 @@
 
 	</head>
 	<body <?php body_class(); ?>>
-
-
+		<div class="body-overlay"></div>
+		
 		<div class="wrapper">
 
 
@@ -44,7 +44,7 @@
 						<div class="constrain">
 							<a class="icon-menu" href="#" id="show-menu"></a>
 							<img src="<?php echo get_template_directory_uri(); ?>/img/short_logo.png" alt="Sacred Heart Health Systems" id="short-logo" />
-							<nav class="links">
+							<nav class="links reveal">
 								<ul>
 									<li><a href="#">SHH Pensacola</a></li>
 									<li><a href="#">SHH Emerald Coast</a></li>
@@ -61,15 +61,15 @@
 							</a>
 							<div class="content">
 								<div class="top">
-									<span class="callout">Make a Difference. Support Sacred Heart.</span>
+									<span class="callout reveal">Make a Difference. Support Sacred Heart.</span>
 									<a href="<?php echo do_shortcode('[contentblock id=give_now_url]') ?>" target="_blank" class="give-now btn">Give Now</a>
 								</div>
 								<div class="bottom">
-									<div class="social">
+									<div class="social reveal">
 										<a href="<?php echo do_shortcode('[contentblock id=facebook_url]') ?>" class="icon-circle-facebook" target="_blank"></a>
 										<a href="<?php echo do_shortcode('[contentblock id=twitter_url]') ?>" class="icon-circle-twitter" target="_blank"></a>
 									</div>
-									<div class="search">
+									<div class="search reveal">
 										<?php get_template_part('searchform'); ?>
 									</div>
 								</div>
@@ -77,7 +77,7 @@
 						</div>
 					</div>
 
-					<nav class="main constrain">
+					<nav class="main constrain reveal">
 						<div class="menu">
 							<? html5blank_nav(); ?>
 						</div>

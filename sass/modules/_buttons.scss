@@ -74,7 +74,7 @@
   }
   &.give-now {
     text-transform: uppercase;
-    background: $color-alt;
+    background: $color-bright;
     color: #fff;
     padding: 4px 8px 2px 8px;
     font: $font-alt;
@@ -84,7 +84,7 @@
       padding-left: 10px;
     }
     &:hover {
-      background: $color-main;
+      background: shade($color-bright, 10%);
     }
   }
 }

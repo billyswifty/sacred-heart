@@ -2,7 +2,7 @@
 	Theme Name: Sacred Heart
 	Theme URI: http://www.nine.is
 	Description: Custom Theme for Sacred Heart
-	Version: 1.5
+	Version: 1.6
 	Author: The Nine
 	Author URI: http://www.nine.is
 	Tags: Graphics, text, images, custom
@@ -31,6 +31,7 @@
 @import "modules/slider";
 
 @import "pages/home";
+@import "pages/our_vision";
 @import "pages/subpage";
 
 @import "plugins/animate";
@@ -38,3 +39,4 @@
 @import "plugins/sidr";
 
 @import "https://fontastic.s3.amazonaws.com/pyUQdwwUpRETXmnff6V2FR/icons.css";
+@import "http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,700,300";
