@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-	<div id="fullscreen-overlay" style="display:none;">
+<!-- 	<div id="fullscreen-overlay" style="display:none;">
 		<div class="table">
 			<div class="table-cell">
 				<div class="modal-wrapper">
@@ -14,10 +14,10 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 	<div class="page-wrapper constrain">
 		<!-- section -->
-		<section class="page-body">
+		<section class="page-body" style="background:transparent;">
 
 			<?php get_template_part('loop'); ?>
 
@@ -86,78 +86,137 @@
 
 			$( function() {
 
-			  var $container = $('.post-grid-wrapper').masonry({
-			    itemSelector: '.post-box',
-			    columnWidth: '.grid-sizer'
+			  var $container = $('.post-grid-wrapper');
+
+			  var clicked = false;
+
+			  $container.imagesLoaded( function() {
+
+			  	if ( $(window).width() > 600 ) {
+			  		$container.masonry({
+					    itemSelector: '.post-box',
+					    columnWidth: '.grid-sizer'
+					  });
+			  	}
+			  	
 			  });
 
-			  // $container.on( 'click', '.container', function( event ) {
-			  // 	event.preventDefault();
-			  //   var $this = $(this);
-			  //   var previousContentSize = getSize( this );
-			  //   // disable transition
-			  //   this.style[ transitionProp ] = 'none';
-			  //   // set current size
-			  //   $this.css({
-			  //     width: previousContentSize.width,
-			  //     height: previousContentSize.height
-			  //   });
+			  $(window).resize(function() {
+			  	if ( $(window).width() > 600 ) {
+			  		$container.masonry({
+					    itemSelector: '.post-box',
+					    columnWidth: '.grid-sizer'
+					  });
+					  $container.find(".blurb").css("display","");
+			  	}
+			  	else {
+			  		$container.masonry('destroy');
+			  	}
+			  });
 
-			    
+			  $container.on('click', '.btn.read-more', function(event) {
+			  	window.location = $(this).attr("href");
+			  	clicked = true;
+			  });
+			  	
 
-			  //   if ( $this.parent().hasClass('big') ) {              // this one is already big
-			  //   	$(".post-box").removeClass("big");                 // make all small
-			  //   	var $itemElem = $this.parent().removeClass('big'); // make this one small
-			  //   }
-			  //   else {                                               // this one is small
-			  //   	$(".post-box").removeClass("big");                 // make all small
-			  //   	var $itemElem = $this.parent().addClass('big');    // make this one big
-			  //   }
-			    
-			  //   // force redraw
-			  //   var redraw = this.offsetWidth;
+			  $container.on( 'click', '.container', function( event ) {
 
-			  //   // renable default transition
-			  //   this.style[ transitionProp ] = '';
+			  	event.preventDefault();
+			  	var $this = $(this);
 
-			  //   // reset 100%/100% sizing after transition end
-			  //   if ( transitionProp ) {
-			  //     var _this = this;
-			  //     var onTransitionEnd = function() {
-			  //       _this.style.width = '';
-			  //       _this.style.height = '';
-			  //     };
-			  //     $this.one( transitionEndEvent, onTransitionEnd );
-			  //   }
+			  	if (!clicked && $(window).width() > 600) {
 
-			  //   // set new size
-			  //   var size = getSize( $itemElem[0] );
-			  //   $this.css({
-			  //     width: size.width,
-			  //     height: size.height
-			  //   });
+				    var previousContentSize = getSize( this );
+				    // disable transition
+				    this.style[ transitionProp ] = 'none';
+				    // set current size
+				    $this.css({
+				      width: previousContentSize.width,
+				      height: previousContentSize.height
+				    });
 
-			  //   $container.masonry();
+				    
 
-			  // });
+				    if ( $this.parent().hasClass('big') ) {              // this one is already big
+				    	$(".post-box").removeClass("big");                 // make all small
+				    	var $itemElem = $this.parent().removeClass('big'); // make this one small
+				    }
+				    else {                                               // this one is small
+				    	$(".post-box").removeClass("big");                 // make all small
+				    	var $itemElem = $this.parent().addClass('big');    // make this one big
+				    }
+				    
+				    // force redraw
+				    var redraw = this.offsetWidth;
 
-				$(".post-box-link").click(function(event) {
-					event.preventDefault();
-					var name = $(this).parent().parent().find(".patient-name").html();
-					var subtitle = $(this).parent().parent().find(".patient-subtitle").html();
-					var blurb = $(this).parent().parent().find(".blurb").html();
-					$("#fullscreen-overlay").find("#name").html(name);
-					$("#fullscreen-overlay").find("#subtitle").html(subtitle);
-					$("#fullscreen-overlay").find("#blurb").html(blurb);
-					$("#fullscreen-overlay").fadeIn();
-					$("#fullscreen-overlay").delay(400).find(".modal-wrapper").addClass("shown");
-				});
+				    // renable default transition
+				    this.style[ transitionProp ] = '';
 
-				$("#close-modal").click(function(event) {
-					event.preventDefault();
-					$("#fullscreen-overlay").find(".modal-wrapper").removeClass("shown");
-					$("#fullscreen-overlay").delay(100).fadeOut();
-				});
+				    // reset 100%/100% sizing after transition end
+				    if ( transitionProp ) {
+				      var _this = this;
+				      var onTransitionEnd = function() {
+				        _this.style.width = '';
+				        _this.style.height = '';
+				      };
+				      $this.one( transitionEndEvent, onTransitionEnd );
+				    }
+
+				    // set new size
+				    var size = getSize( $itemElem[0] );
+				    $this.css({
+				      width: size.width,
+				      height: size.height
+				    });
+
+				    $container.masonry();
+
+			  	}
+
+			  	else if ( !clicked && $(window).width() < 600 ) {
+
+			  		if ( $this.parent().hasClass('show-blurb') ) {              // this one is already big
+				    	$(".post-box").removeClass("show-blurb");                 // make all small
+				    	$container.find(".blurb").slideUp();
+				    	var $itemElem = $this.parent().removeClass('show-blurb'); // make this one small
+				    	$this.find(".blurb").slideUp();
+				    }
+				    else {                                               // this one is small
+				    	$(".post-box").removeClass("show-blurb");                 // make all small
+				    	$container.find(".blurb").slideUp();
+				    	var $itemElem = $this.parent().addClass('show-blurb');    // make this one big
+				    	$this.find(".blurb").slideDown();
+				    }
+
+
+				   // $container.find(".blurb").slideUp();
+				   // $this.find(".blurb").slideToggle();
+
+			  	}
+
+
+			  });
+
+				// $(".post-box-link").click(function(event) {
+				// 	event.preventDefault();
+				// 	var name = $(this).parent().parent().find(".patient-name").html();
+				// 	var subtitle = $(this).parent().parent().find(".patient-subtitle").html();
+				// 	var blurb = $(this).parent().parent().find(".blurb").html();
+				// 	$("#fullscreen-overlay").find("#name").html(name);
+				// 	$("#fullscreen-overlay").find("#subtitle").html(subtitle);
+				// 	$("#fullscreen-overlay").find("#blurb").html(blurb);
+				// 	$("#fullscreen-overlay").fadeIn();
+				// 	$("#fullscreen-overlay").delay(400).find(".modal-wrapper").addClass("shown");
+				// });
+
+				// $("#close-modal").click(function(event) {
+				// 	event.preventDefault();
+				// 	$("#fullscreen-overlay").find(".modal-wrapper").removeClass("shown");
+				// 	$("#fullscreen-overlay").delay(100).fadeOut();
+				// });
+
+
   
 });
 

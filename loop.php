@@ -42,8 +42,9 @@
 <!-- 		</h2> -->
 		<!-- /post title -->
 	<div class="text-wrapper">
-				<h2 class="patient-name"><?= get_post_meta($post_id, 'wpcf-name', true); ?></h2>
-		<h4 class="patient-subtitle"><?= get_post_meta($post_id, 'wpcf-subtitle', true); ?></h4>
+			<h2 class="patient-name"><?= get_post_meta($post_id, 'wpcf-name', true); ?></h2>
+			<h4 class="patient-subtitle"><?= get_post_meta($post_id, 'wpcf-subtitle', true); ?></h4>
+			<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="read-more btn">Read More</a>
 	</div>
 
 <!-- 		 -->
@@ -89,6 +90,7 @@
 <div class="text-wrapper">
 			<h2 class="patient-name"><?= get_post_meta($post_id, 'wpcf-name', true); ?></h2>
 		<h4 class="patient-subtitle"><?= get_post_meta($post_id, 'wpcf-subtitle', true); ?></h4>
+		<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="read-more btn">Read More</a>
 </div>
 
 <!-- 		<p class="blurb"><?= get_post_meta($post_id, 'wpcf-blurb', true); ?></p> -->
@@ -134,6 +136,7 @@
 	<div class="text-wrapper">
 				<h2 class="patient-name"><?= get_post_meta($post_id, 'wpcf-name', true); ?></h2>
 		<h4 class="patient-subtitle"><?= get_post_meta($post_id, 'wpcf-subtitle', true); ?></h4>
+		<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="read-more btn">Read More</a>
 	</div>
 
 <!-- 		<p class="blurb"><?= get_post_meta($post_id, 'wpcf-blurb', true); ?></p> -->
@@ -179,6 +182,7 @@
 	<div class="text-wrapper">
 				<h2 class="patient-name"><?= get_post_meta($post_id, 'wpcf-name', true); ?></h2>
 		<h4 class="patient-subtitle"><?= get_post_meta($post_id, 'wpcf-subtitle', true); ?></h4>
+		<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="read-more btn">Read More</a>
 	</div>
 
 <!-- 		<p class="blurb"><?= get_post_meta($post_id, 'wpcf-blurb', true); ?></p> -->
@@ -225,6 +229,7 @@
 	<div class="text-wrapper">
 				<h2 class="patient-name"><?= get_post_meta($post_id, 'wpcf-name', true); ?></h2>
 		<h4 class="patient-subtitle"><?= get_post_meta($post_id, 'wpcf-subtitle', true); ?></h4>
+		<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="read-more btn">Read More</a>
 	</div>
 
 <!-- 		<p class="blurb"><?= get_post_meta($post_id, 'wpcf-blurb', true); ?></p> -->
@@ -272,6 +277,7 @@
 	<div class="text-wrapper">
 				<h2 class="patient-name"><?= get_post_meta($post_id, 'wpcf-name', true); ?></h2>
 		<h4 class="patient-subtitle"><?= get_post_meta($post_id, 'wpcf-subtitle', true); ?></h4>
+		<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="read-more btn">Read More</a>
 	</div>
 
 <!-- 		<p class="blurb"><?= get_post_meta($post_id, 'wpcf-blurb', true); ?></p> -->

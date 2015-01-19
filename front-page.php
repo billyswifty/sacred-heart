@@ -15,7 +15,7 @@
 			<div class="unit1of2 video">
 				<div class="table">
 					<div class="table-cell">
-						<a class="youtube" href="<?php echo do_shortcode('[contentblock id=homepage_video_url]') ?>">&#10148;</a>
+						<a class="youtube icon-play" href="<?php echo do_shortcode('[contentblock id=homepage_video_url]') ?>"></a>
 					</div>
 				</div>
 			</div>
@@ -74,7 +74,7 @@
 			</div>
 		</div>
 
-		<div class="grid-row patients">
+		<div class="grid-row patient-stories-grid">
 			<div class="unit1of4 patient-stories">
 				<div class="table">
 					<div class="table-cell">
