@@ -17,9 +17,14 @@
 		}
 	}
 	.post-text-wrapper {
-		padding: 30px 3% 50px 3%;
+		padding: 30px 3% 60px 3%;
 		.post-title {
 			color: $color-main;
+			margin-bottom: 5px;
+		}
+		.patient-subtitle {
+			margin-bottom: 30px;
+			color: $color-alt;
 		}
 		.post-content-wrapper {
 			color: $color-main;

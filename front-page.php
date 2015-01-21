@@ -40,6 +40,8 @@
 
 				<div class="liquid-slider" id="event-slider">
 
+					<?php wp_reset_postdata(); ?>
+
 					<?
 			  		global $post;
 			  		$myposts = get_posts(array(
@@ -52,13 +54,14 @@
 			  		foreach($myposts as $post) :
 			    		setup_postdata( $post );
 							$post_id = $post->ID;
-							$count = $count + 1
+							$count = $count + 1;
+							$feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
 					?>
 
-						<div class="slider-slide" style="background-image:url(<?php echo get_template_directory_uri(); ?>/img/event.jpg);">
+						<div class="slider-slide" style="background-image:url(<?= $feat_image ?>);">
 							<div class="text-wrapper">
-								<h4 class="name"><a href="#"><? the_title(); ?></a></h4>
-								<h5 class="description"><? echo get_post_meta($post_id, '_location_address', true); ?></h5>
+								<h4 class="name"><a href="<? the_permalink(); ?>"><? the_title(); ?></a></h4>
+								<h5 class="description">Event Location</h5>
 							</div>
 						</div>
 
@@ -74,36 +77,7 @@
 			</div>
 		</div>
 
-		<div class="grid-row patient-stories-grid">
-			<div class="unit1of4 patient-stories">
-				<div class="table">
-					<div class="table-cell">
-						<?php echo do_shortcode('[contentblock id=homepage_box_3_text]') ?>
-					</div>
-				</div>
-			</div>
-			<div class="unit1of4 patient" style="background-image:url(<?php echo get_template_directory_uri(); ?>/img/patient.jpg);">
-				<div class="overlay"></div>
-				<div class="text-wrapper">
-					<h4 class="name">James Vanhoult</h4>
-					<h5 class="patient-about">Cancer Survivor</h5>
-				</div>
-			</div>
-			<div class="unit1of4 patient" style="background-image:url(<?php echo get_template_directory_uri(); ?>/img/patient.jpg);">
-				<div class="overlay"></div>
-				<div class="text-wrapper">
-					<h4 class="name">James Vanhoult</h4>
-					<h5 class="patient-about">Cancer Survivor</h5>
-				</div>
-			</div>
-			<div class="unit1of4 patient" style="background-image:url(<?php echo get_template_directory_uri(); ?>/img/patient.jpg);">
-				<div class="overlay"></div>
-				<div class="text-wrapper">
-					<h4 class="name">James Vanhoult</h4>
-					<h5 class="patient-about">Cancer Survivor</h5>
-				</div>
-			</div>
-		</div>
+		<?php get_template_part('patient_stories'); ?>
 
 		<div class="did-you-know-slider-wrapper clearfix">
 			<h3 class="section-title">Did You Know</h3>
@@ -120,7 +94,7 @@
 		  		foreach($myposts as $post) :
 		    		setup_postdata( $post );
 						$post_id = $post->ID;
-						$count = $count + 1
+						$count = $count + 1;
 				?>
 
 				  <div class="slider-slide">

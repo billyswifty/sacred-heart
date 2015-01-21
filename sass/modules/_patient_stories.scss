@@ -14,6 +14,7 @@
 		position: relative;
 		height: 225px;
 		cursor: pointer;
+		display: block;
 		&:hover {
 			.overlay {
 				opacity: 0;

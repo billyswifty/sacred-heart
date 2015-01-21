@@ -10,7 +10,14 @@
 
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-					<? $feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
+					<? $post_id = $post->ID; ?>
+
+					<? $feat_image = get_post_meta($post_id, 'wpcf-banner-image', true); ?>
+
+					<? if (empty($feat_image)) {
+							$feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); 
+						}
+					?>
 
 					<?php if ( has_post_thumbnail()) : // Check if Thumbnail exists ?>
 					
@@ -20,6 +27,7 @@
 					
 					<div class="post-text-wrapper">
 						<h1 class="post-title"><?php the_title(); ?></h1>
+						<h4 class="patient-subtitle"><?= get_post_meta($post_id, 'wpcf-subtitle', true); ?></h4>
 
 						<div class="post-content-wrapper">
 							<?php the_content(); ?>
@@ -40,36 +48,7 @@
 
 			<?php endif; ?>
 
-			<div class="grid-row patient-stories-grid">
-				<div class="unit1of4 patient-stories">
-					<div class="table">
-						<div class="table-cell">
-							<?php echo do_shortcode('[contentblock id=homepage_box_3_text]') ?>
-						</div>
-					</div>
-				</div>
-				<div class="unit1of4 patient" style="background-image:url(<?php echo get_template_directory_uri(); ?>/img/patient.jpg);">
-					<div class="overlay"></div>
-					<div class="text-wrapper">
-						<h4 class="name">James Vanhoult</h4>
-						<h5 class="patient-about">Cancer Survivor</h5>
-					</div>
-				</div>
-				<div class="unit1of4 patient" style="background-image:url(<?php echo get_template_directory_uri(); ?>/img/patient.jpg);">
-					<div class="overlay"></div>
-					<div class="text-wrapper">
-						<h4 class="name">James Vanhoult</h4>
-						<h5 class="patient-about">Cancer Survivor</h5>
-					</div>
-				</div>
-				<div class="unit1of4 patient" style="background-image:url(<?php echo get_template_directory_uri(); ?>/img/patient.jpg);">
-					<div class="overlay"></div>
-					<div class="text-wrapper">
-						<h4 class="name">James Vanhoult</h4>
-						<h5 class="patient-about">Cancer Survivor</h5>
-					</div>
-				</div>
-			</div>
+			<?php get_template_part('patient_stories'); ?>
 
 		</div>
 

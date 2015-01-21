@@ -2,7 +2,7 @@
 	Theme Name: Sacred Heart
 	Theme URI: http://www.nine.is
 	Description: Custom Theme for Sacred Heart
-	Version: 2.0
+	Version: 2.1
 	Author: The Nine
 	Author URI: http://www.nine.is
 	Tags: Graphics, text, images, custom
@@ -892,14 +892,15 @@ span.bold {
   background-position: center center;
   position: relative;
   height: 225px;
-  cursor: pointer; }
-  /* line 18, sass/modules/_patient_stories.scss */
+  cursor: pointer;
+  display: block; }
+  /* line 19, sass/modules/_patient_stories.scss */
   .patient-stories-grid .patient:hover .overlay {
     opacity: 0; }
-  /* line 21, sass/modules/_patient_stories.scss */
+  /* line 22, sass/modules/_patient_stories.scss */
   .patient-stories-grid .patient:hover .text-wrapper {
     background: rgba(0, 0, 0, 0.4); }
-  /* line 25, sass/modules/_patient_stories.scss */
+  /* line 26, sass/modules/_patient_stories.scss */
   .patient-stories-grid .patient .overlay {
     position: absolute;
     left: 0;
@@ -910,7 +911,7 @@ span.bold {
     opacity: 0.6;
     z-index: 1;
     transition: opacity 0.5s ease; }
-  /* line 36, sass/modules/_patient_stories.scss */
+  /* line 37, sass/modules/_patient_stories.scss */
   .patient-stories-grid .patient .text-wrapper {
     position: absolute;
     z-index: 2;
@@ -920,12 +921,12 @@ span.bold {
     transition: background 0.5s ease;
     color: #fff;
     padding: 8px 10px; }
-    /* line 45, sass/modules/_patient_stories.scss */
+    /* line 46, sass/modules/_patient_stories.scss */
     .patient-stories-grid .patient .text-wrapper .name {
       font-weight: bold;
       font-size: 16px;
       margin-bottom: 4px; }
-    /* line 50, sass/modules/_patient_stories.scss */
+    /* line 51, sass/modules/_patient_stories.scss */
     .patient-stories-grid .patient .text-wrapper .patient-about {
       font-weight: normal;
       font-style: italic;
@@ -1089,17 +1090,22 @@ span.bold {
         height: 200px; } }
   /* line 19, sass/pages/_post_details.scss */
   .post-details-wrapper .post-text-wrapper {
-    padding: 30px 3% 50px 3%; }
+    padding: 30px 3% 60px 3%; }
     /* line 21, sass/pages/_post_details.scss */
     .post-details-wrapper .post-text-wrapper .post-title {
-      color: #472e93; }
-    /* line 24, sass/pages/_post_details.scss */
+      color: #472e93;
+      margin-bottom: 5px; }
+    /* line 25, sass/pages/_post_details.scss */
+    .post-details-wrapper .post-text-wrapper .patient-subtitle {
+      margin-bottom: 30px;
+      color: #876fcf; }
+    /* line 29, sass/pages/_post_details.scss */
     .post-details-wrapper .post-text-wrapper .post-content-wrapper {
       color: #472e93; }
-      /* line 26, sass/pages/_post_details.scss */
+      /* line 31, sass/pages/_post_details.scss */
       .post-details-wrapper .post-text-wrapper .post-content-wrapper p {
         margin-bottom: 20px; }
-        /* line 28, sass/pages/_post_details.scss */
+        /* line 33, sass/pages/_post_details.scss */
         .post-details-wrapper .post-text-wrapper .post-content-wrapper p:last-of-type {
           margin-bottom: 0; }
 
