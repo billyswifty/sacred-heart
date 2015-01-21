@@ -34,6 +34,16 @@
 					margin-bottom: 0;
 				}
 			}
+			iframe {
+				float: left;
+				margin-right: 20px;
+				margin-bottom: 20px;
+				@include small {
+					float: none;
+					margin: 10px auto;
+					display: block;
+				}
+			}
 		}
 	}
 }

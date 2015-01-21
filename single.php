@@ -29,7 +29,7 @@
 						<h1 class="post-title"><?php the_title(); ?></h1>
 						<h4 class="patient-subtitle"><?= get_post_meta($post_id, 'wpcf-subtitle', true); ?></h4>
 
-						<div class="post-content-wrapper">
+						<div class="post-content-wrapper clearfix">
 							<?php the_content(); ?>
 						</div>
 					</div>

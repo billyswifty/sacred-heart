@@ -100,6 +100,29 @@ body * {
   }
 }
 
+img.alignleft {
+  float: left;
+  margin: 10px 20px 10px 0;
+  @include small {
+    display: block;
+    margin: 10px auto;
+  }
+}
+
+img.alignright {
+  float: right;
+  margin: 10px 0 10px 20px;
+  @include small {
+    display: block;
+    margin: 10px auto;
+  }
+}
+
+img.aligncenter {
+  display: block;
+  margin: 10px auto;
+}
+
 .table {
   display: table;
   table-layout: fixed;

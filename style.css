@@ -2,7 +2,7 @@
 	Theme Name: Sacred Heart
 	Theme URI: http://www.nine.is
 	Description: Custom Theme for Sacred Heart
-	Version: 2.1
+	Version: 2.21
 	Author: The Nine
 	Author URI: http://www.nine.is
 	Tags: Graphics, text, images, custom
@@ -260,29 +260,54 @@ body * {
   padding-left: 10px; }
 
 /* line 103, sass/modules/_body.scss */
+img.alignleft {
+  float: left;
+  margin: 10px 20px 10px 0; }
+  @media all and (max-width: 800px) {
+    /* line 103, sass/modules/_body.scss */
+    img.alignleft {
+      display: block;
+      margin: 10px auto; } }
+
+/* line 112, sass/modules/_body.scss */
+img.alignright {
+  float: right;
+  margin: 10px 0 10px 20px; }
+  @media all and (max-width: 800px) {
+    /* line 112, sass/modules/_body.scss */
+    img.alignright {
+      display: block;
+      margin: 10px auto; } }
+
+/* line 121, sass/modules/_body.scss */
+img.aligncenter {
+  display: block;
+  margin: 10px auto; }
+
+/* line 126, sass/modules/_body.scss */
 .table {
   display: table;
   table-layout: fixed;
   width: 100%;
   height: 100%; }
 
-/* line 110, sass/modules/_body.scss */
+/* line 133, sass/modules/_body.scss */
 .table-cell {
   display: table-cell;
   vertical-align: middle;
   width: 100%;
   height: 100%; }
 
-/* line 117, sass/modules/_body.scss */
+/* line 140, sass/modules/_body.scss */
 ::selection {
   color: #fff;
   background: #472e93; }
 
-/* line 122, sass/modules/_body.scss */
+/* line 145, sass/modules/_body.scss */
 img {
   max-width: 100%; }
 
-/* line 124, sass/modules/_body.scss */
+/* line 147, sass/modules/_body.scss */
 .map img {
   max-width: none !important; }
 
@@ -1108,6 +1133,17 @@ span.bold {
         /* line 33, sass/pages/_post_details.scss */
         .post-details-wrapper .post-text-wrapper .post-content-wrapper p:last-of-type {
           margin-bottom: 0; }
+      /* line 37, sass/pages/_post_details.scss */
+      .post-details-wrapper .post-text-wrapper .post-content-wrapper iframe {
+        float: left;
+        margin-right: 20px;
+        margin-bottom: 20px; }
+        @media all and (max-width: 800px) {
+          /* line 37, sass/pages/_post_details.scss */
+          .post-details-wrapper .post-text-wrapper .post-content-wrapper iframe {
+            float: none;
+            margin: 10px auto;
+            display: block; } }
 
 /* line 1, sass/pages/_post_index.scss */
 .post-grid-wrapper {
