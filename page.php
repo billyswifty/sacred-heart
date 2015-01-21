@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 
-	<main role="main">
+	<div class="page-wrapper constrain">
 		<!-- section -->
-		<section>
+		<section class="page-body">
 
 			<h1><?php the_title(); ?></h1>
 
@@ -13,11 +13,11 @@
 
 				<?php the_content(); ?>
 
-				<?php comments_template( '', true ); // Remove if you don't want comments ?>
+				<?php // comments_template( '', true ); // Remove if you don't want comments ?>
 
 				<br class="clear">
 
-				<?php edit_post_link(); ?>
+				<?php // edit_post_link(); ?>
 
 			</article>
 			<!-- /article -->
@@ -38,8 +38,8 @@
 
 		</section>
 		<!-- /section -->
-	</main>
+	</div>
 
-<?php get_sidebar(); ?>
+<?php // get_sidebar(); ?>
 
 <?php get_footer(); ?>

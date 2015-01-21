@@ -34,10 +34,17 @@
 					margin-bottom: 0;
 				}
 			}
+			b, strong {
+				font-weight: 400;
+			}
+			i, em {
+				font-weight: italic;
+			}
 			iframe {
 				float: left;
 				margin-right: 20px;
 				margin-bottom: 20px;
+				max-width: 100%;
 				@include small {
 					float: none;
 					margin: 10px auto;

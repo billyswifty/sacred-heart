@@ -35,6 +35,26 @@ body * {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
 }
 
+.ui-dialog {
+  @include breakpx(0,700px) {
+    width: 100% !important;
+    left: 0 !important;
+  }
+  .ui-dialog-content {
+    @include breakpx(0,700px) {
+      min-height: 255px !important;
+    }
+  }
+  iframe {
+    @include breakpx(0,700px) {
+      width: 97% !important;
+      margin: 0 auto !important;
+      display: block;
+      height: 257px;
+    }
+  }
+}
+
 .constrain {
   max-width: $max-width; 
   width: 100%; 

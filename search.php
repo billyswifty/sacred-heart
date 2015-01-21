@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 
-	<main role="main">
+	<div class="page-wrapper constrain">
 		<!-- section -->
-		<section>
+		<section class="page-body">
 
 			<h1><?php echo sprintf( __( '%s Search Results for ', 'html5blank' ), $wp_query->found_posts ); echo get_search_query(); ?></h1>
 
@@ -12,8 +12,8 @@
 
 		</section>
 		<!-- /section -->
-	</main>
+	</div>
 
-<?php get_sidebar(); ?>
+<?php // get_sidebar(); ?>
 
 <?php get_footer(); ?>

@@ -17,9 +17,37 @@
 	</div> -->
 	<div class="page-wrapper constrain">
 		<!-- section -->
-		<section class="page-body" style="background:transparent;">
+		<section class="page-body" style="background:transparent;padding:0;">
 
-			<?php get_template_part('loop'); ?>
+			<?php
+				if ( 'page' == get_option('show_on_front') && get_option('page_for_posts') && is_home() ) : the_post();
+					$page_for_posts_id = get_option('page_for_posts');
+					setup_postdata(get_page($page_for_posts_id));
+					$post_id = get_page($page_for_posts_id)->ID;
+				?>
+					<div class="video-banner">
+						<?php $youtube_url = get_post_meta($post_id, 'wpcf-youtube-url', true); ?>
+						<?php if ($youtube_url != "") { ?>
+							<div class="table">
+								<div class="table-cell">
+									<a class="youtube icon-play" href="<? echo $youtube_url; ?>"></a>
+								</div>
+							</div>
+						<? } ?>
+					</div>
+					<div class="post-index-page-text richtext">
+						<div id="post-<?php the_ID(); ?>" class="page">
+							<div class="entry-content">
+								<?php the_content(); ?>
+							</div>
+						</div>
+					</div>
+				<?php
+					rewind_posts();
+				endif;
+			?>
+
+			<?php get_template_part('patient_grid'); ?>
 
 			<?php get_template_part('pagination'); ?>
 
@@ -30,6 +58,12 @@
 <?php // get_sidebar(); ?>
 
 <?php get_footer(); ?>
+
+<style>
+	.ui-widget-overlay {
+		background: #000 !important;
+	}
+</style>
 
 <script src="<?php echo get_template_directory_uri(); ?>/js/lib/imagesLoaded.js" type="text/javascript"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/lib/masonry.js" type="text/javascript"></script>
@@ -44,37 +78,7 @@
 		
 		'use strict';
 
-		//   var container = document.querySelector('.post-grid-wrapper');
-		// 	var msnry;
-		// 	// initialize Masonry after all images have loaded
-		// 	imagesLoaded( container, function() {
-		// 	  msnry = new Masonry( container, {
-		// 	  	columnWidth: ".grid-sizer",
-		// 	  	itemSelector: ".post-box"
-		// //	  	gutter: ".gutter-sizer"
-		// 	  });
-		// 	});
-
-		// 	$(document).ready(function() {
-		// 		$(".post-box-link").click(function(event) {
-		// 			event.preventDefault();
-		// 			console.log("click event");
-		// 	//		$(".post-box").removeClass("big");
-		// 			if ( $(this).parent().parent().hasClass("big") ) {
-		// 				console.log("true");
-		// 				$(".post-box").removeClass("big");
-		// 			}
-		// 			else {
-		// 				$(".post-box").removeClass("big");
-		// 				$(this).parent().parent().addClass("big");
-		// 			}
-					
-		// 		//	$(this).parent().parent().toggleClass("big");
-		// 			msnry.layout();
-		// 		});
-		// 	});
-
-	// http://masonry.desandro.com/masonry.pkgd.js added as external resource
+			$("a.youtube").YouTubePopup({ hideTitleBar: true, showBorder: false, height: 390, overlayOpacity: 0.8 });
 
 			var transitionProp = getStyleProperty('transition');
 			var transitionEndEvent = {
@@ -188,10 +192,6 @@
 				    	var $itemElem = $this.parent().addClass('show-blurb');    // make this one big
 				    	$this.find(".blurb").slideDown();
 				    }
-
-
-				   // $container.find(".blurb").slideUp();
-				   // $this.find(".blurb").slideToggle();
 
 			  	}
 
