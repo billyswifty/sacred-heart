@@ -64,3 +64,50 @@ form.search {
     }
   }
 }
+
+#cntctfrm_contact_form {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background: $color-main;
+ // border: 1px solid $color-main;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  padding: 20px 2%;
+  width: 48%;
+  float: left;
+  .cntctfrm_error_text {
+    color: rgb(255, 236, 142);
+  }
+  .cntctfrm_label {
+    max-width: none;
+    width: 100%;
+    margin: 0 auto 10px auto;
+    color: #fff;
+  }
+  .cntctfrm_input {
+    max-width: none;
+    margin: 0 auto 10px auto;
+    width: 100%;
+    input[type="text"], textarea, input[type="email"] {
+ //     border: 1px solid $color-main;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+  }
+  input[type="submit"] {
+    background: $color-alt;
+    &:hover {
+      background: shade($color-alt, 10%);
+    }
+  }
+  @include small {
+    width: 100%;
+    float: none;
+  }
+}

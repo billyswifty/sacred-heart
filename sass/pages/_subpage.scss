@@ -1,0 +1,62 @@
+.main-page-title {
+	font-size: 1.9em;
+	color: $color-main;
+//	padding-left: 5px;
+	// @include small {
+	// 	padding-left: 0;
+	// }
+}
+
+.loop-wrapper {
+	.loop-post {
+		padding: 10px 0;
+		.cal-icon {
+			width: 100px;
+			height: 100px;
+			-webkit-border-radius: 6px;
+			-moz-border-radius: 6px;
+			-ms-border-radius: 6px;
+			-o-border-radius: 6px;
+			border-radius: 6px;
+			border: 1px solid $color-alt;
+			float: left;
+			margin: 0 20px 10px 0;
+			.month-wrapper {
+				background: $color-alt;
+				text-align: center;
+				padding: 5px 10px;
+				width: 100%;
+				.month {
+					color: #fff;
+					text-transform: uppercase;
+				}
+			}
+			.day-wrapper {
+				color: $color-main;
+				font-size: 40px;
+				text-align: center;
+				padding-top: 4px;
+				font-weight: 400;
+			}
+			@include small {
+				float: none;
+				margin: 0 auto 20px auto;
+			}
+		}
+		.post-title {
+			margin-bottom: 10px;
+			a {
+
+			}
+		}
+		.post-excerpt {
+
+		}
+		&.event {
+			@include small {
+				text-align: center;
+				margin-bottom: 30px;
+			}
+		}
+	}
+}

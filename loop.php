@@ -1,36 +1,43 @@
-<div class="page-wrapper constrain">
-	<div class="page-body">
+<!-- <div class="page-wrapper constrain">
+	<div class="page-body"> -->
 		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
-			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-				<?php if ( has_post_thumbnail()) : // Check if thumbnail exists ?>
-					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-						<?php the_post_thumbnail(array(120,120)); // Declare pixel size you need inside the array ?>
-					</a>
-				<?php endif; ?>
+			<div class="loop-wrapper">
+				
+				<article class="loop-post" id="post-<?php the_ID(); ?>">
 
-				<h2>
-					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
-				</h2>
+					<?php if ( has_post_thumbnail()) : // Check if thumbnail exists ?>
+				<!--		<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+							<?php the_post_thumbnail(array(120,120)); ?>
+						</a> -->
+					<?php endif; ?>
 
-				<!-- <span class="date"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></span> -->
+					<h5 class="post-title">
+						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+					</h5>
 
-				<?php html5wp_excerpt('html5wp_index'); // Build your custom callback length in functions.php ?>
+					<!-- <span class="date"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></span> -->
 
-				<?php // edit_post_link(); ?>
+					<div class="post-excerpt">
+						<?php html5wp_excerpt('html5wp_index'); // Build your custom callback length in functions.php ?>
+					</div>
+					<?php // edit_post_link(); ?>
 
-			</article>
+				</article>
+
+			</div>
 
 		<?php endwhile; ?>
 
 		<?php else: ?>
 
-			<article>
-				<h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
+			<article class="loop-no-results">
+				<p class="sorry"><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></p>
 			</article>
 
 		<?php endif; ?>
-	</div>
+<!-- 	</div>
 </div>
 
 
+ -->

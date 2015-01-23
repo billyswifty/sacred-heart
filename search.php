@@ -4,7 +4,7 @@
 		<!-- section -->
 		<section class="page-body">
 
-			<h1><?php echo sprintf( __( '%s Search Results for ', 'html5blank' ), $wp_query->found_posts ); echo get_search_query(); ?></h1>
+			<h1 class="main-page-title"><?php echo sprintf( __( '%s Search Results for ', 'html5blank' ), $wp_query->found_posts ); echo get_search_query(); ?></h1>
 
 			<?php get_template_part('loop'); ?>
 

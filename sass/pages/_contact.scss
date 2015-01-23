@@ -1,0 +1,20 @@
+.contact-text-wrapper {
+	width: 48%;
+	float: right;
+	padding: 20px 2%;
+	margin: 20px auto;
+	font-size: 14px;
+	h1, h2, h3, h4, h5, h6 {
+		color: $color-main;
+		margin-top: 15px;
+		margin-bottom: 8px;
+		&:first-of-type {
+			margin-top: 0;
+		}
+	}
+	@include small {
+		width: 100%;
+		float: none;
+		text-align: center;
+	}
+}
