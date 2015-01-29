@@ -67,7 +67,7 @@
 								<div class="bottom">
 									<div class="social reveal">
 										<a href="<?php echo do_shortcode('[contentblock id=facebook_url]') ?>" class="icon-circle-facebook" target="_blank"></a>
-										<a href="<?php echo do_shortcode('[contentblock id=twitter_url]') ?>" class="icon-circle-twitter" target="_blank"></a>
+										
 									</div>
 									<div class="search reveal">
 										<?php get_template_part('searchform'); ?>

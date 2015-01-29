@@ -28,7 +28,7 @@
   text-align: center; 
   cursor: pointer; 
   border-width: $btn-border-width;
-
+  color: #fff !important;
   @if $btn-border-side == "bottom" {
     border-bottom: $btn-border-width solid $btn-border-color;
   }
@@ -55,7 +55,7 @@
 
   &:hover {
     background: shade($btn-bg-color, 10%); 
-    text-decoration: none; 
+    text-decoration: none !important; 
     border-color: shade($btn-border-color, 10%); 
   }
   &.white {
@@ -99,9 +99,21 @@
   }
 }
 
+.link.icon-circle-facebook {
+  &::before {
+    position: relative;
+    top: 13px;
+    margin-right: 10px;
+    font-size: 40px;
+  }
+}
+
 [class^="icon-"] {
   text-decoration: none;
-  font-size: 40px;
+  &::before {
+    font-size: 40px;
+  }
+  font-size: 1em;
   &.white {
     color: #fff; 
     &:hover {
@@ -119,6 +131,9 @@
 a[class^="icon-"] {
   cursor: pointer; 
   text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 ul.social-links {

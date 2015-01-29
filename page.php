@@ -9,7 +9,7 @@
 		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
 			<!-- article -->
-			<article id="post-<?php the_ID(); ?>" class="clearfix">
+			<article id="post-<?php the_ID(); ?>" class="clearfix richtext">
 
 				<?php the_content(); ?>
 
