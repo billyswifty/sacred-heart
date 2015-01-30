@@ -1,8 +1,9 @@
 .video-banner {
-	@include bgcover("img/video2_bg.jpg");
+	@include bgcover("img/video_bg2.jpg");
 	width: 100%;
-	height: 300px;
+	height: 250px;
 	text-align: center;
+	background-position: center 25%;
 	@include breakpx(700px, 900px) {
 		height: 250px;
 	}
@@ -39,6 +40,16 @@
 	color: #fff;
 	width: 100%;
 	background: $color-alt;
+	padding: 30px;
+	h1, h2, h3, h4, h5, h6 {
+		margin-top: 0;
+	}
+}
+
+.post-index-more-text {
+	color: #fff;
+	width: 100%;
+	background: $color-main;
 	padding: 30px;
 	h1, h2, h3, h4, h5, h6 {
 		margin-top: 0;

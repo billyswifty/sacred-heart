@@ -42,6 +42,10 @@
 							</div>
 						</div>
 					</div>
+					<div class="post-index-more-text richtext">
+						<h4 class="section-title">Your Passion — Our Mission</h4>
+						<p>Every day we see donor gifts in action and making the difference. It all begins with your passion. Where do you want to make a difference? Children’s Hospital, cancer care, senior care, clinical &amp; technical breakthroughs, emergency medicine, etc.</p>
+					</div>
 				<?php
 					rewind_posts();
 				endif;
