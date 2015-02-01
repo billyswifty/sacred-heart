@@ -6,10 +6,34 @@
   ul {
     margin-top: 10px;
     li {
-      padding: 8px 0;
+      padding: 10px 0;
+      &:nth-of-type(even) {
+        background: #3C277C;
+      }
       a {
-        font: $font-main; 
-        font-size: 16px;
+        font: $font-main;
+      }
+    }
+  }
+  .content {
+    text-align: center;
+    .search-input {
+      margin-top: 20px;
+      font-size: 20px;
+      background: $color-alt;
+    }
+    .search-submit {
+      font-size: 30px;
+    }
+    .give-now.btn {
+      margin-top: 30px;
+    }
+    .social {
+      margin-top: 30px;
+      a {
+        &:hover {
+          color: $color-alt !important;
+        }
       }
     }
   }

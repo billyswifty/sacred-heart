@@ -34,23 +34,116 @@
 	</head>
 	<body <?php body_class(); ?>>
 		<div class="body-overlay"></div>
+
+		<div id="sidr" style="display:none;">
+      <div class="nav">
+        <ul>
+          <? mobile_menu(); ?>
+        </ul>
+      </div>
+      <div class="content">
+				<div class="search">
+					<?php get_template_part('searchform'); ?>
+				</div>
+				<a href="/make-a-gift" class="give-now btn">Give Now</a>
+				<div class="social">
+					<a href="<?php echo do_shortcode('[contentblock id=facebook_url]') ?>" class="icon-circle-facebook white" target="_blank"></a>
+				</div>
+      </div>
+    </div>
 		
 		<div class="wrapper">
-
 
 			<header class="main">
 
 					<div class="title-bar">
 						<div class="constrain">
 							<a class="icon-menu" href="#" id="show-menu"></a>
-							<img src="<?php echo get_template_directory_uri(); ?>/img/short_logo.png" alt="Sacred Heart Health Systems" id="short-logo" />
+							<a class="hidden" href="#" id="fake-show-menu"></a>
+							<a href="http://www.sacred-heart.org" title="Sacred Heart Health System"><img src="<?php echo get_template_directory_uri(); ?>/img/short_logo.png" alt="Sacred Heart Health Systems" id="short-logo" /></a>
 							<nav class="links reveal">
 								<ul>
-									<li><a href="#">SHH Pensacola</a></li>
-									<li><a href="#">SHH Emerald Coast</a></li>
-									<li><a href="#">SHH Gulf</a></li>
+									<li><a href="#" class="open-hospital" id="pensacola">SHH Pensacola</a></li>
+									<li><a href="#" class="open-hospital" id="emerald">SHH Emerald Coast</a></li>
+									<li><a href="#" class="open-hospital" id="gulf">SHH Gulf</a></li>
 								</ul>
 							</nav>
+						</div>
+					</div>
+
+					<div class="hospital-dropdown" id="pensacola">
+						<div class="constrain">
+							<div class="top">
+								<a href="http://www.sacred-heart.org/SacredHeartHospitalPensacola" title="SHHP">Open SHHP Site</a>
+								<a href="#" class="close-hospital-dropdown icon-close"></a>
+							</div>
+							<div class="bottom clearfix">
+								<ul>
+									<li><a href="http://www.sacred-heart.org/CancerCenter">Cancer</a></li>
+									<li><a href="http://www.sacred-heart.org/ChildrensHospital/">Children's Hospital</a></li>
+									<li><a href="http://www.sacred-heart.org/heart/">Heart &amp; Vascular</a></li>
+									<li><a href="http://www.sacred-heart.org/orthopedics/">Orthopedics</a></li>
+									<li><a href="http://www.sacred-heart.org/neuro/">Neuroscience</a></li>
+									<li><a href="http://www.sacredheartsurgicalweightloss.com/" target="_blank">Weight Loss</a></li>
+									<li><a href="http://www.sacred-heart.org/SacredHeartHospitalPensacola/Services/"><em>More Services &gt;&gt;</em></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="hospital-dropdown" id="emerald">
+						<div class="constrain">
+							<div class="top">
+								<a href="http://www.sacredheartemerald.org/" title="SHHEC">Open SHHEC Site</a>
+								<a href="#" class="close-hospital-dropdown icon-close"></a>
+							</div>
+							<div class="bottom clearfix">
+								<ul>
+									<li><a href="http://sacredheartemerald.org/familybirthplace/">Family Birth Place</a></li>
+									<li><a href="http://www.sacredheartemerald.org/services/orthopedic.asp">Orthopedics</a></li>
+									<li><a href="http://sacredheartemerald.org/hv/">Heart &amp; Vascular</a></li>
+									<li><a href="http://sacredheartemerald.org/womens/">Women's Diagnostic Center</a></li>
+									<li><a href="http://www.sacredheartemerald.org/services/cancer.asp">Cancer Services</a></li>
+									<li><a href="http://www.sacredheartemerald.org/main.asp"><em>More Services &gt;&gt;</em></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="hospital-dropdown" id="gulf">
+						<div class="constrain">
+							<div class="top">
+								<a href="http://www.sacred-heart.org/Gulf" title="SHHG">Open SHHG Site</a>
+								<a href="#" class="close-hospital-dropdown icon-close"></a>
+							</div>
+							<div class="bottom clearfix">
+								<ul>
+									<li><a href="http://www.sacred-heart.org/gulf/page/?ID=639">Outpatient Infusion Services</a></li>
+									<li><a href="http://www.sacred-heart.org/gulf/page/?ID=599">Physical Rehabilitation</a></li>
+									<li><a href="http://www.sacred-heart.org/gulf/page/?ID=600"><em>More Services &gt;&gt;</em></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="dropdown-nav">
+						<div class="constrain">
+							<div class="menu-wrapper">
+								<? top_menu(); ?>
+							</div>
+							<div class="search-wrapper">
+								<form class="site-search" action="http://www.sacred-heart.org/sitesearch.asp">
+									<input type="hidden" name="cx" value="003753645996749388088:riaf2vdj9us">
+									<input type="hidden" name="cof" value="FORID:9">
+									<input type="text" name="q" placeholder="Enter Keywords" />
+									<input type="submit" name="sa" value="Search Sacred Heart" />
+								</form>
+							</div>
+						</div>
+						<div class="close-wrapper">
+							<div class="close-menu">
+								<a href="#" id="close-top-nav"><span class="arrows right">&#9654; &#9654;</span>CLOSE MENU<span class="arrows left">&#9664; &#9664;</span></a>
+							</div>
 						</div>
 					</div>
 
@@ -79,7 +172,7 @@
 
 					<nav class="main constrain reveal">
 						<div class="menu">
-							<? html5blank_nav(); ?>
+							<? header_menu(); ?>
 						</div>
 					</nav>
 

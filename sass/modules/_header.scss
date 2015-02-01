@@ -4,7 +4,8 @@ header.main {
   color: $header-font-color;
   .title-bar {
     background: $color-highlight;
-    height: 50px;
+    height: 45px;
+    width: 100%;
     .constrain {
       max-width: 1500px;
       padding: 0;
@@ -13,7 +14,7 @@ header.main {
       cursor: pointer;
       font-size: 42px;
       position: relative;
-      top: 2px;
+      top: -2px;
       left: 3px;
       color: $sidebar-icon-color;
     }
@@ -22,12 +23,12 @@ header.main {
       padding-bottom: 2px;
       margin-left: 20px;
       position: relative;
-      top: -2px;
+      top: -5px;
       display: inline;
       @include small {
         float: right;
         width: 250px;
-        top: 16px;
+        top: 12px;
         margin-right: 6px;
       }
     }
@@ -41,13 +42,12 @@ header.main {
           display: inline-block;
           margin-left: 15px;
           padding-left: 15px;
-          padding-top: 13px;
+          padding-top: 11px;
           font-size: 17px;
-          height: 50px;
+          height: 45px;
           border-left: 1px solid #fff;
           &:last-of-type {
             padding-right: 15px;
-            border-right: 1px solid #fff;
           }
           a {
             color: $color-menu;
@@ -55,6 +55,173 @@ header.main {
           }
         }
       }
+    }
+    @include small {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 200;
+    }
+  }
+
+  .hospital-dropdown {
+    width: 100%;
+    display: none;
+    border-top: 1px solid #fff;
+    position: relative;
+    &#pensacola {
+      background: #c7addf;
+    }
+    &#emerald {
+      background: rgb(219, 231, 220);
+    }
+    &#gulf {
+      background: #c6d4fd;
+    }
+    .top {
+      text-align: center;
+      padding: 5px 10px;
+      a {
+        color: $color-main;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      .icon-close {
+        position: absolute;
+        right: 25px;
+        top: 2px;
+        color: $color-main;
+        text-decoration: none;
+        font-size: 25px;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+    .bottom {
+      ul {
+        background: #e4deea;
+        padding: 5px 10px;
+        text-align: center;
+        position: relative;
+        li {
+          display: inline-block;
+          &::after {
+            content: "|";
+            padding: 0 8px;
+          }
+          &:last-of-type::after {
+            content: "";
+            padding: 0;
+          }
+          a {
+            font-size: 13px;
+            color: $color-main;
+            font-weight: 400;
+            text-decoration: none;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+    @include small {
+      display: none !important;
+    }
+  }
+
+  .dropdown-nav {
+    background: #d6c7e1;
+    padding: 20px 0 0 0;
+    border-top: 2px solid #e6d7f1;
+    display: none;
+    .constrain {
+      max-width: 900px;
+      height: auto;
+      .menu-wrapper {
+        ul {
+          list-style-type: none;
+          li {
+            display: inline-block;
+            width: 20%;
+            float: left;
+            height: 40px;
+            margin-bottom: 20px;
+            padding-right: 10px;
+            a {
+              font-weight: 700;
+              color: #000;
+              text-decoration: none;
+              border-left: 4px solid $color-main;
+              display: inline-block;
+              padding-left: 6px;
+              font-size: 14px;
+              height: 40px;
+              &:hover {
+                color: $color-main;
+              }
+            }
+          }
+        }
+      }
+      .search-wrapper {
+        text-align: center;
+        padding-bottom: 25px;
+        padding-top: 15px;
+        input[type="text"] {
+          font-size: 14px;
+          height: 36px;
+          line-height: 17px;
+          margin-right: 10px;
+        }
+        input[type="submit"] {
+          font-size: 14px;
+          line-height: 21px;
+          height: 36px;
+        }
+      }
+    }
+    .close-wrapper {
+      padding: 0 0 15px 0;
+      text-align: center;
+      background: #e6d7f1;
+      .close-menu {
+        background: #d6c8e0;
+        width: 200px;
+        padding: 8px 8px 12px 8px;
+        margin: 0 auto;
+        -webkit-border-bottom-right-radius: 8px;
+        -webkit-border-bottom-left-radius: 8px;
+        -moz-border-radius-bottomright: 8px;
+        -moz-border-radius-bottomleft: 8px;
+        border-bottom-right-radius: 8px;
+        border-bottom-left-radius: 8px;
+      }
+      a {
+        font-size: 13px;
+        color: $color-main;
+        text-decoration: none;
+        cursor: pointer;
+        .arrows {
+          font-size: 12px;
+          &.right {
+            margin-right: 5px;
+          }
+          &.left {
+            margin-left: 5px;
+          }
+        }
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+    @include small {
+      display: none !important;
     }
   }
   .main-header {
@@ -68,7 +235,8 @@ header.main {
         width: 340px;
       }
       @include small {
-        width: 80%;
+        padding: 8px 0;
+        width: 250px;
         margin: 0 auto;
         float: none;
         text-align: center;
@@ -88,10 +256,12 @@ header.main {
           font-size: 18px;
           padding: 3px 5px 1px 5px;
           @include small {
-            margin-top: 20px;
-       //     display: block;
-       //     width: 120px;
-       //     margin: 10px auto 0 auto;
+            background: $color-alt;
+            font-size: 16px;
+            padding: 3px 10px 1px 10px;
+            &:hover {
+              background: shade($color-alt, 10%);
+            }
           }
         }
       }
@@ -121,10 +291,12 @@ header.main {
         width: 100%;
         float: none;
         text-align: center;
+        padding: 8px 0;
+        background: $color-main;
       }
     }
     @include small {
-      padding: 15px 0;
+      padding: 0;
     }
   }
   nav.main {

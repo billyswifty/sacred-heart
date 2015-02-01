@@ -18,6 +18,12 @@ body * {
   box-sizing: border-box;
 }
 
+body > .wrapper {
+  @include small {
+    padding-top: 45px;
+  }
+}
+
 .body-overlay {
  // background-color: yellow;
   z-index: -1;

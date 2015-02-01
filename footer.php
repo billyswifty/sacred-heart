@@ -12,10 +12,10 @@
 					<div class="navigation">
 						<div class="grid-row">
 							<div class="unit1of2">
-								<? html5footer_nav(); ?>
+								<? footer_1_menu(); ?>
 							</div>
 							<div class="unit1of2">
-								<? html5footer2_nav(); ?>
+								<? footer_2_menu(); ?>
 							</div>
 						</div>
 					</div>

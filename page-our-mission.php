@@ -35,7 +35,7 @@
 						</div>
 					</div>
 				</div>
-				<a class="unit1of4 need" href="#" style="background-image:url(<?php echo get_template_directory_uri(); ?>/img/building.jpg);">
+				<a class="unit1of4 need" href="#" style="background-image:url(<?php echo get_template_directory_uri(); ?>/img/children_logo.png);">
 					<div class="overlay"></div>
 					<div class="text-wrapper">
 						<h4 class="name">The Children's Hospital of Sacred Heart</h4>
@@ -50,10 +50,10 @@
 						</ul>
 					</div>
 				</a>
-				<a class="unit1of4 need" href="#" style="background-image:url(<?php echo get_template_directory_uri(); ?>/img/building.jpg);">
+				<a class="unit1of4 need" href="#" style="background-image:url(<?php echo get_template_directory_uri(); ?>/img/rooms.jpg);">
 					<div class="overlay"></div>
 					<div class="text-wrapper">
-						<h4 class="name">The Children's Hospital of Sacred Heart</h4>
+						<h4 class="name">Current Bed Tower/Inpatient Unit</h4>
 					</div>
 					<div class="need-text" style="display:none;">
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste provident, nam ex sapiente voluptatum optio id odit voluptates quos porro aliquid rem consequuntur! Ratione laudantium at nisi officia corrupti! Eos.</p>
@@ -61,10 +61,10 @@
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam nostrum itaque provident beatae labore, at veniam, asperiores, consequuntur quos fuga iusto libero voluptate illum ab corporis dolores quasi! Eaque, consectetur?</p>
 					</div>
 				</a>
-				<a class="unit1of4 need" href="#" style="background-image:url(<?php echo get_template_directory_uri(); ?>/img/building.jpg);">
+				<a class="unit1of4 need" href="#" style="background-image:url(<?php echo get_template_directory_uri(); ?>/img/icu.jpg);">
 					<div class="overlay"></div>
 					<div class="text-wrapper">
-						<h4 class="name">The Children's Hospital of Sacred Heart</h4>
+						<h4 class="name">Enhanced Surgical Services</h4>
 					</div>
 					<div class="need-text" style="display:none;">
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste provident, nam ex sapiente voluptatum optio id odit voluptates quos porro aliquid rem consequuntur! Ratione laudantium at nisi officia corrupti! Eos.</p>
