@@ -45,7 +45,7 @@
 				<div class="search">
 					<?php get_template_part('searchform'); ?>
 				</div>
-				<a href="/make-a-gift" class="give-now btn">Give Now</a>
+				<a href="https://donatenow.networkforgood.org/SacredHeartFoundation" class="give-now btn">Give Now</a>
 				<div class="social">
 					<a href="<?php echo do_shortcode('[contentblock id=facebook_url]') ?>" class="icon-circle-facebook white" target="_blank"></a>
 				</div>

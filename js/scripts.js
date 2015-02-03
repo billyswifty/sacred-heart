@@ -6,6 +6,7 @@
 
 
 		$("#close-top-nav").click(function(event) {
+			event.preventDefault();
 			$("header.main").find(".dropdown-nav").slideUp();
 		});
 

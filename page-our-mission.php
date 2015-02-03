@@ -56,9 +56,11 @@
 						<h4 class="name">Current Bed Tower/Inpatient Unit</h4>
 					</div>
 					<div class="need-text" style="display:none;">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste provident, nam ex sapiente voluptatum optio id odit voluptates quos porro aliquid rem consequuntur! Ratione laudantium at nisi officia corrupti! Eos.</p>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus non tempore autem debitis, error eum incidunt praesentium perspiciatis! Quas magni rerum quae reprehenderit labore inventore sunt obcaecati nesciunt facilis vel.</p>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam nostrum itaque provident beatae labore, at veniam, asperiores, consequuntur quos fuga iusto libero voluptate illum ab corporis dolores quasi! Eaque, consectetur?</p>
+						<h4 class="section-title">Current Bed Tower/Inpatient Unit</h4>
+						<ul>
+							<li>Renovating existing nursing floors and associated support areas in the main bed tower for both aesthetic and functional purposes.</li>
+							<li>Infrastructure upgrades to create an enhanced healing environment (lighting, expanded waiting rooms, noise reduction design, etc.) are also being implemented.</li>
+						</ul>
 					</div>
 				</a>
 				<a class="unit1of4 need" href="#" style="background-image:url(<?php echo get_template_directory_uri(); ?>/img/icu.jpg);">
@@ -67,9 +69,12 @@
 						<h4 class="name">Enhanced Surgical Services</h4>
 					</div>
 					<div class="need-text" style="display:none;">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste provident, nam ex sapiente voluptatum optio id odit voluptates quos porro aliquid rem consequuntur! Ratione laudantium at nisi officia corrupti! Eos.</p>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus non tempore autem debitis, error eum incidunt praesentium perspiciatis! Quas magni rerum quae reprehenderit labore inventore sunt obcaecati nesciunt facilis vel.</p>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam nostrum itaque provident beatae labore, at veniam, asperiores, consequuntur quos fuga iusto libero voluptate illum ab corporis dolores quasi! Eaque, consectetur?</p>
+						<h4 class="section-title">Enhanced Surgical Services</h4>
+						<ul>
+							<li><strong style="font-weight:400;">Hybrid Operating Room</strong>: Achieve optimal surgical outcomes and reduce recovery time through less invasive interventional vascular, cardiovascular and neurovascular procedures.</li>
+							<li><strong style="font-weight:400;">Robotic Technology</strong>: Robot-assisted minimally invasive procedures allow surgeons to probe areas of the body that are difficult to access by more traditional laparoscopic means.  In addition to gynecologic, urologic, and general procedures, the robotic expansion could incorporate heart and lung surgical procedures.</li>
+							<li><strong style="font-weight:400;">Surgical and Recovery Expansion</strong>: Greater efficiency and enhanced patient comfort are behind plans for expanding the surgical and recovery areas that are undersized for our current volume and anticipated growth.</li>
+						</ul>
 					</div>
 				</a>
 			</div>

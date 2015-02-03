@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-	<div class="page-wrapper constrain">
+	<div class="page-wrapper generic-page constrain">
 		<!-- section -->
 		<section class="page-body">
 

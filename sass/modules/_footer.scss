@@ -23,27 +23,27 @@ footer.main {
       margin-top: 26px;
       .contact-icon {
         display: inline-block;
-        width: 80px;
-        height: 80px;
+        width: 60px;
+        height: 60px;
         background-image: url('img/icons/contact_sprite.png');
-        background-size: 160px;
+        background-size: 120px;
         margin-right: 8px;
         &.phone {
           background-position: 0 0;
           &:hover {
-            background-position: 80px 0;
+            background-position: 60px 0;
           }
         }
         &.map {
-          background-position: 0 160px;
+          background-position: 0 120px;
           &:hover {
-            background-position: 80px 160px;
+            background-position: 60px 120px;
           }
         }
         &.mail {
-          background-position: 0 80px;
+          background-position: 0 60px;
           &:hover {
-            background-position: 80px 80px;
+            background-position: 60px 60px;
           }
         }
       }

@@ -2,7 +2,7 @@
 	Theme Name: Sacred Heart
 	Theme URI: http://www.nine.is
 	Description: Custom Theme for Sacred Heart
-	Version: 2.9
+	Version: 3.0
 	Author: The Nine
 	Author URI: http://www.nine.is
 	Tags: Graphics, text, images, custom
@@ -496,29 +496,29 @@ footer.main {
       /* line 24, sass/modules/_footer.scss */
       footer.main .links .contact .contact-icon {
         display: inline-block;
-        width: 80px;
-        height: 80px;
+        width: 60px;
+        height: 60px;
         background-image: url("img/icons/contact_sprite.png");
-        background-size: 160px;
+        background-size: 120px;
         margin-right: 8px; }
         /* line 31, sass/modules/_footer.scss */
         footer.main .links .contact .contact-icon.phone {
           background-position: 0 0; }
           /* line 33, sass/modules/_footer.scss */
           footer.main .links .contact .contact-icon.phone:hover {
-            background-position: 80px 0; }
+            background-position: 60px 0; }
         /* line 37, sass/modules/_footer.scss */
         footer.main .links .contact .contact-icon.map {
-          background-position: 0 160px; }
+          background-position: 0 120px; }
           /* line 39, sass/modules/_footer.scss */
           footer.main .links .contact .contact-icon.map:hover {
-            background-position: 80px 160px; }
+            background-position: 60px 120px; }
         /* line 43, sass/modules/_footer.scss */
         footer.main .links .contact .contact-icon.mail {
-          background-position: 0 80px; }
+          background-position: 0 60px; }
           /* line 45, sass/modules/_footer.scss */
           footer.main .links .contact .contact-icon.mail:hover {
-            background-position: 80px 80px; }
+            background-position: 60px 60px; }
     @media all and (max-width: 800px) {
       /* line 12, sass/modules/_footer.scss */
       footer.main .links {
@@ -1262,17 +1262,20 @@ span.bold {
       font-size: 14px;
       margin-bottom: 0; }
 
-/* line 3, sass/modules/_slider.scss */
-.home-slider-wrapper .ls-l h1, .home-slider-wrapper .ls-l h2, .home-slider-wrapper .ls-l h3, .home-slider-wrapper .ls-l h4, .home-slider-wrapper .ls-l h5, .home-slider-wrapper .ls-l h6 {
-  background: rgba(75, 75, 75, 0.6);
-  color: #fff;
-  padding: 3px 5px;
-  margin-bottom: 8px;
-  display: inline-block; }
-/* line 10, sass/modules/_slider.scss */
-.home-slider-wrapper .ls-l .give-now.btn {
-  margin-top: 10px;
-  font-size: 24px; }
+/* line 2, sass/modules/_slider.scss */
+.home-slider-wrapper .ls-l {
+  font-size: 20px; }
+  /* line 4, sass/modules/_slider.scss */
+  .home-slider-wrapper .ls-l h1, .home-slider-wrapper .ls-l h2, .home-slider-wrapper .ls-l h3, .home-slider-wrapper .ls-l h4, .home-slider-wrapper .ls-l h5, .home-slider-wrapper .ls-l h6 {
+    background: rgba(135, 111, 207, 0.6);
+    color: #fff;
+    padding: 3px 5px;
+    margin-bottom: 8px;
+    display: inline-block; }
+  /* line 12, sass/modules/_slider.scss */
+  .home-slider-wrapper .ls-l .give-now.btn {
+    margin-top: 10px;
+    font-size: 24px; }
 
 /* line 1, sass/pages/_contact.scss */
 .contact-text-wrapper {
@@ -1428,6 +1431,39 @@ span.bold {
     .home-wrapper .did-you-know-slider-wrapper .panel-wrapper {
       padding: 1px !important; }
 
+/* line 2, sass/pages/_make_a_gift.scss */
+.make-a-gift .page-body {
+  padding: 0; }
+/* line 22, sass/pages/_make_a_gift.scss */
+.make-a-gift .text-wrapper {
+  color: #472e93;
+  padding: 30px 3% 60px 3%; }
+  /* line 25, sass/pages/_make_a_gift.scss */
+  .make-a-gift .text-wrapper .section-title {
+    color: #472e93; }
+  /* line 28, sass/pages/_make_a_gift.scss */
+  .make-a-gift .text-wrapper h1, .make-a-gift .text-wrapper h2, .make-a-gift .text-wrapper h3, .make-a-gift .text-wrapper h4, .make-a-gift .text-wrapper h5, .make-a-gift .text-wrapper h6 {
+    margin-bottom: 20px; }
+  /* line 31, sass/pages/_make_a_gift.scss */
+  .make-a-gift .text-wrapper p {
+    margin-bottom: 20px; }
+    /* line 33, sass/pages/_make_a_gift.scss */
+    .make-a-gift .text-wrapper p:last-of-type {
+      margin-bottom: 0; }
+  /* line 37, sass/pages/_make_a_gift.scss */
+  .make-a-gift .text-wrapper b, .make-a-gift .text-wrapper strong {
+    font-weight: 400; }
+  /* line 40, sass/pages/_make_a_gift.scss */
+  .make-a-gift .text-wrapper ul {
+    list-style-type: disc;
+    padding-left: 20px; }
+  /* line 44, sass/pages/_make_a_gift.scss */
+  .make-a-gift .text-wrapper i, .make-a-gift .text-wrapper em {
+    font-weight: italic; }
+  /* line 47, sass/pages/_make_a_gift.scss */
+  .make-a-gift .text-wrapper .btn {
+    margin-top: 30px; }
+
 /* line 2, sass/pages/_our_mission.scss */
 .our-mission .page-body {
   padding: 0; }
@@ -1487,7 +1523,7 @@ span.bold {
       margin-top: 15px; }
   /* line 46, sass/pages/_our_mission.scss */
   .our-mission .vision .legacy .section-title {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     line-height: 1.4em; }
   @media all and (max-width: 800px) {
     /* line 38, sass/pages/_our_mission.scss */

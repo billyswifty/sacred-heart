@@ -4,9 +4,10 @@
 					<div class="links">
 						<a href="<?php echo do_shortcode('[contentblock id=give_now_url]') ?>" target="_blank" class="give-now btn">Give Now</a>
 						<div class="contact">
-							<a href="#" class="contact-icon phone"></a>
-							<a href="#" class="contact-icon map"></a>
-							<a href="#" class="contact-icon mail"></a>
+							<a href="/contact-us" class="contact-icon phone reveal"></a>
+							<a href="tel:8504164660" class="contact-icon phone conceal"></a>
+							<a href="https://www.google.com/maps/place/sacred+heart+hospital+pensacola/@30.476797,-87.210988,15z/data=!4m2!3m1!1s0x0:0x13f542420fbb4511?sa=X&ei=6v7PVKneOZLeoASO9YL4DA&ved=0CH4Q_BIwDg" target="_blank" class="contact-icon map"></a>
+							<a href="/contact-us" class="contact-icon mail"></a>
 						</div>
 					</div>
 					<div class="navigation">
