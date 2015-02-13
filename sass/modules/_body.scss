@@ -134,24 +134,32 @@ body > .wrapper {
 img.alignleft {
   float: left;
   margin: 10px 20px 10px 0;
+  max-width: 50%;
   @include small {
     display: block;
     margin: 10px auto;
+    max-width: 100%;
   }
 }
 
 img.alignright {
   float: right;
   margin: 10px 0 10px 20px;
+  max-width: 50%;
   @include small {
     display: block;
     margin: 10px auto;
+    max-width: 100%;
   }
 }
 
 img.aligncenter {
   display: block;
   margin: 10px auto;
+  max-width: 50%;
+  @include small {
+    max-width: 100%;
+  }
 }
 
 .table {

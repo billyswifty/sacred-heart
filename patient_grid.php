@@ -7,7 +7,7 @@
 		global $post;
 		$myposts = get_posts(array(
 		  'numberposts' => 20,
-		  'category_name' => 'Patients'
+		  'post_type' => 'Patient'
 		));
 
 		$count = 0; 

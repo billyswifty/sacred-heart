@@ -266,6 +266,55 @@ header.main {
         }
       }
       .bottom {
+        .forms-container {
+          display: inline;
+          margin-right: 10px;
+          position: relative;
+          & > a {
+            display: inline-block;
+            padding: 3px 6px;
+            font-size: 14px;
+            background: $color-alt;
+            color: #fff;
+            text-decoration: none;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            -ms-border-radius: 3px;
+            -o-border-radius: 3px;
+            border-radius: 3px;
+            &:hover {
+              background: $color-main;
+            }
+          }
+          .downloadable-forms {
+            display: none;
+            position: absolute;
+            background: #ffffe2;
+            padding: 10px;
+            width: 376px;
+            left: 0;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            -ms-border-radius: 3px;
+            -o-border-radius: 3px;
+            border-radius: 3px;
+            z-index: 200;
+            ul {
+              li {
+                text-align: left;
+                padding: 5px 0;
+                a {
+                  font-size: 15px;
+                  text-decoration: none;
+                  color: $color-main;
+                  &:hover {
+                    text-decoration: underline;
+                  }
+                }
+              }
+            }
+          }
+        }
         .social {
           position: relative;
           top: 15px;
@@ -328,6 +377,12 @@ header.main {
               display: block;
             }
           }
+          &.current-menu-item, &.current-menu-ancestor {
+            & > a {
+              border-bottom: 8px solid $color-alt;
+              padding: 10px 0 4px 0;
+            }
+          }
           a {
             text-decoration: none;
             color: #fff;
@@ -350,6 +405,12 @@ header.main {
               text-align: left;
               &:nth-of-type(even) {
                 background: rgba(255,255,255,0.9);
+              }
+              &.current-menu-item, &.current-menu-ancestor {
+                & > a {
+                  border-bottom: 0;
+                  padding: 6px 12px;
+                }
               }
               &:hover {
                 a {

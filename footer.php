@@ -4,10 +4,27 @@
 					<div class="links">
 						<a href="<?php echo do_shortcode('[contentblock id=give_now_url]') ?>" target="_blank" class="give-now btn">Give Now</a>
 						<div class="contact">
-							<a href="/contact-us" class="contact-icon phone reveal"></a>
-							<a href="tel:8504164660" class="contact-icon phone conceal"></a>
-							<a href="https://www.google.com/maps/place/sacred+heart+hospital+pensacola/@30.476797,-87.210988,15z/data=!4m2!3m1!1s0x0:0x13f542420fbb4511?sa=X&ei=6v7PVKneOZLeoASO9YL4DA&ved=0CH4Q_BIwDg" target="_blank" class="contact-icon map"></a>
-							<a href="/contact-us" class="contact-icon mail"></a>
+							<? $fb = do_shortcode('[contentblock id=facebook_url]'); ?>
+							<? if ( $fb != "" && $fb != "#" ) { ?><a href="<?= $fb ?>" target="_blank" class="icon-circle-facebook colored"></a><? } ?>
+			
+							<? $fb = do_shortcode('[contentblock id=twitter_url]'); ?>
+							<? if ( $fb != "" && $fb != "#" ) { ?><a href="<?= $fb ?>" target="_blank" class="icon-circle-twitter colored"></a><? } ?>
+
+							<? $fb = do_shortcode('[contentblock id=youtube_url]'); ?>
+							<? if ( $fb != "" && $fb != "#" ) { ?><a href="<?= $fb ?>" target="_blank" class="icon-circle-youtube colored"></a><? } ?>
+
+							<? $fb = do_shortcode('[contentblock id=linkedin_url]'); ?>
+							<? if ( $fb != "" && $fb != "#" ) { ?><a href="<?= $fb ?>" target="_blank" class="icon-circle-linkedin colored"></a><? } ?>
+
+							<? $fb = do_shortcode('[contentblock id=google_plus_url]'); ?>
+							<? if ( $fb != "" && $fb != "#" ) { ?><a href="<?= $fb ?>" target="_blank" class="icon-circle-google-plus colored"></a><? } ?>
+
+							<? $fb = do_shortcode('[contentblock id=instagram_url]'); ?>
+							<? if ( $fb != "" && $fb != "#" ) { ?><a href="<?= $fb ?>" target="_blank" class="icon-circle-instagram colored"></a><? } ?>
+						</div>
+						<div class="copyright">
+							<p>Copyright &copy; <?php echo date("Y"); ?> <a href="http://www.sacred-heart.org/" target="_blank">Sacred Heart Health System</a><br />
+							5151 N. Ninth Avenue - Pensacola, FL 32504</p>
 						</div>
 					</div>
 					<div class="navigation">

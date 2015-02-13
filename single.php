@@ -27,7 +27,18 @@
 					
 					<div class="post-text-wrapper">
 						<h1 class="post-title"><?php the_title(); ?></h1>
-						<h4 class="patient-subtitle"><?= get_post_meta($post_id, 'wpcf-subtitle', true); ?></h4>
+						<? $subtitle = get_post_meta($post_id, 'wpcf-subtitle', true); ?>
+						<? $start_date = get_post_meta($post_id, '_event_start_date', true); ?>
+
+						<? if ( $subtitle != "" ) { ?>
+							<h4 class="patient-subtitle"><?= $subtitle ?></h4>
+						<? } elseif ( $start_date ) { ?>
+							<? $begin_date = new DateTime( $start_date ); ?>
+							<? $begin_date = date_format($begin_date, "F j, Y"); ?>
+							<h4 class="patient-subtitle"><?= $begin_date; ?></h4>
+						<? } else { ?>
+							<h4 class="patient-subtitle"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></h4>
+						<? } ?>
 
 						<div class="post-content-wrapper clearfix">
 							<?php the_content(); ?>

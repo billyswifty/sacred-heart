@@ -10,6 +10,16 @@
 			$("header.main").find(".dropdown-nav").slideUp();
 		});
 
+		$("#show-forms").click(function(event) {
+			event.preventDefault();
+			$(this).next(".downloadable-forms").slideToggle();
+		});
+
+		$(".downloadable-forms a").click(function(event) {
+			event.preventDefault();
+			window.open($(this).attr("href"), '_blank');
+		});
+
 		$('#fake-show-menu').sidr({ side: 'left' });
 
 	  $("body > .wrapper").click( function() {
@@ -28,6 +38,25 @@
 	  		$(".hospital-dropdown").removeClass("shown");
 	  	}
 
+	  });
+
+	  $(document).ready(function() {
+	  	$(".cntctfrm_label_subject").hide();
+	  	$(".cntctfrm_input_subject").hide();
+	  	var email_label = $(".cntctfrm_label_email");
+	  	var email_input = $(".cntctfrm_input_email");
+	  	var phone_label = $(".cntctfrm_label_phone");
+	  	var phone_input = $(".cntctfrm_input_phone");
+	  	var name_input = $(".cntctfrm_input_name");
+	  	email_label.insertAfter(name_input);
+	  	email_input.insertAfter(email_label);
+	  	phone_label.insertAfter(email_input);
+	  	phone_input.insertAfter(phone_label);
+	  	$(".cntctfrm_error_text").each(function() {
+	  		if ( $(this).html().indexOf("email") >= 0 ) {
+	  			$(this).insertAfter(email_label);
+	  		}
+	  	});
 	  });
 
 	  $(".open-hospital").click(function(event) {

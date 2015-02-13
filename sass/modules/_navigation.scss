@@ -4,7 +4,7 @@
   color: $sidebar-font-color; 
   background: $sidebar-bg-color;
   ul {
-    margin-top: 10px;
+    margin: 0 0;
     li {
       padding: 10px 0;
       &:nth-of-type(even) {
@@ -12,6 +12,19 @@
       }
       a {
         font: $font-main;
+      }
+      ul {
+        li {
+          &:first-of-type {
+            padding: 15px 0 10px 0;
+          }
+          &:last-of-type {
+            padding: 10px 0 0 0;
+          }
+          a {
+
+          }
+        }
       }
     }
   }

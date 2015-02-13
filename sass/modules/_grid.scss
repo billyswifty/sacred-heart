@@ -68,6 +68,9 @@
       float: left;
       text-align: center; 
       width: 100%;
+      &.left-align {
+        text-align: left;
+      }
     }
   }
 }

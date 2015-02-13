@@ -1,0 +1,37 @@
+.events-page {
+	.page-body {
+		padding: 0;
+	}
+	.text-wrapper {
+		color: $color-main;
+		padding: 30px 3% 60px 3%;
+		.section-title {
+			color: $color-main;
+		}
+		h1, h2, h3, h4, h5, h6 {
+			margin-bottom: 20px;
+		}
+		p {
+			margin-bottom: 20px;
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+		b, strong {
+			font-weight: 400;
+		}
+		ul {
+			list-style-type: disc;
+			padding-left: 20px;
+		}
+		i, em {
+			font-weight: italic;
+		}
+		.btn {
+			margin-top: 30px;
+		}
+	}
+	.loop-wrapper {
+		margin-top: 30px;
+	}
+}

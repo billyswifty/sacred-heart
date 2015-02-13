@@ -1,11 +1,29 @@
+<?php
+/*
+Template Name: Events
+*/
+?>
+
 <?php get_header(); ?>
 
-	<div class="page-wrapper constrain">
+	<?php 
+		global $post;
+		setup_postdata( $post );
+		$post_id = $post->ID;
+	?>
+
+	<div class="page-wrapper events-page constrain">
 		<!-- section -->
 		<section class="page-body">
 
-			<h1 class="main-page-title">Upcoming Events</h1>
+			
+			<?php layerslider(3) ?>
 
+			<div class="text-wrapper">
+			<h1 class="main-page-title"><?php echo get_post_meta($post_id, 'wpcf-events-page-title', true); ?></h1>
+
+			<?php echo get_post_meta($post_id, 'wpcf-events-page-text', true); ?>
+			
 			<div class="loop-wrapper">
 				
 				<?
@@ -48,7 +66,7 @@
 		  	<? endforeach; ?>
 
 			</div>
-
+		</div>
 
 		</section>
 		<!-- /section -->

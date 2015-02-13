@@ -74,6 +74,12 @@
       background: $btn-border-color;
     }
   }
+  &.alternate {
+    background: $color-alt;
+    &:hover {
+      background: shade($color-alt, 10%);
+    }
+  }
   &.color-outline {
     border: 1px solid $btn-border-color;
     background: none;

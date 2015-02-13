@@ -1,4 +1,16 @@
+<?php
+/*
+Template Name: Home
+*/
+?>
+
 <?php get_header(); ?>
+
+	<?php 
+		global $post;
+		setup_postdata( $post );
+		$post_id = $post->ID;
+	?>
 
 	<div class="home-wrapper constrain">
 
@@ -7,22 +19,23 @@
 		</div>
 
 		<div class="about">
-			<h1 class="title">Sacred Heart Foundation</h1>
-			<?php echo do_shortcode('[contentblock id=homepage_about_text]') ?>
+			<h1 class="title"><?php echo get_post_meta($post_id, 'wpcf-home-page-title', true); ?></h1>
+			<?php echo get_post_meta($post_id, 'wpcf-home-page-text', true); ?>
 		</div>
 
 		<div class="grid-row">
 			<div class="unit1of2 video">
 				<div class="table">
 					<div class="table-cell">
-						<a class="youtube icon-play" href="<?php echo do_shortcode('[contentblock id=homepage_video_url]') ?>"></a>
+						<a class="youtube icon-play" href="<?php echo get_post_meta($post_id, 'wpcf-youtube-url', true); ?>"></a>
 					</div>
 				</div>
 			</div>
 			<div class="unit1of2 why-we-give">
 				<div class="table">
 					<div class="table-cell">
-						<?php echo do_shortcode('[contentblock id=homepage_box_1_text]') ?>
+						<h3 class="section-title"><?php echo get_post_meta($post_id, 'wpcf-box-1-title', true); ?></h3>
+						<?php echo get_post_meta($post_id, 'wpcf-box-1-main-text', true); ?>
 					</div>
 				</div>
 			</div>
@@ -32,7 +45,8 @@
 			<div class="unit1of2 upcoming-events">
 				<div class="table">
 					<div class="table-cell">
-						<?php echo do_shortcode('[contentblock id=homepage_box_2_text]') ?>
+						<h3 class="section-title"><?php echo get_post_meta($post_id, 'wpcf-box-2-title', true); ?></h3>
+						<?php echo get_post_meta($post_id, 'wpcf-box-2-main-text', true); ?>
 					</div>
 				</div>
 			</div>
@@ -46,7 +60,9 @@
 			  		global $post;
 			  		$myposts = get_posts(array(
 						  'numberposts' => 5,
-						  'post_type' => 'event'
+						  'post_type' => 'event',
+						  'meta_key'     => 'wpcf-show-event-on-homepage',
+		  				'meta_value'  => 1
 						));
 
 			  		$count = 0; 
@@ -61,7 +77,9 @@
 						<div class="slider-slide" style="background-image:url(<?= $feat_image ?>);">
 							<div class="text-wrapper">
 								<h4 class="name"><a href="<? the_permalink(); ?>"><? the_title(); ?></a></h4>
-								<h5 class="description">Event Location</h5>
+								<? $begin_date = new DateTime(get_post_meta($post_id, '_event_start_date', true)); ?>
+								<? $begin_date = date_format($begin_date, "F j, Y"); ?>
+								<h5 class="description"><?= $begin_date; ?></h5>
 							</div>
 						</div>
 

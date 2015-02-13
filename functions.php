@@ -88,6 +88,31 @@ function header_menu()
 }
 
 // HTML5 Blank navigation
+function forms_menu()
+{
+    wp_nav_menu(
+    array(
+        'theme_location'  => 'forms-menu',
+        'menu'            => '',
+        'container'       => 'div',
+        'container_class' => 'menu-{menu slug}-container',
+        'container_id'    => '',
+        'menu_class'      => 'menu',
+        'menu_id'         => '',
+        'echo'            => true,
+        'fallback_cb'     => 'wp_page_menu',
+        'before'          => '',
+        'after'           => '',
+        'link_before'     => '',
+        'link_after'      => '',
+        'items_wrap'      => '<ul>%3$s</ul>',
+        'depth'           => 0,
+        'walker'          => ''
+        )
+    );
+}
+
+// HTML5 Blank navigation
 function footer_1_menu()
 {
     wp_nav_menu(
@@ -156,7 +181,7 @@ function mobile_menu()
         'link_before'     => '',
         'link_after'      => '',
         'items_wrap'      => '<ul>%3$s</ul>',
-        'depth'           => 1,
+        'depth'           => 2,
         'walker'          => ''
         )
     );
@@ -244,6 +269,7 @@ function register_html5_menu()
 {
     register_nav_menus(array( // Using array to specify more menus if needed
         'header-menu' => __('Header Menu', 'html5blank'), // Main Navigation
+        'forms-menu' => __('Forms Menu', 'html5blank'), // Main Navigation
         'mobile-menu' => __('Mobile Menu', 'html5blank'), // Main Navigation
         'top-menu' => __('Top Menu', 'html5blank'), // Main Navigation
         'footer-menu-2' => __('Footer Column 2', 'html5blank'), // Sidebar Navigation
@@ -340,7 +366,7 @@ function html5wp_pagination()
 // Custom Excerpts
 function html5wp_index($length) // Create 20 Word Callback for Index page Excerpts, call using html5wp_excerpt('html5wp_index');
 {
-    return 20;
+    return 40;
 }
 
 // Create 40 Word Callback for Custom Post Excerpts, call using html5wp_excerpt('html5wp_custom_post');

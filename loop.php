@@ -1,33 +1,42 @@
-<!-- <div class="page-wrapper constrain">
-	<div class="page-body"> -->
+
+
+		<div class="news-list-block">
+
+
 		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
 			<div class="loop-wrapper">
 				
-				<article class="loop-post" id="post-<?php the_ID(); ?>">
 
-					<?php if ( has_post_thumbnail()) : // Check if thumbnail exists ?>
-				<!--		<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-							<?php the_post_thumbnail(array(120,120)); ?>
-						</a> -->
-					<?php endif; ?>
 
-					<h5 class="post-title">
-						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
-					</h5>
+				<div class="post-unit clearfix">
+					<?php if ( has_post_thumbnail()) {  ?>
+						<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+						<div class="image-holder" style="background-image:url('<?php echo $image[0] ?>');"></div>
 
-					<!-- <span class="date"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></span> -->
+					<?php } else { ?>
+						<div class="image-holder placeholder" style="background-image:url('<?php echo get_template_directory_uri(); ?>/img/placeholder.jpg');"></div>
+					<?php } ?>
+          <div class="post-text">
+					  <h4 class="post-title"><?php the_title(); ?></h4>
+					  <h6 class="post-date"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></h6>
+	
+	            <div class="post-excerpt">
+	              <?php html5wp_excerpt('html5wp_index'); ?>
+	            </div>
 
-					<div class="post-excerpt">
-						<?php html5wp_excerpt('html5wp_index'); // Build your custom callback length in functions.php ?>
-					</div>
-					<?php // edit_post_link(); ?>
+<!--             <a href="<?php the_permalink(); ?>" class="btn">Read More</a> -->
+          </div>
+				</div>
 
-				</article>
+
 
 			</div>
 
+
 		<?php endwhile; ?>
+
+		</div>
 
 		<?php else: ?>
 
@@ -36,8 +45,5 @@
 			</article>
 
 		<?php endif; ?>
-<!-- 	</div>
-</div>
-
-
- -->
+		
+			

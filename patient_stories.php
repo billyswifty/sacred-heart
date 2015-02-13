@@ -11,8 +11,7 @@
 		global $post;
 		$myposts = get_posts(array(
 		  'numberposts' => 3,
-		  'post_type' => 'post',
-		  'category_name'  => 'patients',
+		  'post_type' => 'Patient',
 		  'meta_key'     => 'wpcf-featured',
 		  'meta_value'  => 1
 		));

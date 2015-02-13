@@ -45,10 +45,28 @@
 				<div class="search">
 					<?php get_template_part('searchform'); ?>
 				</div>
-				<a href="https://donatenow.networkforgood.org/SacredHeartFoundation" class="give-now btn">Give Now</a>
+				<a href="<?php echo do_shortcode('[contentblock id=give_now_url]') ?>" class="give-now btn">Give Now</a>
+
 				<div class="social">
-					<a href="<?php echo do_shortcode('[contentblock id=facebook_url]') ?>" class="icon-circle-facebook white" target="_blank"></a>
+					<? $fb = do_shortcode('[contentblock id=facebook_url]'); ?>
+					<? if ( $fb != "" && $fb != "#" ) { ?><a href="<?= $fb ?>" target="_blank" class="icon-circle-facebook white"></a><? } ?>
+	
+					<? $fb = do_shortcode('[contentblock id=twitter_url]'); ?>
+					<? if ( $fb != "" && $fb != "#" ) { ?><a href="<?= $fb ?>" target="_blank" class="icon-circle-twitter white"></a><? } ?>
+
+					<? $fb = do_shortcode('[contentblock id=youtube_url]'); ?>
+					<? if ( $fb != "" && $fb != "#" ) { ?><a href="<?= $fb ?>" target="_blank" class="icon-circle-youtube white"></a><? } ?>
+
+					<? $fb = do_shortcode('[contentblock id=linkedin_url]'); ?>
+					<? if ( $fb != "" && $fb != "#" ) { ?><a href="<?= $fb ?>" target="_blank" class="icon-circle-linkedin white"></a><? } ?>
+
+					<? $fb = do_shortcode('[contentblock id=google_plus_url]'); ?>
+					<? if ( $fb != "" && $fb != "#" ) { ?><a href="<?= $fb ?>" target="_blank" class="icon-circle-google-plus white"></a><? } ?>
+
+					<? $fb = do_shortcode('[contentblock id=instagram_url]'); ?>
+					<? if ( $fb != "" && $fb != "#" ) { ?><a href="<?= $fb ?>" target="_blank" class="icon-circle-instagram white"></a><? } ?>
 				</div>
+
       </div>
     </div>
 		
@@ -158,9 +176,14 @@
 									<a href="<?php echo do_shortcode('[contentblock id=give_now_url]') ?>" target="_blank" class="give-now btn">Give Now</a>
 								</div>
 								<div class="bottom">
+									<div class="forms-container reveal">
+										<a href="#" id="show-forms">Downloadable Forms</a>
+										<div class="downloadable-forms">
+											<? forms_menu(); ?>
+										</div>
+									</div>
 									<div class="social reveal">
-										<a href="<?php echo do_shortcode('[contentblock id=facebook_url]') ?>" class="icon-circle-facebook" target="_blank"></a>
-										
+										<a href="/contact-us/newsletter" title="Newsletter" class="icon-circle-mail"></a>
 									</div>
 									<div class="search reveal">
 										<?php get_template_part('searchform'); ?>
