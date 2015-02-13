@@ -18,7 +18,7 @@
 						<div class="image-holder placeholder" style="background-image:url('<?php echo get_template_directory_uri(); ?>/img/placeholder.jpg');"></div>
 					<?php } ?>
           <div class="post-text">
-					  <h4 class="post-title"><?php the_title(); ?></h4>
+					  <h4 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
 					  <h6 class="post-date"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></h6>
 	
 	            <div class="post-excerpt">

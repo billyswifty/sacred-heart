@@ -44,8 +44,10 @@ Template Name: Events
 						$count = $count + 1;
 						$feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
 				?>
-
-				<div class="loop-post event clearfix">
+				<? $start_date = get_post_meta($post_id, '_event_start_date', true); ?>
+				<? $begin_date = new DateTime( $start_date ); ?>
+				<? $now = new DateTime(); ?>
+				<div class="loop-post event clearfix" <? if ($begin_date < $now) { ?> style="display:none;" <? } ?>>
 					<div class="cal-icon">
 						<? 	$monthNum = date_parse(get_post_meta($post_id, '_event_start_date', true))['month'];
 						 		$dateObj   = DateTime::createFromFormat('!m', $monthNum);

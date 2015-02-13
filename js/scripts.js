@@ -17,6 +17,7 @@
 
 		$(".downloadable-forms a").click(function(event) {
 			event.preventDefault();
+			$(".downloadable-forms").slideUp();
 			window.open($(this).attr("href"), '_blank');
 		});
 
@@ -41,8 +42,8 @@
 	  });
 
 	  $(document).ready(function() {
-	  	$(".cntctfrm_label_subject").hide();
-	  	$(".cntctfrm_input_subject").hide();
+	  	// $(".cntctfrm_label_subject").hide();
+	  	// $(".cntctfrm_input_subject").hide();
 	  	var email_label = $(".cntctfrm_label_email");
 	  	var email_input = $(".cntctfrm_input_email");
 	  	var phone_label = $(".cntctfrm_label_phone");

@@ -2,7 +2,7 @@
 	Theme Name: Sacred Heart
 	Theme URI: http://www.nine.is
 	Description: Custom Theme for Sacred Heart
-	Version: 3.5
+	Version: 3.6
 	Author: The Nine
 	Author URI: http://www.nine.is
 	Tags: Graphics, text, images, custom
@@ -1407,6 +1407,14 @@ span.bold {
 #cntctfrm_thanks {
   color: #fff; }
 
+/* line 36, sass/pages/_contact.scss */
+.cntctfrm_label_subject {
+  display: none !important; }
+
+/* line 37, sass/pages/_contact.scss */
+.cntctfrm_input_subject {
+  display: none !important; }
+
 /* line 2, sass/pages/_events.scss */
 .events-page .page-body {
   padding: 0; }
@@ -2101,8 +2109,11 @@ span.bold {
 
 /* line 11, sass/pages/_subpage.scss */
 .loop-wrapper .loop-post {
-  padding: 10px 0; }
+  padding: 20px 2% 15px 2%; }
   /* line 13, sass/pages/_subpage.scss */
+  .loop-wrapper .loop-post:nth-of-type(even) {
+    background: #f6f6f6; }
+  /* line 16, sass/pages/_subpage.scss */
   .loop-wrapper .loop-post .cal-icon {
     width: 100px;
     height: 100px;
@@ -2114,33 +2125,34 @@ span.bold {
     border: 1px solid #876fcf;
     float: left;
     margin: 0 20px 10px 0; }
-    /* line 24, sass/pages/_subpage.scss */
+    /* line 27, sass/pages/_subpage.scss */
     .loop-wrapper .loop-post .cal-icon .month-wrapper {
       background: #876fcf;
       text-align: center;
       padding: 5px 10px;
       width: 100%; }
-      /* line 29, sass/pages/_subpage.scss */
+      /* line 32, sass/pages/_subpage.scss */
       .loop-wrapper .loop-post .cal-icon .month-wrapper .month {
         color: #fff;
         text-transform: uppercase; }
-    /* line 34, sass/pages/_subpage.scss */
+    /* line 37, sass/pages/_subpage.scss */
     .loop-wrapper .loop-post .cal-icon .day-wrapper {
       color: #472e93;
       font-size: 40px;
       text-align: center;
+      background: #fff;
       padding-top: 4px;
       font-weight: 400; }
     @media all and (max-width: 800px) {
-      /* line 13, sass/pages/_subpage.scss */
+      /* line 16, sass/pages/_subpage.scss */
       .loop-wrapper .loop-post .cal-icon {
         float: none;
         margin: 0 auto 20px auto; } }
-  /* line 46, sass/pages/_subpage.scss */
+  /* line 50, sass/pages/_subpage.scss */
   .loop-wrapper .loop-post .post-title {
     margin-bottom: 10px; }
   @media all and (max-width: 800px) {
-    /* line 55, sass/pages/_subpage.scss */
+    /* line 59, sass/pages/_subpage.scss */
     .loop-wrapper .loop-post.event {
       text-align: center;
       margin-bottom: 30px; } }

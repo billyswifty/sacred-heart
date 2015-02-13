@@ -73,8 +73,11 @@ Template Name: Home
 							$count = $count + 1;
 							$feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
 					?>
-
-						<div class="slider-slide" style="background-image:url(<?= $feat_image ?>);">
+						<? if ($feat_image != "") { ?>
+							<div class="slider-slide" style="background-image:url(<?= $feat_image ?>);">
+						<? } else { ?>
+							<div class="slider-slide" style="background-image:url('<?php echo get_template_directory_uri(); ?>/img/placeholder.jpg');">
+						<? } ?>
 							<div class="text-wrapper">
 								<h4 class="name"><a href="<? the_permalink(); ?>"><? the_title(); ?></a></h4>
 								<? $begin_date = new DateTime(get_post_meta($post_id, '_event_start_date', true)); ?>
