@@ -56,7 +56,7 @@ Template Name: Home
 
 					<?php wp_reset_postdata(); ?>
 
-					<?
+					<?php
 			  		global $post;
 			  		$myposts = get_posts(array(
 						  'numberposts' => 10,
