@@ -7,7 +7,7 @@
 		</div>
 	</div>
 
-	<?
+	<?php
 		global $post;
 		$myposts = get_posts(array(
 		  'numberposts' => 3,

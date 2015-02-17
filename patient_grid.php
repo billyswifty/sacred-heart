@@ -3,7 +3,7 @@
 	<div class="gutter-sizer"></div>
 	<div class="grid-sizer"></div>
 
-	<?
+	<?php
 		global $post;
 		$myposts = get_posts(array(
 		  'numberposts' => 20,

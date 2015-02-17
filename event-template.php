@@ -26,7 +26,7 @@ Template Name: Events
 			
 			<div class="loop-wrapper">
 				
-				<?
+				<?php
 		  		global $post;
 		  		$myposts = get_posts(array(
 					  'numberposts' => 20,

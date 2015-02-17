@@ -106,7 +106,7 @@ Template Name: Home
 		<div class="did-you-know-slider-wrapper clearfix">
 			<h3 class="section-title">Did You Know</h3>
 			<div class="liquid-slider" id="did-you-know-slider">
-				<?
+				<?php
 		  		global $post;
 		  		$myposts = get_posts(array(
 					  'numberposts' => 30,
