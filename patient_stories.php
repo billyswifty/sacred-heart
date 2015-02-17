@@ -33,7 +33,7 @@
 		</div>
 	</a>
 
-	<? endforeach; ?>
+	<?php endforeach; ?>
 
 	<?php wp_reset_postdata(); ?>
 </div>

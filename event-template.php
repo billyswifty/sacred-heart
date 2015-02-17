@@ -44,12 +44,12 @@ Template Name: Events
 						$count = $count + 1;
 						$feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
 				?>
-				<? $start_date = get_post_meta($post_id, '_event_start_date', true); ?>
-				<? $begin_date = new DateTime( $start_date ); ?>
-				<? $now = new DateTime(); ?>
-				<div class="loop-post event clearfix" <? if ($begin_date < $now) { ?> style="display:none;" <? } ?>>
+				<?php $start_date = get_post_meta($post_id, '_event_start_date', true); ?>
+				<?php $begin_date = new DateTime( $start_date ); ?>
+				<?php $now = new DateTime(); ?>
+				<div class="loop-post event clearfix" <?php if ($begin_date < $now) { ?> style="display:none;" <?php } ?>>
 					<div class="cal-icon">
-						<? 	$monthNum = date_parse(get_post_meta($post_id, '_event_start_date', true))['month'];
+						<?php 	$monthNum = date_parse(get_post_meta($post_id, '_event_start_date', true))['month'];
 						 		$dateObj   = DateTime::createFromFormat('!m', $monthNum);
 								$monthName = $dateObj->format('F'); 
 								$dayNum = date_parse(get_post_meta($post_id, '_event_start_date', true))['day'];
@@ -61,11 +61,11 @@ Template Name: Events
 							<span class="day"><?= $dayNum ?></span>
 						</div>
 					</div>
-					<h5 class="post-title"><a href="<? the_permalink(); ?>"><? the_title(); ?></a></h5>
-					<p class="post-excerpt"><? the_excerpt(); ?></p>
+					<h5 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+					<p class="post-excerpt"><?php the_excerpt(); ?></p>
 				</div>
 				
-		  	<? endforeach; ?>
+		  	<?php endforeach; ?>
 
 			</div>
 		</div>

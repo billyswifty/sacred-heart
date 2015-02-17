@@ -38,7 +38,7 @@
 		<div id="sidr" style="display:none;">
       <div class="nav">
         <ul>
-          <? mobile_menu(); ?>
+          <?php mobile_menu(); ?>
         </ul>
       </div>
       <div class="content">
@@ -48,23 +48,23 @@
 				<a href="<?php echo do_shortcode('[contentblock id=give_now_url]') ?>" class="give-now btn">Give Now</a>
 
 				<div class="social">
-					<? $fb = do_shortcode('[contentblock id=facebook_url]'); ?>
-					<? if ( $fb != "" && $fb != "#" ) { ?><a href="<?= $fb ?>" target="_blank" class="icon-circle-facebook white"></a><? } ?>
+					<?php $fb = do_shortcode('[contentblock id=facebook_url]'); ?>
+					<?php if ( $fb != "" && $fb != "#" ) { ?><a href="<?= $fb ?>" target="_blank" class="icon-circle-facebook white"></a><?php } ?>
 	
-					<? $fb = do_shortcode('[contentblock id=twitter_url]'); ?>
-					<? if ( $fb != "" && $fb != "#" ) { ?><a href="<?= $fb ?>" target="_blank" class="icon-circle-twitter white"></a><? } ?>
+					<?php $fb = do_shortcode('[contentblock id=twitter_url]'); ?>
+					<?php if ( $fb != "" && $fb != "#" ) { ?><a href="<?= $fb ?>" target="_blank" class="icon-circle-twitter white"></a><?php } ?>
 
-					<? $fb = do_shortcode('[contentblock id=youtube_url]'); ?>
-					<? if ( $fb != "" && $fb != "#" ) { ?><a href="<?= $fb ?>" target="_blank" class="icon-circle-youtube white"></a><? } ?>
+					<?php $fb = do_shortcode('[contentblock id=youtube_url]'); ?>
+					<?php if ( $fb != "" && $fb != "#" ) { ?><a href="<?= $fb ?>" target="_blank" class="icon-circle-youtube white"></a><?php } ?>
 
-					<? $fb = do_shortcode('[contentblock id=linkedin_url]'); ?>
-					<? if ( $fb != "" && $fb != "#" ) { ?><a href="<?= $fb ?>" target="_blank" class="icon-circle-linkedin white"></a><? } ?>
+					<?php $fb = do_shortcode('[contentblock id=linkedin_url]'); ?>
+					<?php if ( $fb != "" && $fb != "#" ) { ?><a href="<?= $fb ?>" target="_blank" class="icon-circle-linkedin white"></a><?php } ?>
 
-					<? $fb = do_shortcode('[contentblock id=google_plus_url]'); ?>
-					<? if ( $fb != "" && $fb != "#" ) { ?><a href="<?= $fb ?>" target="_blank" class="icon-circle-google-plus white"></a><? } ?>
+					<?php $fb = do_shortcode('[contentblock id=google_plus_url]'); ?>
+					<?php if ( $fb != "" && $fb != "#" ) { ?><a href="<?= $fb ?>" target="_blank" class="icon-circle-google-plus white"></a><?php } ?>
 
-					<? $fb = do_shortcode('[contentblock id=instagram_url]'); ?>
-					<? if ( $fb != "" && $fb != "#" ) { ?><a href="<?= $fb ?>" target="_blank" class="icon-circle-instagram white"></a><? } ?>
+					<?php $fb = do_shortcode('[contentblock id=instagram_url]'); ?>
+					<?php if ( $fb != "" && $fb != "#" ) { ?><a href="<?= $fb ?>" target="_blank" class="icon-circle-instagram white"></a><?php } ?>
 				</div>
 
       </div>
@@ -147,7 +147,7 @@
 					<div class="dropdown-nav">
 						<div class="constrain">
 							<div class="menu-wrapper">
-								<? top_menu(); ?>
+								<?php top_menu(); ?>
 							</div>
 							<div class="search-wrapper">
 								<form class="site-search" action="http://www.sacred-heart.org/sitesearch.asp">
@@ -179,7 +179,7 @@
 									<div class="forms-container reveal">
 										<a href="#" id="show-forms">Downloadable Forms</a>
 										<div class="downloadable-forms">
-											<? forms_menu(); ?>
+											<?php forms_menu(); ?>
 										</div>
 									</div>
 									<div class="social reveal">
@@ -195,7 +195,7 @@
 
 					<nav class="main constrain reveal">
 						<div class="menu">
-							<? header_menu(); ?>
+							<?php header_menu(); ?>
 						</div>
 					</nav>
 

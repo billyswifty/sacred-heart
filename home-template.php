@@ -31,7 +31,7 @@ Template Name: Home
 					</div>
 				</div>
 			</div>
-			<div class="unit1of2 why-we-give">
+			<div class="unit1of2 why-we-give left-align">
 				<div class="table">
 					<div class="table-cell">
 						<h3 class="section-title"><?php echo get_post_meta($post_id, 'wpcf-box-1-title', true); ?></h3>
@@ -42,7 +42,7 @@ Template Name: Home
 		</div>
 
 		<div class="grid-row">
-			<div class="unit1of2 upcoming-events">
+			<div class="unit1of2 upcoming-events left-align">
 				<div class="table">
 					<div class="table-cell">
 						<h3 class="section-title"><?php echo get_post_meta($post_id, 'wpcf-box-2-title', true); ?></h3>
@@ -59,10 +59,11 @@ Template Name: Home
 					<?
 			  		global $post;
 			  		$myposts = get_posts(array(
-						  'numberposts' => 5,
+						  'numberposts' => 10,
 						  'post_type' => 'event',
-						  'meta_key'     => 'wpcf-show-event-on-homepage',
-		  				'meta_value'  => 1
+						  'meta_key'     => '_event_start_date',
+						  'order'         => 'ASC',
+						  'orderby'     => 'meta_value'
 						));
 
 			  		$count = 0; 
@@ -72,21 +73,23 @@ Template Name: Home
 							$post_id = $post->ID;
 							$count = $count + 1;
 							$feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+							$featured = get_post_meta($post_id, 'wpcf-show-event-on-homepage', true);
+							if ( $featured != 1 ) { continue; }
 					?>
-						<? if ($feat_image != "") { ?>
+						<?php if ($feat_image != "") { ?>
 							<div class="slider-slide" style="background-image:url(<?= $feat_image ?>);">
-						<? } else { ?>
+						<?php } else { ?>
 							<div class="slider-slide" style="background-image:url('<?php echo get_template_directory_uri(); ?>/img/placeholder.jpg');">
-						<? } ?>
+						<?php } ?>
 							<div class="text-wrapper">
-								<h4 class="name"><a href="<? the_permalink(); ?>"><? the_title(); ?></a></h4>
-								<? $begin_date = new DateTime(get_post_meta($post_id, '_event_start_date', true)); ?>
-								<? $begin_date = date_format($begin_date, "F j, Y"); ?>
+								<h4 class="name"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+								<?php $begin_date = new DateTime(get_post_meta($post_id, '_event_start_date', true)); ?>
+								<?php $begin_date = date_format($begin_date, "F j, Y"); ?>
 								<h5 class="description"><?= $begin_date; ?></h5>
 							</div>
 						</div>
 
-			  	<? endforeach; ?>
+			  	<?php endforeach; ?>
 
 			  	<?php wp_reset_postdata(); ?>
 
@@ -119,10 +122,10 @@ Template Name: Home
 				?>
 
 				  <div class="slider-slide">
-						<p><? the_content(); ?></p>
+						<p><?php the_content(); ?></p>
 					</div>
 
-		  	<? endforeach; ?>
+		  	<?php endforeach; ?>
 			</div>
 			<div class="arrows">
 				<a href="#" class="icon-left-arrow white" id="nav-left"></a>

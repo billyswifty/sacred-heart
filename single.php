@@ -10,11 +10,11 @@
 
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-					<? $post_id = $post->ID; ?>
+					<?php $post_id = $post->ID; ?>
 
-					<? $feat_image = get_post_meta($post_id, 'wpcf-banner-image', true); ?>
+					<?php $feat_image = get_post_meta($post_id, 'wpcf-banner-image', true); ?>
 
-					<? if (empty($feat_image)) {
+					<?php if (empty($feat_image)) {
 							$feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); 
 						}
 					?>
@@ -27,18 +27,18 @@
 					
 					<div class="post-text-wrapper">
 						<h1 class="post-title"><?php the_title(); ?></h1>
-						<? $subtitle = get_post_meta($post_id, 'wpcf-subtitle', true); ?>
-						<? $start_date = get_post_meta($post_id, '_event_start_date', true); ?>
+						<?php $subtitle = get_post_meta($post_id, 'wpcf-subtitle', true); ?>
+						<?php $start_date = get_post_meta($post_id, '_event_start_date', true); ?>
 
-						<? if ( $subtitle != "" ) { ?>
+						<?php if ( $subtitle != "" ) { ?>
 							<h4 class="patient-subtitle"><?= $subtitle ?></h4>
-						<? } elseif ( $start_date ) { ?>
-							<? $begin_date = new DateTime( $start_date ); ?>
-							<? $begin_date = date_format($begin_date, "F j, Y"); ?>
+						<?php } elseif ( $start_date ) { ?>
+							<?php $begin_date = new DateTime( $start_date ); ?>
+							<?php $begin_date = date_format($begin_date, "F j, Y"); ?>
 							<h4 class="patient-subtitle"><?= $begin_date; ?></h4>
-						<? } else { ?>
+						<?php } else { ?>
 							<h4 class="patient-subtitle"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></h4>
-						<? } ?>
+						<?php } ?>
 
 						<div class="post-content-wrapper clearfix">
 							<?php the_content(); ?>

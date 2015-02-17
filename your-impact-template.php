@@ -18,10 +18,10 @@ Template Name: Your Impact
 				<?php if ($youtube_url != "") { ?>
 					<div class="table">
 						<div class="table-cell">
-							<a class="youtube icon-play" href="<? echo $youtube_url; ?>"></a>
+							<a class="youtube icon-play" href="<?php echo $youtube_url; ?>"></a>
 						</div>
 					</div>
-				<? } ?>
+				<?php } ?>
 			</div>
 			<div class="post-index-page-text richtext">
 				<div id="post-<?php the_ID(); ?>" class="page">

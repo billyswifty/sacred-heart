@@ -4,23 +4,23 @@
 					<div class="links">
 						<a href="<?php echo do_shortcode('[contentblock id=give_now_url]') ?>" target="_blank" class="give-now btn">Give Now</a>
 						<div class="contact">
-							<? $fb = do_shortcode('[contentblock id=facebook_url]'); ?>
-							<? if ( $fb != "" && $fb != "#" ) { ?><a href="<?= $fb ?>" target="_blank" class="icon-circle-facebook colored"></a><? } ?>
+							<?php $fb = do_shortcode('[contentblock id=facebook_url]'); ?>
+							<?php if ( $fb != "" && $fb != "#" ) { ?><a href="<?= $fb ?>" target="_blank" class="icon-circle-facebook colored"></a><?php } ?>
 			
-							<? $fb = do_shortcode('[contentblock id=twitter_url]'); ?>
-							<? if ( $fb != "" && $fb != "#" ) { ?><a href="<?= $fb ?>" target="_blank" class="icon-circle-twitter colored"></a><? } ?>
+							<?php $fb = do_shortcode('[contentblock id=twitter_url]'); ?>
+							<?php if ( $fb != "" && $fb != "#" ) { ?><a href="<?= $fb ?>" target="_blank" class="icon-circle-twitter colored"></a><?php } ?>
 
-							<? $fb = do_shortcode('[contentblock id=youtube_url]'); ?>
-							<? if ( $fb != "" && $fb != "#" ) { ?><a href="<?= $fb ?>" target="_blank" class="icon-circle-youtube colored"></a><? } ?>
+							<?php $fb = do_shortcode('[contentblock id=youtube_url]'); ?>
+							<?php if ( $fb != "" && $fb != "#" ) { ?><a href="<?= $fb ?>" target="_blank" class="icon-circle-youtube colored"></a><?php } ?>
 
-							<? $fb = do_shortcode('[contentblock id=linkedin_url]'); ?>
-							<? if ( $fb != "" && $fb != "#" ) { ?><a href="<?= $fb ?>" target="_blank" class="icon-circle-linkedin colored"></a><? } ?>
+							<?php $fb = do_shortcode('[contentblock id=linkedin_url]'); ?>
+							<?php if ( $fb != "" && $fb != "#" ) { ?><a href="<?= $fb ?>" target="_blank" class="icon-circle-linkedin colored"></a><?php } ?>
 
-							<? $fb = do_shortcode('[contentblock id=google_plus_url]'); ?>
-							<? if ( $fb != "" && $fb != "#" ) { ?><a href="<?= $fb ?>" target="_blank" class="icon-circle-google-plus colored"></a><? } ?>
+							<?php $fb = do_shortcode('[contentblock id=google_plus_url]'); ?>
+							<?php if ( $fb != "" && $fb != "#" ) { ?><a href="<?= $fb ?>" target="_blank" class="icon-circle-google-plus colored"></a><?php } ?>
 
-							<? $fb = do_shortcode('[contentblock id=instagram_url]'); ?>
-							<? if ( $fb != "" && $fb != "#" ) { ?><a href="<?= $fb ?>" target="_blank" class="icon-circle-instagram colored"></a><? } ?>
+							<?php $fb = do_shortcode('[contentblock id=instagram_url]'); ?>
+							<?php if ( $fb != "" && $fb != "#" ) { ?><a href="<?= $fb ?>" target="_blank" class="icon-circle-instagram colored"></a><?php } ?>
 						</div>
 						<div class="copyright">
 							<p>Copyright &copy; <?php echo date("Y"); ?> <a href="http://www.sacred-heart.org/" target="_blank">Sacred Heart Health System</a><br />
@@ -30,10 +30,10 @@
 					<div class="navigation">
 						<div class="grid-row">
 							<div class="unit1of2">
-								<? footer_1_menu(); ?>
+								<?php footer_1_menu(); ?>
 							</div>
 							<div class="unit1of2">
-								<? footer_2_menu(); ?>
+								<?php footer_2_menu(); ?>
 							</div>
 						</div>
 					</div>
