@@ -49,16 +49,18 @@ Template Name: Events
 				<?php $now = new DateTime(); ?>
 				<div class="loop-post event clearfix" <?php if ($begin_date < $now) { ?> style="display:none;" <?php } ?>>
 					<div class="cal-icon">
-						<?php 	$monthNum = date_parse(get_post_meta($post_id, '_event_start_date', true))['month'];
+						<?php
+								$this_date = date_parse(get_post_meta($post_id, '_event_start_date', true));
+							  $monthNum = $this_date['month'];
 						 		$dateObj   = DateTime::createFromFormat('!m', $monthNum);
 								$monthName = $dateObj->format('F'); 
 								$dayNum = date_parse(get_post_meta($post_id, '_event_start_date', true))['day'];
 						?>
 						<div class="month-wrapper">
-							<span class="month"><?= $monthName ?></span>
+							<span class="month"><?php echo $monthName; ?></span>
 						</div>
 						<div class="day-wrapper">
-							<span class="day"><?= $dayNum ?></span>
+							<span class="day"><?php echo $dayNum; ?></span>
 						</div>
 					</div>
 					<h5 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
@@ -74,6 +76,5 @@ Template Name: Events
 		<!-- /section -->
 	</div>
 
-<?php // get_sidebar(); ?>
 
 <?php get_footer(); ?>
