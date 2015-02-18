@@ -77,7 +77,8 @@ Template Name: Home
 							if ( $featured != 1 ) { continue; }
 					?>
 						<?php if ($feat_image != "") { ?>
-							<div class="slider-slide" style="background-image:url(<?= $feat_image ?>);">
+							<div class="slider-slide" style="background-image:url(<?php echo
+	 $feat_image ?>);">
 						<?php } else { ?>
 							<div class="slider-slide" style="background-image:url('<?php echo get_template_directory_uri(); ?>/img/placeholder.jpg');">
 						<?php } ?>
@@ -85,7 +86,8 @@ Template Name: Home
 								<h4 class="name"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
 								<?php $begin_date = new DateTime(get_post_meta($post_id, '_event_start_date', true)); ?>
 								<?php $begin_date = date_format($begin_date, "F j, Y"); ?>
-								<h5 class="description"><?= $begin_date; ?></h5>
+								<h5 class="description"><?php echo
+	 $begin_date; ?></h5>
 							</div>
 						</div>
 

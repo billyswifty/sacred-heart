@@ -5,22 +5,28 @@
 						<a href="<?php echo do_shortcode('[contentblock id=give_now_url]') ?>" target="_blank" class="give-now btn">Give Now</a>
 						<div class="contact">
 							<?php $fb = do_shortcode('[contentblock id=facebook_url]'); ?>
-							<?php if ( $fb != "" && $fb != "#" ) { ?><a href="<?= $fb ?>" target="_blank" class="icon-circle-facebook colored"></a><?php } ?>
+							<?php if ( $fb != "" && $fb != "#" ) { ?><a href="<?php echo
+	 $fb; ?>" target="_blank" class="icon-circle-facebook colored"></a><?php } ?>
 			
 							<?php $fb = do_shortcode('[contentblock id=twitter_url]'); ?>
-							<?php if ( $fb != "" && $fb != "#" ) { ?><a href="<?= $fb ?>" target="_blank" class="icon-circle-twitter colored"></a><?php } ?>
+							<?php if ( $fb != "" && $fb != "#" ) { ?><a href="<?php echo
+	 $fb; ?>" target="_blank" class="icon-circle-twitter colored"></a><?php } ?>
 
 							<?php $fb = do_shortcode('[contentblock id=youtube_url]'); ?>
-							<?php if ( $fb != "" && $fb != "#" ) { ?><a href="<?= $fb ?>" target="_blank" class="icon-circle-youtube colored"></a><?php } ?>
+							<?php if ( $fb != "" && $fb != "#" ) { ?><a href="<?php echo
+	 $fb; ?>" target="_blank" class="icon-circle-youtube colored"></a><?php } ?>
 
 							<?php $fb = do_shortcode('[contentblock id=linkedin_url]'); ?>
-							<?php if ( $fb != "" && $fb != "#" ) { ?><a href="<?= $fb ?>" target="_blank" class="icon-circle-linkedin colored"></a><?php } ?>
+							<?php if ( $fb != "" && $fb != "#" ) { ?><a href="<?php echo
+	 $fb; ?>" target="_blank" class="icon-circle-linkedin colored"></a><?php } ?>
 
 							<?php $fb = do_shortcode('[contentblock id=google_plus_url]'); ?>
-							<?php if ( $fb != "" && $fb != "#" ) { ?><a href="<?= $fb ?>" target="_blank" class="icon-circle-google-plus colored"></a><?php } ?>
+							<?php if ( $fb != "" && $fb != "#" ) { ?><a href="<?php echo
+	 $fb; ?>" target="_blank" class="icon-circle-google-plus colored"></a><?php } ?>
 
 							<?php $fb = do_shortcode('[contentblock id=instagram_url]'); ?>
-							<?php if ( $fb != "" && $fb != "#" ) { ?><a href="<?= $fb ?>" target="_blank" class="icon-circle-instagram colored"></a><?php } ?>
+							<?php if ( $fb != "" && $fb != "#" ) { ?><a href="<?php echo
+	 $fb; ?>" target="_blank" class="icon-circle-instagram colored"></a><?php } ?>
 						</div>
 						<div class="copyright">
 							<p>Copyright &copy; <?php echo date("Y"); ?> <a href="http://www.sacred-heart.org/" target="_blank">Sacred Heart Health System</a><br />

@@ -31,7 +31,8 @@ Template Name: Contact Us
 					<br />
 
 			<?php $fb = do_shortcode('[contentblock id=facebook_url]'); ?>
-			<?php if ( $fb != "" && $fb != "#" ) { ?><a href="<?= $fb ?>" target="_blank" class="icon-circle-facebook link">Follow Us on Facebook</a><?php } ?>
+			<?php if ( $fb != "" && $fb != "#" ) { ?><a href="<?php echo
+	 $fb ?>" target="_blank" class="icon-circle-facebook link">Follow Us on Facebook</a><?php } ?>
 			<br />
 			<br />
 			<a href="/privacy-policy" style="font-size:13px;">Privacy Policy</a>

@@ -25,11 +25,14 @@
 			$feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
 	?>
 
-	<a class="unit1of4 patient" href="<?php the_permalink(); ?>" style="background-image:url(<?= $feat_image ?>);">
+	<a class="unit1of4 patient" href="<?php the_permalink(); ?>" style="background-image:url(<?php echo
+	 $feat_image ?>);">
 		<div class="overlay"></div>
 		<div class="text-wrapper">
-			<h4 class="name"><?= get_post_meta($post_id, 'wpcf-name', true); ?></h4>
-			<h5 class="patient-about"><?= get_post_meta($post_id, 'wpcf-subtitle', true); ?></h5>
+			<h4 class="name"><?php echo
+	 get_post_meta($post_id, 'wpcf-name', true); ?></h4>
+			<h5 class="patient-about"><?php echo
+	 get_post_meta($post_id, 'wpcf-subtitle', true); ?></h5>
 		</div>
 	</a>
 

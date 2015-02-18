@@ -21,7 +21,8 @@
 
 					<?php if ( has_post_thumbnail()) : // Check if Thumbnail exists ?>
 					
-						<div class="post-banner" style="background-image:url(<?= $feat_image ?>);"></div>
+						<div class="post-banner" style="background-image:url(<?php echo
+	 $feat_image ?>);"></div>
 
 					<?php endif; ?>
 					
@@ -31,11 +32,13 @@
 						<?php $start_date = get_post_meta($post_id, '_event_start_date', true); ?>
 
 						<?php if ( $subtitle != "" ) { ?>
-							<h4 class="patient-subtitle"><?= $subtitle ?></h4>
+							<h4 class="patient-subtitle"><?php echo
+	 $subtitle ?></h4>
 						<?php } elseif ( $start_date ) { ?>
 							<?php $begin_date = new DateTime( $start_date ); ?>
 							<?php $begin_date = date_format($begin_date, "F j, Y"); ?>
-							<h4 class="patient-subtitle"><?= $begin_date; ?></h4>
+							<h4 class="patient-subtitle"><?php echo
+	 $begin_date; ?></h4>
 						<?php } else { ?>
 							<h4 class="patient-subtitle"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></h4>
 						<?php } ?>

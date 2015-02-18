@@ -49,22 +49,28 @@
 
 				<div class="social">
 					<?php $fb = do_shortcode('[contentblock id=facebook_url]'); ?>
-					<?php if ( $fb != "" && $fb != "#" ) { ?><a href="<?= $fb ?>" target="_blank" class="icon-circle-facebook white"></a><?php } ?>
+					<?php if ( $fb != "" && $fb != "#" ) { ?><a href="<?php echo
+	 $fb; ?>" target="_blank" class="icon-circle-facebook white"></a><?php } ?>
 	
 					<?php $fb = do_shortcode('[contentblock id=twitter_url]'); ?>
-					<?php if ( $fb != "" && $fb != "#" ) { ?><a href="<?= $fb ?>" target="_blank" class="icon-circle-twitter white"></a><?php } ?>
+					<?php if ( $fb != "" && $fb != "#" ) { ?><a href="<?php echo
+	 $fb; ?>" target="_blank" class="icon-circle-twitter white"></a><?php } ?>
 
 					<?php $fb = do_shortcode('[contentblock id=youtube_url]'); ?>
-					<?php if ( $fb != "" && $fb != "#" ) { ?><a href="<?= $fb ?>" target="_blank" class="icon-circle-youtube white"></a><?php } ?>
+					<?php if ( $fb != "" && $fb != "#" ) { ?><a href="<?php echo
+	 $fb; ?>" target="_blank" class="icon-circle-youtube white"></a><?php } ?>
 
 					<?php $fb = do_shortcode('[contentblock id=linkedin_url]'); ?>
-					<?php if ( $fb != "" && $fb != "#" ) { ?><a href="<?= $fb ?>" target="_blank" class="icon-circle-linkedin white"></a><?php } ?>
+					<?php if ( $fb != "" && $fb != "#" ) { ?><a href="<?php echo
+	 $fb; ?>" target="_blank" class="icon-circle-linkedin white"></a><?php } ?>
 
 					<?php $fb = do_shortcode('[contentblock id=google_plus_url]'); ?>
-					<?php if ( $fb != "" && $fb != "#" ) { ?><a href="<?= $fb ?>" target="_blank" class="icon-circle-google-plus white"></a><?php } ?>
+					<?php if ( $fb != "" && $fb != "#" ) { ?><a href="<?php echo
+	 $fb; ?>" target="_blank" class="icon-circle-google-plus white"></a><?php } ?>
 
 					<?php $fb = do_shortcode('[contentblock id=instagram_url]'); ?>
-					<?php if ( $fb != "" && $fb != "#" ) { ?><a href="<?= $fb ?>" target="_blank" class="icon-circle-instagram white"></a><?php } ?>
+					<?php if ( $fb != "" && $fb != "#" ) { ?><a href="<?php echo
+	 $fb; ?>" target="_blank" class="icon-circle-instagram white"></a><?php } ?>
 				</div>
 
       </div>
