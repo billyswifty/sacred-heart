@@ -9,7 +9,7 @@
 @mixin bgcover( $url ) { 
     background-image: url(' #{$url} '); 
     -ms-behavior: url('/bg.htc');
-    background-size: cover; 
+    -ms-behavior: url('js/bg.htc'); background-size: cover; 
     background-position: center center; 
     background-repeat: no-repeat; 
 }

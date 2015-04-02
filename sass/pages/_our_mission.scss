@@ -79,7 +79,7 @@
 			}
 		}
 		.need {
-			background-size: cover;
+			-ms-behavior: url('js/bg.htc'); background-size: cover;
 			background-position: center center;
 			position: relative;
 			height: 225px;
@@ -90,6 +90,7 @@
 					opacity: 0;
 				}
 				.text-wrapper {
+					background: #5d5d5d;
 					background: rgba(0,0,0,0.6);
 				}
 			}

@@ -1,9 +1,14 @@
 <!doctype html>
-<html <?php language_attributes(); ?> class="no-js">
+<!--[if lt IE 7]><html <?php language_attributes(); ?> class="no-js ie lt-ie9 lt-ie8 lt-ie7" lang="en"><![endif]-->
+<!--[if IE 7]><html <?php language_attributes(); ?> class="no-js ie ie7 lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if IE 8]><html <?php language_attributes(); ?> class="no-js ie ie8 lt-ie9" lang="en"><![endif]-->
+<!--[if IE 9]><html <?php language_attributes(); ?> class="no-js ie ie9" lang="en"><![endif]-->
+<!--[if !IE]><!--> <html <?php language_attributes(); ?> class="no-js" lang="en"><!--<![endif]-->
+<!--[if lt IE 9]><script src="<?php echo get_template_directory_uri(); ?>/js/html5shiv.js"></script><![endif]-->
 	<head>
 		<meta charset="<?php bloginfo('charset'); ?>">
 		<title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' :'; } ?> <?php bloginfo('name'); ?></title>
-
+		<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
 		<link href="//www.google-analytics.com" rel="dns-prefetch">
 		<link type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/redmond/jquery-ui.css" rel="stylesheet" />
 
@@ -20,9 +25,8 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="<?php bloginfo('description'); ?>">
-
 		<?php wp_head(); ?>
-		<script>
+		 <script>
         // conditionizr.com
         // configure environment tests
         conditionizr.config({
@@ -78,7 +82,7 @@
 		
 		<div class="wrapper">
 
-			<header class="main">
+			<header class="main clearfix">
 
 					<div class="title-bar">
 						<div class="constrain">
@@ -160,6 +164,7 @@
 									<input type="hidden" name="cx" value="003753645996749388088:riaf2vdj9us">
 									<input type="hidden" name="cof" value="FORID:9">
 									<input type="text" name="q" placeholder="Enter Keywords" />
+									<p class="ie-show search-text">search</p>
 									<input type="submit" name="sa" value="Search Sacred Heart" />
 								</form>
 							</div>
@@ -171,7 +176,7 @@
 						</div>
 					</div>
 
-					<div class="main-header">
+					<div class="main-header clearfix">
 						<div class="constrain">
 							<a href="/" class="logo-link" title="Home">
 								<img src="<?php echo get_template_directory_uri(); ?>/img/main_logo.png" alt="Sacred Heart Health Systems" id="main-logo" />
@@ -207,4 +212,3 @@
 
 
 			</header>
-

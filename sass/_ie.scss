@@ -1,5 +1,34 @@
 html.lt-ie9 {
-
+  header.main .title-bar {
+    padding: 0 4%;
+  }
+  .ie-show {
+    display: block;
+  }
+  .search-text {
+    font-size: 13px;
+    color: $color-main;
+  }
+  footer.main {
+    height: 250px;
+  }
+  header.main .main-header .content .bottom .social [class^="icon-"] {
+    font-size: 36px;
+    position: relative;
+    bottom: 2px;
+  }
+  .main-header {
+    height: 130px;
+  }
+  .overlay {
+    display: none;
+  }
+  footer.main a[class^="icon-"] {
+    font-size: 36px;
+  }
+  .main-header .content .bottom {
+    margin-top: 15px;
+  }
   .conceal {
     display: none !important;
   }

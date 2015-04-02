@@ -54,7 +54,8 @@ Template Name: Events
 							  $monthNum = $this_date['month'];
 						 		$dateObj   = DateTime::createFromFormat('!m', $monthNum);
 								$monthName = $dateObj->format('F'); 
-								$dayNum = date_parse(get_post_meta($post_id, '_event_start_date', true))['day'];
+								$this_day = date_parse(get_post_meta($post_id, '_event_start_date', true));
+								$dayNum = $this_day['day'];
 						?>
 						<div class="month-wrapper">
 							<span class="month"><?php echo $monthName; ?></span>

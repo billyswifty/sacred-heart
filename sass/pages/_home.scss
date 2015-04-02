@@ -17,6 +17,7 @@
 	.upcoming-events {
 		@include small {
 			background: $color-main !important;
+			height: auto;
 		}
 	}
 	.why-we-give, .upcoming-events {
@@ -58,7 +59,7 @@
 				height: 225px;
 				.slider-slide {
 					height: 225px;
-					background-size: cover;
+					-ms-behavior: url('js/bg.htc'); background-size: cover;
 					background-position: center center;
 					position: relative;
 					.panel-wrapper {
@@ -79,6 +80,7 @@
 			bottom: 0;
 			left: 0;
 			width: 100%;
+			background: #5d5d5d;
 			background: rgba(0,0,0,0.6);
 			color: #fff;
 			padding: 8px 10px;
