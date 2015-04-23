@@ -2,7 +2,7 @@
 	Theme Name: Sacred Heart
 	Theme URI: http://www.nine.is
 	Description: Custom Theme for Sacred Heart
-	Version: 4.5
+	Version: 4.6
 	Author: The Nine
 	Author URI: http://www.nine.is
 	Tags: Graphics, text, images, custom
@@ -83,72 +83,94 @@ html.lt-ie9 .search-text {
 html.lt-ie9 footer.main {
   height: 250px; }
 /* line 15, sass/_ie.scss */
+html.lt-ie9 .did-you-know-slider-wrapper {
+  height: auto; }
+/* line 19, sass/_ie.scss */
+html.lt-ie9 .patient-stories-grid .patient .text-wrapper {
+  background: #6e6e6e !important; }
+/* line 24, sass/_ie.scss */
+html.lt-ie9 .hospital-dropdown .bottom ul li {
+  margin-right: 10px; }
+  /* line 26, sass/_ie.scss */
+  html.lt-ie9 .hospital-dropdown .bottom ul li:last-of-type {
+    margin-right: 0; }
+/* line 33, sass/_ie.scss */
+html.lt-ie9 .news-list-block .post-unit .image-holder {
+  background-image: url("img/ie_placeholder.jpg") !important;
+  background-size: 180px !important; }
+/* line 42, sass/_ie.scss */
+html.lt-ie9 .our-mission .needs .need .text-wrapper {
+  background: #5d5d5d !important; }
+/* line 49, sass/_ie.scss */
+html.lt-ie9 .video .table, html.lt-ie9 .video .table-cell {
+  text-align: center; }
+/* line 52, sass/_ie.scss */
 html.lt-ie9 header.main .main-header .content .bottom .social [class^="icon-"] {
   font-size: 36px;
   position: relative;
   bottom: 2px; }
-/* line 20, sass/_ie.scss */
+/* line 57, sass/_ie.scss */
 html.lt-ie9 .main-header {
   height: 130px; }
-/* line 23, sass/_ie.scss */
+/* line 60, sass/_ie.scss */
 html.lt-ie9 .overlay {
   display: none; }
-/* line 26, sass/_ie.scss */
+/* line 63, sass/_ie.scss */
 html.lt-ie9 footer.main a[class^="icon-"] {
   font-size: 36px; }
-/* line 29, sass/_ie.scss */
+/* line 66, sass/_ie.scss */
 html.lt-ie9 .main-header .content .bottom {
   margin-top: 15px; }
-/* line 32, sass/_ie.scss */
+/* line 69, sass/_ie.scss */
 html.lt-ie9 .conceal {
   display: none !important; }
-/* line 35, sass/_ie.scss */
+/* line 72, sass/_ie.scss */
 html.lt-ie9 .reveal {
   display: inherit; }
-/* line 38, sass/_ie.scss */
+/* line 75, sass/_ie.scss */
 html.lt-ie9 .reveal-m {
   display: inherit; }
-/* line 42, sass/_ie.scss */
+/* line 79, sass/_ie.scss */
 html.lt-ie9 .grid-row .unit1of1 {
   width: 100%;
   float: left;
   text-align: left; }
-/* line 47, sass/_ie.scss */
+/* line 84, sass/_ie.scss */
 html.lt-ie9 .grid-row .unit1of2 {
   width: 50%;
   float: left;
   text-align: left; }
-/* line 52, sass/_ie.scss */
+/* line 89, sass/_ie.scss */
 html.lt-ie9 .grid-row .unit1of3 {
   width: 33.3333333%;
   float: left;
   text-align: left; }
-/* line 57, sass/_ie.scss */
+/* line 94, sass/_ie.scss */
 html.lt-ie9 .grid-row .unit2of3 {
   width: 66.6666666%;
   float: left;
   text-align: left; }
-/* line 62, sass/_ie.scss */
+/* line 99, sass/_ie.scss */
 html.lt-ie9 .grid-row .unit1of4 {
   width: 25%;
   float: left;
   text-align: left; }
-/* line 67, sass/_ie.scss */
+/* line 104, sass/_ie.scss */
 html.lt-ie9 .grid-row .unit3of4 {
   width: 75%;
   float: left;
   text-align: left; }
-/* line 72, sass/_ie.scss */
+/* line 109, sass/_ie.scss */
 html.lt-ie9 .grid-row .unit1of5 {
   width: 20%;
   float: left;
   text-align: left; }
-/* line 77, sass/_ie.scss */
+/* line 114, sass/_ie.scss */
 html.lt-ie9 .grid-row .unit2of5 {
   width: 40%;
   float: left;
   text-align: left; }
-/* line 82, sass/_ie.scss */
+/* line 119, sass/_ie.scss */
 html.lt-ie9 .grid-row .unit4of5 {
   width: 80%;
   float: left;
@@ -1170,7 +1192,7 @@ header.main {
     /* line 353, sass/modules/_header.scss */
     header.main nav.main .menu {
       width: 100%;
-      height: 45px; }
+      height: 49px; }
       /* line 356, sass/modules/_header.scss */
       header.main nav.main .menu ul {
         padding: 0;
@@ -1341,17 +1363,18 @@ span.bold {
 
 /* line 1, sass/modules/_patient_stories.scss */
 .patient-stories-grid {
-  background: #472e93; }
-  /* line 3, sass/modules/_patient_stories.scss */
+  background: #472e93;
+  clear: both; }
+  /* line 4, sass/modules/_patient_stories.scss */
   .patient-stories-grid .patient-stories {
     position: relative;
     height: 225px; }
-    /* line 6, sass/modules/_patient_stories.scss */
+    /* line 7, sass/modules/_patient_stories.scss */
     .patient-stories-grid .patient-stories .table-cell {
       padding: 20px;
       background: #472e93;
       color: #fff; }
-  /* line 12, sass/modules/_patient_stories.scss */
+  /* line 13, sass/modules/_patient_stories.scss */
   .patient-stories-grid .patient {
     -ms-behavior: url("js/bg.htc");
     background-size: cover;
@@ -1360,14 +1383,14 @@ span.bold {
     height: 225px;
     cursor: pointer;
     display: block; }
-    /* line 20, sass/modules/_patient_stories.scss */
+    /* line 22, sass/modules/_patient_stories.scss */
     .patient-stories-grid .patient:hover .overlay {
       opacity: 0; }
-    /* line 23, sass/modules/_patient_stories.scss */
+    /* line 25, sass/modules/_patient_stories.scss */
     .patient-stories-grid .patient:hover .text-wrapper {
       background: #6e6e6e;
       background: rgba(0, 0, 0, 0.4); }
-    /* line 28, sass/modules/_patient_stories.scss */
+    /* line 30, sass/modules/_patient_stories.scss */
     .patient-stories-grid .patient .overlay {
       position: absolute;
       left: 0;
@@ -1378,7 +1401,7 @@ span.bold {
       opacity: 0.6;
       z-index: 1;
       transition: opacity 0.5s ease; }
-    /* line 39, sass/modules/_patient_stories.scss */
+    /* line 41, sass/modules/_patient_stories.scss */
     .patient-stories-grid .patient .text-wrapper {
       position: absolute;
       z-index: 2;
@@ -1388,12 +1411,12 @@ span.bold {
       transition: background 0.5s ease;
       color: #fff;
       padding: 8px 10px; }
-      /* line 48, sass/modules/_patient_stories.scss */
+      /* line 50, sass/modules/_patient_stories.scss */
       .patient-stories-grid .patient .text-wrapper .name {
         font-weight: bold;
         font-size: 16px;
         margin-bottom: 4px; }
-      /* line 53, sass/modules/_patient_stories.scss */
+      /* line 55, sass/modules/_patient_stories.scss */
       .patient-stories-grid .patient .text-wrapper .patient-about {
         font-weight: normal;
         font-style: italic;
@@ -1613,16 +1636,17 @@ span.bold {
     background: #876fcf;
     color: #fff;
     padding: 20px;
-    position: relative; }
-    /* line 115, sass/pages/_home.scss */
+    position: relative;
+    clear: both; }
+    /* line 116, sass/pages/_home.scss */
     .home-wrapper .did-you-know-slider-wrapper .arrows {
       position: absolute;
       top: 10px;
       right: 2px; }
-      /* line 119, sass/pages/_home.scss */
+      /* line 120, sass/pages/_home.scss */
       .home-wrapper .did-you-know-slider-wrapper .arrows a {
         font-size: 30px; }
-    /* line 123, sass/pages/_home.scss */
+    /* line 124, sass/pages/_home.scss */
     .home-wrapper .did-you-know-slider-wrapper .panel-wrapper {
       padding: 1px !important; }
 
@@ -1796,18 +1820,19 @@ span.bold {
 .our-mission .detail-text {
   background: #876fcf;
   color: #fff;
+  clear: both;
   padding: 30px; }
-  /* line 129, sass/pages/_our_mission.scss */
+  /* line 130, sass/pages/_our_mission.scss */
   .our-mission .detail-text .section-title {
     margin-bottom: 20px; }
-  /* line 132, sass/pages/_our_mission.scss */
+  /* line 133, sass/pages/_our_mission.scss */
   .our-mission .detail-text ul {
     list-style-type: disc;
     padding-left: 20px; }
-    /* line 135, sass/pages/_our_mission.scss */
+    /* line 136, sass/pages/_our_mission.scss */
     .our-mission .detail-text ul li {
       margin-bottom: 8px; }
-      /* line 137, sass/pages/_our_mission.scss */
+      /* line 138, sass/pages/_our_mission.scss */
       .our-mission .detail-text ul li:last-of-type {
         margin-bottom: 0; }
 
@@ -2059,8 +2084,9 @@ span.bold {
       border-right: 1px solid #b9b9b9;
       background: #fff;
       position: relative;
+      clear: both;
       bottom: 5px; }
-      /* line 184, sass/pages/_post_index.scss */
+      /* line 185, sass/pages/_post_index.scss */
       .post-box .container .text-wrapper .read-more {
         display: none;
         position: absolute;
@@ -2070,12 +2096,12 @@ span.bold {
         padding: 6px 10px 7px 10px;
         background: #876fcf;
         color: #fff; }
-        /* line 193, sass/pages/_post_index.scss */
+        /* line 194, sass/pages/_post_index.scss */
         .post-box .container .text-wrapper .read-more:hover {
           background: #472e93;
           text-decoration: none; }
         @media all and (max-width: 800px) {
-          /* line 184, sass/pages/_post_index.scss */
+          /* line 185, sass/pages/_post_index.scss */
           .post-box .container .text-wrapper .read-more {
             position: static;
             margin-top: 10px;
@@ -2086,80 +2112,79 @@ span.bold {
           display: block !important;
           text-align: center;
           padding: 10px 15px 10px 15px; } }
-    /* line 209, sass/pages/_post_index.scss */
+    /* line 210, sass/pages/_post_index.scss */
     .post-box .container .patient-name {
       color: #472e93;
       font-size: 20px;
       margin-bottom: 8px; }
-    /* line 214, sass/pages/_post_index.scss */
+    /* line 215, sass/pages/_post_index.scss */
     .post-box .container .patient-subtitle {
       color: #666666;
       font-size: 14px;
       margin-bottom: 0; }
 
 @media all and (max-width: 800px) {
-  /* line 223, sass/pages/_post_index.scss */
+  /* line 224, sass/pages/_post_index.scss */
   .news-list-block .news-list-title {
     text-align: center; } }
 @media all and (max-width: 800px) {
-  /* line 222, sass/pages/_post_index.scss */
+  /* line 223, sass/pages/_post_index.scss */
   .news-list-block {
     padding: 20px 0 40px 0; } }
-/* line 231, sass/pages/_post_index.scss */
+/* line 232, sass/pages/_post_index.scss */
 .news-list-block .post-unit {
   clear: both;
   padding: 20px 1%;
   margin-bottom: 10px;
   background: #fff; }
-  /* line 236, sass/pages/_post_index.scss */
+  /* line 237, sass/pages/_post_index.scss */
   .news-list-block .post-unit:nth-of-type(even) {
     background: #f6f6f6; }
-  /* line 239, sass/pages/_post_index.scss */
+  /* line 240, sass/pages/_post_index.scss */
   .news-list-block .post-unit:last-of-type {
     margin-bottom: 0; }
-  /* line 242, sass/pages/_post_index.scss */
+  /* line 243, sass/pages/_post_index.scss */
   .news-list-block .post-unit .image-holder {
     width: 24%;
     height: 150px;
-    -ms-behavior: url("js/bg.htc");
     background-size: contain;
+    -ms-behavior: url("js/bg.htc");
     background-position: center top;
-    -ms-behavior: url("/bg.htc");
     background-repeat: no-repeat;
     float: left; }
     @media all and (max-width: 800px) {
-      /* line 250, sass/pages/_post_index.scss */
+      /* line 251, sass/pages/_post_index.scss */
       .news-list-block .post-unit .image-holder.placeholder {
         display: none; } }
     @media all and (max-width: 800px) {
-      /* line 242, sass/pages/_post_index.scss */
+      /* line 243, sass/pages/_post_index.scss */
       .news-list-block .post-unit .image-holder {
         width: 200px;
         float: left;
         margin: 0 auto 15px 3%;
         background-position: center center; } }
-  /* line 262, sass/pages/_post_index.scss */
+  /* line 263, sass/pages/_post_index.scss */
   .news-list-block .post-unit .post-text {
     width: 76%;
     float: right;
     padding-left: 4%; }
     @media all and (max-width: 800px) {
-      /* line 262, sass/pages/_post_index.scss */
+      /* line 263, sass/pages/_post_index.scss */
       .news-list-block .post-unit .post-text {
         width: 100%;
         padding-left: 3%;
         text-align: left; } }
-    /* line 271, sass/pages/_post_index.scss */
+    /* line 272, sass/pages/_post_index.scss */
     .news-list-block .post-unit .post-text .post-title {
       font-size: 1.5em;
       margin-bottom: 8px; }
-    /* line 275, sass/pages/_post_index.scss */
+    /* line 276, sass/pages/_post_index.scss */
     .news-list-block .post-unit .post-text .post-date {
       font-style: italic;
       font-size: 0.9em;
       margin-bottom: 8px;
       color: #4b4b4b; }
-    /* line 284, sass/pages/_post_index.scss */
+    /* line 285, sass/pages/_post_index.scss */
     .news-list-block .post-unit .post-text .btn {
       margin-top: 20px; }
 

@@ -180,6 +180,7 @@
 			border-right: 1px solid #b9b9b9;
 			background: #fff;
 			position: relative;
+			clear: both;
 			bottom: 5px;
 			.read-more {
 				display: none;
@@ -242,9 +243,9 @@
     .image-holder {
       width: 24%;
       height: 150px;
-      -ms-behavior: url('js/bg.htc'); background-size: contain;
+      background-size: contain;
+      -ms-behavior: url('js/bg.htc');
       background-position: center top; 
-      -ms-behavior: url('/bg.htc');
       background-repeat: no-repeat; 
       float: left;
       &.placeholder {

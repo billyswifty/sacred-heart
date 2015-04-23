@@ -12,6 +12,43 @@ html.lt-ie9 {
   footer.main {
     height: 250px;
   }
+  .did-you-know-slider-wrapper {
+    height: auto;
+  }
+  .patient-stories-grid {
+    .patient .text-wrapper {
+      background: #6e6e6e !important;
+    }
+  }
+  .hospital-dropdown {
+    .bottom ul li {
+      margin-right: 10px;
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+  .news-list-block {
+    .post-unit {
+      .image-holder {
+        background-image: url('img/ie_placeholder.jpg') !important;
+        background-size: 180px !important;
+      }
+    }
+  }
+  .our-mission {
+    .needs {
+      .need {
+        .text-wrapper {
+          background: #5d5d5d !important;
+        }
+      }
+    }
+  }
+  .video {
+  .table, .table-cell {
+    text-align: center;
+  } }
   header.main .main-header .content .bottom .social [class^="icon-"] {
     font-size: 36px;
     position: relative;

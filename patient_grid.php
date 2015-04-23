@@ -19,7 +19,7 @@
 	?>
 
 		<div id="post-<?php the_ID(); ?>" class="post-box" <?php post_class(); ?>>
-			<div class="container">
+			<div class="container clearfix">
 				<div class="image-wrapper clearfix">
 					<?php if ( has_post_thumbnail()) : // Check if thumbnail exists ?>
 						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="post-box-link">
