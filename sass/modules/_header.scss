@@ -266,10 +266,12 @@ header.main {
         }
       }
       .bottom {
+        padding-top: 27px;
         .forms-container {
           display: inline;
           margin-right: 10px;
           position: relative;
+          top: 2px;
           & > a {
             display: inline-block;
             padding: 3px 6px;

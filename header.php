@@ -188,14 +188,14 @@
 								</div>
 								<div class="bottom">
 									<div class="forms-container reveal">
-										<a href="#" id="show-forms">Downloadable Forms</a>
+										<a href="#" id="show-forms">Download Event Forms</a>
 										<div class="downloadable-forms">
 											<?php forms_menu(); ?>
 										</div>
 									</div>
-									<div class="social reveal">
+							<!-- 		<div class="social reveal">
 										<a href="/contact-us/newsletter" title="Newsletter" class="icon-circle-mail"></a>
-									</div>
+									</div> -->
 									<div class="search reveal">
 										<?php get_template_part('searchform'); ?>
 									</div>

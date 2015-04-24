@@ -142,6 +142,7 @@
 			cursor: pointer;
 			.blurb {
 				display: none;
+				background: $color-main;
 				@include small {
 					padding: 10px 10px 15px 10px;
 					font-size: 15px;
