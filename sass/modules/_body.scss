@@ -10,6 +10,9 @@ body {
   color: $color-dark;
   position: relative;
   min-height: 100%;
+  &.sidr-open {
+    position: fixed !important;
+  }
 }
 
 .ie-show {

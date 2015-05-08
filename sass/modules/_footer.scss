@@ -15,7 +15,9 @@ footer.main {
     float: left;
     .give-now {
       font-size: 35px;
-      padding: 5px 10px 1px 10px;
+      height: 50px;
+      padding: 4px 10px;
+      line-height: 50px;
       &::after {
         padding-left: 43px;
       }
@@ -58,6 +60,51 @@ footer.main {
       float: none;
       text-align: center;
       margin-bottom: 30px;
+    }
+  }
+  .back-top {
+    position: absolute;
+    top: 3px;
+    right: 2%;
+    .mobile-text {
+      display: block;
+      text-align: center;
+      font-size: 13px;
+      margin-bottom: 4px;
+    }
+    .text {
+      display: block;
+      text-align: center;
+      font-size: 13px;
+      margin-top: 4px;
+    }
+    @include small {
+      top: initial;
+      bottom: -85px;
+    }
+  }
+  #back-top {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding-top: 6px;
+    background: $color-alt;
+    display: block;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    color: #fff;
+    transition: background 500ms ease;
+    cursor: pointer;
+    @include small {
+      padding-top: 11px;
+      width: 40px;
+      height: 40px;
+    }
+    &:hover {
+      background: $color-main;
     }
   }
   .navigation {

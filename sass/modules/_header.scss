@@ -254,11 +254,11 @@ header.main {
         }
         .give-now {
           font-size: 18px;
-          padding: 3px 5px 1px 5px;
+          padding: 3px 5px;
           @include small {
-            background: $color-alt;
+        //    background: $color-alt;
             font-size: 16px;
-            padding: 3px 10px 1px 10px;
+            padding: 3px 10px;
             &:hover {
               background: shade($color-alt, 10%);
             }
@@ -267,6 +267,9 @@ header.main {
       }
       .bottom {
         padding-top: 27px;
+        @include small {
+          padding-top: 0;
+        }
         .forms-container {
           display: inline;
           margin-right: 10px;

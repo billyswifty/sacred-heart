@@ -32,7 +32,7 @@
     }
 	}
 	.video {
-		@include bgcover("img/video_bg2.jpg");
+		@include bgcover("/wp-content/uploads/2015/04/video.jpg");
 		height: 225px;
 		text-align: center;
 		.youtube {

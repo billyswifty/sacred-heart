@@ -179,7 +179,7 @@
 					<div class="main-header clearfix">
 						<div class="constrain">
 							<a href="/" class="logo-link" title="Home">
-								<img src="<?php echo get_template_directory_uri(); ?>/img/main_logo.png" alt="Sacred Heart Health Systems" id="main-logo" />
+								<img src="/wp-content/uploads/2015/04/shf.png" alt="Sacred Heart Health Systems" id="main-logo" />
 							</a>
 							<div class="content">
 								<div class="top">
@@ -212,3 +212,6 @@
 
 
 			</header>
+
+
+

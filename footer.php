@@ -33,6 +33,11 @@
 							5151 N. Ninth Avenue - Pensacola, FL 32504</p>
 						</div>
 					</div>
+					<div class="back-top">
+						<span class="mobile-text conceal">Top</span>
+						<a id="back-top">&#x25B2;</a>
+						<span class="text reveal">Top</span>
+					</div>
 					<div class="navigation clearfix">
 						<div class="grid-row">
 							<div class="unit1of2">
