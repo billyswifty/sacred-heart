@@ -187,12 +187,22 @@
 									<a href="<?php echo do_shortcode('[contentblock id=give_now_url]') ?>" target="_blank" class="give-now btn">Give Now</a>
 								</div>
 								<div class="bottom">
+									<?php 
+											$forms_menu_count = wp_nav_menu(array(
+									        'theme_location'  => 'forms-menu',
+									        'echo'            => false
+									        )
+									    );
+									?>
+									<?php $count = substr_count($forms_menu_count,'class="menu-item '); ?>
+									<?php if ($count > 0) { ?>
 									<div class="forms-container reveal">
 										<a href="#" id="show-forms">Download Event Forms</a>
 										<div class="downloadable-forms">
 											<?php forms_menu(); ?>
 										</div>
 									</div>
+									<?php } ?>
 							<!-- 		<div class="social reveal">
 										<a href="/contact-us/newsletter" title="Newsletter" class="icon-circle-mail"></a>
 									</div> -->

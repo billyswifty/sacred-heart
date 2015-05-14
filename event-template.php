@@ -45,28 +45,33 @@ Template Name: Events
 						$feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
 				?>
 				<?php $start_date = get_post_meta($post_id, '_event_start_date', true); ?>
+				<?php $end_date = get_post_meta($post_id, '_event_end_date', true); ?>
 				<?php $begin_date = new DateTime( $start_date ); ?>
+				<?php $finish_date = new DateTime( $end_date ); ?>
 				<?php $now = new DateTime(); ?>
-				<div class="loop-post event clearfix" <?php if ($begin_date < $now) { ?> style="display:none;" <?php } ?>>
-					<div class="cal-icon">
-						<?php
-								$this_date = date_parse(get_post_meta($post_id, '_event_start_date', true));
-							  $monthNum = $this_date['month'];
-						 		$dateObj   = DateTime::createFromFormat('!m', $monthNum);
-								$monthName = $dateObj->format('F'); 
-								$this_day = date_parse(get_post_meta($post_id, '_event_start_date', true));
-								$dayNum = $this_day['day'];
-						?>
-						<div class="month-wrapper">
-							<span class="month"><?php echo $monthName; ?></span>
+				<?php if ($begin_date > $now || ($begin_date < $now && $finish_date > $now)) { ?>
+					<div class="loop-post event clearfix">
+						<div class="cal-icon">
+							<?php
+									$this_date = date_parse(get_post_meta($post_id, '_event_start_date', true));
+								  $monthNum = $this_date['month'];
+							 		$dateObj   = DateTime::createFromFormat('!m', $monthNum);
+									$monthName = $dateObj->format('F'); 
+									$this_day = date_parse(get_post_meta($post_id, '_event_start_date', true));
+									$dayNum = $this_day['day'];
+							?>
+							<div class="month-wrapper">
+								<span class="month"><?php echo $monthName; ?></span>
+							</div>
+							<div class="day-wrapper">
+								<span class="day"><?php echo $dayNum; ?></span>
+							</div>
 						</div>
-						<div class="day-wrapper">
-							<span class="day"><?php echo $dayNum; ?></span>
-						</div>
+						<h5 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+						<p class="post-excerpt"><?php the_excerpt(); ?></p>
 					</div>
-					<h5 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
-					<p class="post-excerpt"><?php the_excerpt(); ?></p>
-				</div>
+
+				<?php } ?>
 				
 		  	<?php endforeach; ?>
 

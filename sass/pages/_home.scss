@@ -33,6 +33,7 @@
 	}
 	.video {
 		@include bgcover("/wp-content/uploads/2015/04/video.jpg");
+		background-size: center 15%;
 		height: 225px;
 		text-align: center;
 		.youtube {
